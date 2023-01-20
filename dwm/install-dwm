@@ -1,0 +1,31 @@
+#!/bin/bash
+
+#     .___                .__                 __         .__  .__                
+#   __| _/_  _  _______   |__| ____   _______/  |______  |  | |  |   ___________ 
+#  / __ |\ \/ \/ /     \  |  |/    \ /  ___/\   __\__  \ |  | |  | _/ __ \_  __ \
+# / /_/ | \     /  Y Y  \ |  |   |  \\___ \  |  |  / __ \|  |_|  |_\  ___/|  | \/
+# \____ |  \/\_/|__|_|  / |__|___|  /____  > |__| (____  /____/____/\___  >__|   
+#      \/             \/          \/     \/            \/               \/    
+
+shared_names="xorg xorg-init git rofi pulseaudio pulsemixer pavucontrol paman"
+libs_installed=false
+
+# Update + Download 
+[ -f "/etc/arch-release" ] \ 
+          && pacman -Syu base-devel $shared_names \
+          && libs_installed=true
+
+[ -f "/etc/debian-version" ] \
+          && apt-get -y update \
+          && apt-get -y upgrade \
+          && apt-get -y install build-essential $shared_names \
+          && libs_installed=true
+
+[ !libs_installed ] && echo "Something happened during installation, please repeat!" && exit 1
+
+
+# PulseAudio is a 'User' service so the flag is necessary for it to be found.
+systemctl --user enable pulseaudio.service 
+
+# Elitist time
+sudo make clean install

@@ -1,0 +1,15 @@
+#/bin/zsh
+
+# Settings
+flameshot&
+
+export QT_QPA_PLATFORM=wayland
+export XDG_CURRENT_DESKTOP=sway
+export XDG_SESSION_DESKTOP=sway
+# Breaks mega
+# export QT_QPA_PLATFORMTHEME=qt5ct
+
+export GTK_THEME=Catppuccin-Frappe-Standard-Pink-Dark
+# export SDL_VIDEODRIVER=wayland
+export MOZ_ENABLE_WAYLAND=1
+exec Hyprland

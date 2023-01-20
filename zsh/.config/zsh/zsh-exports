@@ -1,0 +1,29 @@
+#!/bin/sh
+HISTSIZE=100
+SAVEHIST=100
+export_os
+export PATH="$HOME/.local/bin":$PATH
+export MANPAGER='nvim +Man!'
+export MANWIDTH=999
+export GRADLE_HOME=$HOME/.local/share/gradle/latest
+export SXHKD_SHELL="/usr/bin/sh"
+export EDITOR="nvim"
+export TERMINAL="kitty"
+export BROWSER="vivaldi"
+
+# NNN Config
+export NNN_OPTS="deH" 
+export LC_COLLATE="C"
+export NNN_FIFO="/tmp/nnn.fifo" 
+export NNN_SSHFS="sshfs -o follow_symlinks"
+export NNN_FCOLORS="AAAAE631BBBBCCCCDDDD9999" # feel free to change the colors
+export NNN_PLUG='p:preview-tui;i:imgview' # many other plugins are available here: https://github.com/jarun/nnn/tree/master/plugins
+set --export NNN_FIFO "/tmp/nnn.fifo"
+
+# export PATH="$PATH:./node_modules/.bin"
+export PATH=${GRADLE_HOME}/bin:$PATH
+export PATH="$PATH:$(go env GOBIN):$(go env GOPATH)/bin"
+export PATH=$HOME/.cargo/bin:$PATH
+export PATH=$HOME/.local/share/go/bin:$PATH
+
+# source /etc/zsh_command_not_found
