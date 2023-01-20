@@ -1,7 +1,0 @@
-#!/bin/bash
-
-
-
-xrandr --output HDMI-1 --mode 1920x1080
-feh --bg-fill .wallpaper
-# picom -b --config picom.conf
