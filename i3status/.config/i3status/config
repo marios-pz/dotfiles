@@ -1,0 +1,30 @@
+general {
+        output_format = "i3bar"
+        colors = true
+        interval = 5
+}
+
+order += "wireless wlan0"
+order += "battery 0"
+order += "tztime athens"
+
+wireless wlan0 {
+        format_up = "%ip"
+        format_down = "Wifi down."
+}
+
+battery 0 {
+        format = "%status %percentage %remaining %emptytime"
+        format_down = "❌"
+        status_chr = "⚡"
+        status_bat = "🔋"
+        status_unk = "🪫"
+        status_full = "🔋" 
+        path = "/sys/class/power_supply/BAT%d/uevent"
+        low_threshold = 10
+}
+
+tztime athens {
+        format = "%m-%d %H:%M %Z"
+        timezone = "Europe/Athens"
+}
