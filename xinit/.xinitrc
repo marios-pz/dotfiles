@@ -2,5 +2,5 @@
 
 pipewire & wireplumber &
 nitrogen ~/Pictures/Wallpapers --restore &
-[[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
+picom &
 exec i3
