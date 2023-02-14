@@ -169,14 +169,13 @@ gaps inner 10
 gaps outer 10
 
 # Color settings
+client.focused #ebe705 #ebe705 #ebe705 #ebe705 #ebe705
+client.focused_inactive #ebe705 #ebe705 #ebe705 #ebe705
+client.unfocused #ebe705 #ebe705 #ebe705 #ebe705 #ebe705
+client.urgent #ebe705 #ebe705 #ebe705 #ebe705 #ebe705
 
-client.focused #53d92e  #53d92e #53d92e #53d92e #53d92e
-client.focused_inactive #49be28 #49be28 #49be28 #49be28 #49be28
-client.unfocused #34881d #34881d #34881d #34881d #34881d
-client.urgent #FF5733 #FF5733 #FF5733 #FF5733 #FF5733
-
-#client.focused #c20ea1  #c20ea1 #c20ea1 #c20ea1
-#client.focused_inactive #aa0c8d #aa0c8d #aa0c8d #aa0c8d
-#client.unfocused #7b0966 #7b0966 #7b0966 #7b0966  
-# client.urgent #f02dcc #c20ea1 #c20ea1 #c20ea1
+#client.focused #53d92e  #53d92e #53d92e #53d92e #53d92e
+#client.focused_inactive #49be28 #49be28 #49be28 #49be28 #49be28
+#client.unfocused #34881d #34881d #34881d #34881d #34881d
+#client.urgent #FF5733 #FF5733 #FF5733 #FF5733 #FF5733
 
