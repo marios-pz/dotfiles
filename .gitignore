@@ -1,0 +1,5 @@
+
+# Obsidian Rice
+obsidian/MEGA/Brain/*
+!obsidian/MEGA/Brain/.obsidian.vimrc
+!obsidian/MEGA/Brain/.obsidian/
