@@ -1,0 +1,33 @@
+{
+  "addToCommand": true,
+  "addToContextMenu": true,
+  "enableWindowsConhostWorkaround": true,
+  "errorNoticeTimeout": 0,
+  "executables": {
+    "darwin": {
+      "extArgs": [
+        "$PWD"
+      ],
+      "extExe": "kitty",
+      "intArgs": [],
+      "intExe": "/bin/zsh"
+    },
+    "linux": {
+      "extArgs": [],
+      "extExe": "kitty",
+      "intArgs": [],
+      "intExe": "/bin/sh"
+    },
+    "win32": {
+      "extArgs": [],
+      "extExe": "C:\\Windows\\System32\\cmd.exe",
+      "intArgs": [],
+      "intExe": "C:\\Windows\\System32\\cmd.exe"
+    }
+  },
+  "hideStatusBar": "focused",
+  "language": "",
+  "noticeTimeout": 5,
+  "preferredRenderer": "webgl",
+  "pythonExecutable": "python3"
+}
