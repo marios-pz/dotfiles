@@ -9,7 +9,8 @@ set $right l
 set $term foot
 set $menu dmenu_path | dmenu | xargs swaymsg exec --
 
-output * bg  ~/Documents/wallpaper.jpg fill
+output * bg /home/amadeus/Documents/wallpaper.jpg fill
+
 #
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
@@ -21,6 +22,9 @@ exec swayidle -w \
           timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
           before-sleep 'swaylock -f -c 000000'
 
+### Wayland current desktop fix
+exec "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
+
 ### Input configuration
 input "2:7:SynPS/2_Synaptics_TouchPad" {
        dwt enabled
@@ -29,13 +33,24 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
        middle_emulation enabled
 }
 
-# You can get the names of your inputs by running: swaymsg -t get_inputs
+set $opacity 0.9
+for_window [class=".*"] opacity $opacity
+for_window [app_id=".*"] opacity $opacity
+
+default_border pixel 2
+
+# Color settings
+client.focused #0bbf35 #0bbf35 #0bbf35 #0bbf35 #0bbf35
+client.focused_inactive #0bbf35 #0bbf35 #0bbf35 #0bbf35 #0bbf35
+client.unfocused #0bbf35 #0bbf35 #0bbf35 #0bbf35 #0bbf35
+client.urgent #f70505 #f70505 #f70505 #f70505 #f70505
+
+font pango:monospace 10
+
+# Screenshot
+bindsym $mod+p exec grim -g "$(slurp -d)" - | wl-copy
 
 ### Key bindings
-#
-# Basics:
-#
-# Start a terminal
 bindsym $mod+Return exec $term
 
 # Kill focused window
@@ -126,7 +141,6 @@ bindsym $mod+a focus parent
 bindsym $mod+Shift+minus move scratchpad
 
 # Show the next scratchpad window or hide the focused scratchpad window.
-# If there are multiple scratchpad windows, this command cycles through them.
 bindsym $mod+minus scratchpad show
 
 #
@@ -161,33 +175,18 @@ bar {
         background #00000000
         inactive_workspace #32323200 #32323200 #0bbf35
     }
-# Window borders
-smart_gaps on
-gaps inner 10
-gaps outer 15 
-default_border pixel
-
-font pango:monospace 10
-
-titlebar_padding 1
-titlebar_border_thickness 0
-
-# Color settings
-client.focused #0bbf35 #0bbf35 #0bbf35 #0bbf35 #0bbf35
-client.focused_inactive #0bbf35 #0bbf35 #0bbf35 #0bbf35 #0bbf35
-client.unfocused #0bbf35 #0bbf35 #0bbf35 #0bbf35 #0bbf35
-client.urgent #f70505 #f70505 #f70505 #f70505 #f70505
+}
 
 # Handle audio
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% 
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% 
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle 
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle 
+# bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% 
+# bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% 
+# bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle 
+# bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle 
 
 # Handle backlight.
-bindsym XF86MonBrightnessUp exec light -A 5
-bindsym XF86MonBrightnessDown exec light -U 5
-bindsym shift+XF86MonBrightnessUp exec light -A 25
-bindsym shift+XF86MonBrightnessDown exec light -U 25
+# bindsym XF86MonBrightnessUp exec light -A 5
+# bindsym XF86MonBrightnessDown exec light -U 5
+# bindsym shift+XF86MonBrightnessUp exec light -A 25
+# bindsym shift+XF86MonBrightnessDown exec light -U 25
 
 # include /etc/sway/config.d/*
