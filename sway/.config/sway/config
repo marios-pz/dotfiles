@@ -32,11 +32,24 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
        middle_emulation enabled
 }
 
+input * {
+    xkb_layout "us,gr"
+    xkb_options "grp:ctrl_space_toggle"
+}
+
 set $opacity 0.9
 for_window [class=".*"] opacity $opacity
 for_window [app_id=".*"] opacity $opacity
 
 default_border pixel 2
+
+bindsym $mod+o mode "opacity"
+
+mode "opacity" {
+    bindsym plus exec "swaymsg opacity plus 0.1"
+    bindsym minus exec "swaymsg opacity minus 0.1"
+    bindsym Escape mode "default"
+}
 
 # Color settings
 client.focused #0bbf35 #0bbf35 #0bbf35 #0bbf35 #0bbf35
