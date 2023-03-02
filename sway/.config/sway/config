@@ -9,7 +9,7 @@ set $right l
 set $term kitty
 set $menu dmenu_path | dmenu | xargs swaymsg exec --
 
-output * bg /home/amadeus/Documents/wallpaper.jpg fill
+output * bg ~/dotfiles/assets/wallpaper.jpg fill
 
 output HDMI-A-1 resolution 1920x1080 position 1920,0
 
@@ -17,9 +17,9 @@ output HDMI-A-1 resolution 1920x1080 position 1920,0
 
 ### Idle configuration
 exec swayidle -w \
-         timeout 300 'swaylock -f -c 000000' \
+         timeout 300 'swaylock -f --image ~/dotfiles/assets/lock-screen.png' \
           timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-          before-sleep 'swaylock -f -c 000000'
+          before-sleep 'swaylock -f --image ~/dotfiles/assets/lock-screen.png'
 
 ### Wayland current desktop fix
 exec "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
@@ -37,7 +37,7 @@ input * {
     xkb_options "grp:ctrl_space_toggle"
 }
 
-set $opacity 0.9
+set $opacity 1
 for_window [class=".*"] opacity $opacity
 for_window [app_id=".*"] opacity $opacity
 
