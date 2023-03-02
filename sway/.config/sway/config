@@ -17,9 +17,9 @@ output HDMI-A-1 resolution 1920x1080 position 1920,0
 
 ### Idle configuration
 exec swayidle -w \
-         timeout 300 'swaylock -f --image ~/dotfiles/assets/lock-screen.png' \
-          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-          before-sleep 'swaylock -f --image ~/dotfiles/assets/lock-screen.png'
+         timeout 60 'swaylock --image /home/amadeus/dotfiles/assets/lock-screen.png' \
+          timeout 120 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+          before-sleep 'swaylock --image /home/amadeus/dotfiles/assets/lock-screen.png'
 
 ### Wayland current desktop fix
 exec "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
@@ -31,13 +31,12 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
        natural_scroll enabled
        middle_emulation enabled
 }
-
 input * {
     xkb_layout "us,gr"
     xkb_options "grp:ctrl_space_toggle"
 }
 
-set $opacity 1
+set $opacity 0.9
 for_window [class=".*"] opacity $opacity
 for_window [app_id=".*"] opacity $opacity
 
