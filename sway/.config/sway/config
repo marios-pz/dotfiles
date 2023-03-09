@@ -154,6 +154,12 @@ bindsym $mod+Shift+minus move scratchpad
 # Show the next scratchpad window or hide the focused scratchpad window.
 bindsym $mod+minus scratchpad show
 
+
+# Handle backlight.
+bindsym Shift+F6 exec light -A 5
+bindsym Shift+F5 exec light -U 5
+
+
 #
 # Resizing containers:
 #
@@ -177,27 +183,23 @@ bindsym $mod+r mode "resize"
 bar {
     position bottom
 
-    # When the status_command prints a new line to stdout, swaybar updates.
-    # The default just shows the current date and time.
-    status_command while date +'%Y-%m-%d %I:%M'; do sleep 60; done
-
+    status_command while ~/.config/sway/status.sh; do sleep 1; done
+    
     colors {
         statusline #0bbf35
         background #00000000
         inactive_workspace #32323200 #32323200 #0bbf35
     }
+
+    font pango:DejaVu Sans Mono 12
 }
 
 # Handle audio
-# bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% 
-# bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% 
-# bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle 
-# bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle 
+bindsym Shift+F3 exec pactl set-sink-volume @DEFAULT_SINK@ +10% 
+bindsym Shift+F2 exec pactl set-sink-volume @DEFAULT_SINK@ -10% 
+bindsym Shift+F1 exec pactl set-sink-mute @DEFAULT_SINK@ toggle 
+bindsym Shift+F4 exec pactl set-source-mute @DEFAULT_SOURCE@ toggle 
 
-# Handle backlight.
-# bindsym XF86MonBrightnessUp exec light -A 5
-# bindsym XF86MonBrightnessDown exec light -U 5
-# bindsym shift+XF86MonBrightnessUp exec light -A 25
-# bindsym shift+XF86MonBrightnessDown exec light -U 25
 
+# TODO: When I finish my rice, I will cut it in seperate files for maintanability
 # include /etc/sway/config.d/*
