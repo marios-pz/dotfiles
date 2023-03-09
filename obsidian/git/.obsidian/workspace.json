@@ -1,0 +1,172 @@
+{
+  "main": {
+    "id": "f0e30975ddb027ce",
+    "type": "split",
+    "children": [
+      {
+        "id": "d6247b675786c906",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a86e4993a326008c",
+            "type": "leaf",
+            "state": {
+              "type": "kanban",
+              "state": {
+                "file": "Kanban.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "af0809a93cf691f0",
+    "type": "split",
+    "children": [
+      {
+        "id": "6d15e42fc28d5a69",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "de64f697915a1ef8",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "5968bfe3b67c8a7b",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "92465ab528bee3d2",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "9657629a0f1c8c56",
+    "type": "split",
+    "children": [
+      {
+        "id": "cde7079b937131ab",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3053cf87b33ea85b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Kanban.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "bb271dda1a97f4eb",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Kanban.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "84448427bac266aa",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "56fd8ce9d5bfdcb3",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Kanban.md"
+              }
+            }
+          },
+          {
+            "id": "56914e19fba47b09",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false
+    }
+  },
+  "active": "a86e4993a326008c",
+  "lastOpenFiles": [
+    "Job Kanban.md",
+    "2023-03-09.md",
+    "Kanban.md",
+    "2023-W10.md",
+    "Day Planners/Day Planner-20230308.md",
+    "Kanban 1.md",
+    "Japan/Notes.md",
+    "Day Planners/Day Planner-20230309.md",
+    "sex.jpg",
+    "Untitled",
+    "Japan",
+    "Day Planners"
+  ]
+}
