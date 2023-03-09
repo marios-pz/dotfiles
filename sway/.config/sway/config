@@ -36,7 +36,7 @@ input * {
     xkb_options "grp:ctrl_space_toggle"
 }
 
-set $opacity 0.9
+set $opacity 1
 for_window [class=".*"] opacity $opacity
 for_window [app_id=".*"] opacity $opacity
 
@@ -187,7 +187,7 @@ bar {
     
     colors {
         statusline #0bbf35
-        background #00000000
+        background #350373
         inactive_workspace #32323200 #32323200 #0bbf35
     }
 
