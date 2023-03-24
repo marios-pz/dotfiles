@@ -1,3 +1,4 @@
 # Ignore .DS_Store files everywhere
 # Fuck you apple
 **/.DS_Store
+obsidian/git/*

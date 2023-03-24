@@ -4,17 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "d6247b675786c906",
+        "id": "1ac0fd901174e6e9",
         "type": "tabs",
         "children": [
           {
-            "id": "a86e4993a326008c",
+            "id": "5ec6ab0d83e3ecdc",
             "type": "leaf",
             "state": {
-              "type": "kanban",
-              "state": {
-                "file": "Kanban.md"
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -83,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Kanban.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Kanban.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -122,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Kanban.md"
-              }
+              "state": {}
             }
           },
           {
@@ -144,29 +138,64 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "zk-prefixer:Create new unique note": false,
+      "audio-recorder:Start/stop recording": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "a86e4993a326008c",
+  "active": "5ec6ab0d83e3ecdc",
   "lastOpenFiles": [
-    "Job Kanban.md",
-    "2023-03-09.md",
-    "Kanban.md",
-    "2023-W10.md",
-    "Day Planners/Day Planner-20230308.md",
-    "Kanban 1.md",
-    "Japan/Notes.md",
-    "Day Planners/Day Planner-20230309.md",
-    "sex.jpg",
-    "Untitled",
-    "Japan",
-    "Day Planners"
+    "grind/Kanban/DevOops.md",
+    "My-Uni-Notes/4st/operating-systems/tasks/task-1/Άσκηση 1 - Μάριος Παπάζογλου.md",
+    "My-Uni-Notes/4st/operating-systems/tasks/task-1/main",
+    "My-Uni-Notes/4st/operating-systems/tasks/task-1/maind",
+    "My-Uni-Notes/4st/operating-systems/tasks/task-1/Screenshot 2023-03-22 at 8.26.32 PM.png",
+    "My-Uni-Notes/4st/operating-systems/Notes.md",
+    "grind/DevOps Notes.md",
+    "My-Uni-Notes/4st/operating-systems/tasks/task-1/main.c",
+    "My-Uni-Notes/4st/operating-systems/tasks/task-1/main.cpp",
+    "My-Uni-Notes/4st/operating-systems/tasks/task-1",
+    "My-Uni-Notes/4st/operating-systems/tasks/task1",
+    "My-Uni-Notes/4st/operating-systems/tasks",
+    "boorufetch/README.md",
+    "boorufetch/PKGBUILD",
+    "boorufetch/cmd/main.go",
+    "boorufetch/cmd/go.sum",
+    "grind/Stoicicm.md",
+    "grind/Kanban/Easter.md",
+    "grind/Kanban/Summer.md",
+    "Day Planners/Day Planner-20230322.md",
+    "Day Planners/Day Planner-20230321.md",
+    "Day Planners/Day Planner-20230320.md",
+    "Day Planners/Day Planner-20230319.md",
+    "eclass-tui/README.md",
+    "Day Planners/Day Planner-20230317.md",
+    "Day Planners/Day Planner-20230316.md",
+    "grind/Applies/INDEV SOFTWARE.md",
+    "Day Planners/Day Planner-20230315.md",
+    "grind/Applies/GRNET.md",
+    "My-Uni-Notes/4st/networking/Guide.md",
+    "Day Planners/Day Planner-20230314.md",
+    "Day Planners/Day Planner-20230313.md",
+    "My-Uni-Notes/5st/databases/Task 3/static/background.gif",
+    "My-Uni-Notes/5st/databases/Task 3/README.md",
+    "My-Uni-Notes/5st/databases/Task 3/ER_MODEL_NEW.png",
+    "My-Uni-Notes/5st/databases/15-12-22.md",
+    "My-Uni-Notes/4st/data-bases/model_02.png",
+    "My-Uni-Notes/4st/data-bases/model_01.png",
+    "My-Uni-Notes/3st/networking/Exam/parity_checking.png",
+    "My-Uni-Notes/3st/networking/Exam/Pasted image 20230130174652.png",
+    "My-Uni-Notes/3st/networking/Exam/Pasted image 20230130170512.png",
+    "My-Uni-Notes/3st/networking/Exam/Pasted image 20230130170450.png",
+    "My-Uni-Notes/3st/networking/Exam/Network Layer.md",
+    "My-Uni-Notes/3st/networking/Exam/Data Link Layer.md",
+    "My-Uni-Notes/3st/networking/signal-2022-12-30-194943_004.png"
   ]
 }

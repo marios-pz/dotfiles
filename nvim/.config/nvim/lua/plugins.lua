@@ -47,6 +47,7 @@ local plugins = {
     'ray-x/lsp_signature.nvim',
 
     -- Convenience
+    "xiyaowong/nvim-transparent",
     "lukas-reineke/indent-blankline.nvim",
     "ThePrimeagen/harpoon",
     "edluffy/hologram.nvim",
