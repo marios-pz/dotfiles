@@ -10,5 +10,7 @@
   "obsidian-day-planner",
   "obsidian-excalidraw-plugin",
   "obsidian-mind-map",
-  "obsidian-kanban"
+  "obsidian-kanban",
+  "obsidian-file-color",
+  "highlightr-plugin"
 ]

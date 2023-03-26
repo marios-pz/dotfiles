@@ -4,18 +4,55 @@
     "type": "split",
     "children": [
       {
-        "id": "1ac0fd901174e6e9",
+        "id": "9648ba2c75d7809a",
         "type": "tabs",
+        "dimension": 45.92293906810036,
         "children": [
           {
-            "id": "5ec6ab0d83e3ecdc",
+            "id": "3937bd6cbd969e0b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "My-Uni-Notes/2st/circuit-theory/Notes.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
+      },
+      {
+        "id": "28a3340c83d92fbd",
+        "type": "tabs",
+        "dimension": 54.077060931899645,
+        "children": [
+          {
+            "id": "960b37433cb5fb3e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "grind/journal/2023/March/2023-03-27.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "75629e8950f149fa",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "grind/Productivity Workflow.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -65,7 +102,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 285
   },
   "right": {
     "id": "9657629a0f1c8c56",
@@ -81,6 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "grind/Productivity Workflow.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +135,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "grind/Productivity Workflow.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +157,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "grind/Productivity Workflow.md"
+              }
             }
           },
           {
@@ -150,52 +191,54 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "5ec6ab0d83e3ecdc",
+  "active": "75629e8950f149fa",
   "lastOpenFiles": [
+    "grind/journal/2023/March/2023-03-27.md",
+    "grind/Productivity Workflow.md",
+    "freedom-penguin.github.io/style/style.css",
+    "freedom-penguin.github.io/style",
+    "freedom-penguin.github.io/index.html",
+    "freedom-penguin.github.io/icons/rev.png",
+    "freedom-penguin.github.io/icons/profile.jpg",
+    "freedom-penguin.github.io/icons/ljinux.png",
+    "freedom-penguin.github.io/icons/htb.png",
+    "freedom-penguin.github.io/icons",
+    "freedom-penguin.github.io/README.md",
+    "freedom-penguin.github.io/LICENSE",
+    "freedom-penguin.github.io",
     "grind/Kanban/DevOops.md",
-    "My-Uni-Notes/4st/operating-systems/tasks/task-1/Άσκηση 1 - Μάριος Παπάζογλου.md",
-    "My-Uni-Notes/4st/operating-systems/tasks/task-1/main",
-    "My-Uni-Notes/4st/operating-systems/tasks/task-1/maind",
-    "My-Uni-Notes/4st/operating-systems/tasks/task-1/Screenshot 2023-03-22 at 8.26.32 PM.png",
-    "My-Uni-Notes/4st/operating-systems/Notes.md",
-    "grind/DevOps Notes.md",
-    "My-Uni-Notes/4st/operating-systems/tasks/task-1/main.c",
-    "My-Uni-Notes/4st/operating-systems/tasks/task-1/main.cpp",
-    "My-Uni-Notes/4st/operating-systems/tasks/task-1",
-    "My-Uni-Notes/4st/operating-systems/tasks/task1",
-    "My-Uni-Notes/4st/operating-systems/tasks",
-    "boorufetch/README.md",
-    "boorufetch/PKGBUILD",
-    "boorufetch/cmd/main.go",
-    "boorufetch/cmd/go.sum",
-    "grind/Stoicicm.md",
-    "grind/Kanban/Easter.md",
+    "My-Uni-Notes/2st/circuit-theory/diagrams/05_kef 3 slides_part 3.pdf",
+    "My-Uni-Notes/2st/circuit-theory/Notes.md",
+    "My-Uni-Notes/2st/circuit-theory/diagrams/04_kef 3 slides_part 2.pdf",
+    "My-Uni-Notes/2st/circuit-theory/diagrams/03_kef 3 slides_part 1.pdf",
+    "My-Uni-Notes/2st/circuit-theory/assets",
+    "My-Uni-Notes/2st/circuit-theory/assets/Screenshot 2023-03-26 at 12.17.06 PM.png",
+    "My-Uni-Notes/2st/circuit-theory/assets/Screenshot 2023-03-26 at 12.16.59 PM.png",
+    "My-Uni-Notes/Studying/4st-semester/Cloud (Completed).md",
+    "My-Uni-Notes/Studying/4st-semester/Decentralized.md",
+    "My-Uni-Notes/Studying/4st-semester/Circuit Theory.md",
+    "My-Uni-Notes/Studying/4st-semester/Digital Design.md",
+    "My-Uni-Notes/Studying/4st-semester/Operating Systems.md",
+    "Pasted image 20230326093805 1.png",
+    "My-Uni-Notes/Studying/Calculus.png",
+    "My-Uni-Notes/Math.md",
+    "Day Planners/Day Planner-20230326.md",
+    "My-Uni-Notes/2st/digital-design/Notes.md",
+    "My-Uni-Notes/2st/digital-design/assets/Screenshot 2023-03-25 at 11.16.23 PM.png",
+    "My-Uni-Notes/2st/digital-design/assets/Screenshot 2023-03-25 at 11.15.21 PM.png",
     "grind/Kanban/Summer.md",
-    "Day Planners/Day Planner-20230322.md",
-    "Day Planners/Day Planner-20230321.md",
-    "Day Planners/Day Planner-20230320.md",
-    "Day Planners/Day Planner-20230319.md",
-    "eclass-tui/README.md",
-    "Day Planners/Day Planner-20230317.md",
-    "Day Planners/Day Planner-20230316.md",
-    "grind/Applies/INDEV SOFTWARE.md",
-    "Day Planners/Day Planner-20230315.md",
-    "grind/Applies/GRNET.md",
-    "My-Uni-Notes/4st/networking/Guide.md",
-    "Day Planners/Day Planner-20230314.md",
-    "Day Planners/Day Planner-20230313.md",
-    "My-Uni-Notes/5st/databases/Task 3/static/background.gif",
-    "My-Uni-Notes/5st/databases/Task 3/README.md",
-    "My-Uni-Notes/5st/databases/Task 3/ER_MODEL_NEW.png",
-    "My-Uni-Notes/5st/databases/15-12-22.md",
-    "My-Uni-Notes/4st/data-bases/model_02.png",
-    "My-Uni-Notes/4st/data-bases/model_01.png",
-    "My-Uni-Notes/3st/networking/Exam/parity_checking.png",
-    "My-Uni-Notes/3st/networking/Exam/Pasted image 20230130174652.png",
-    "My-Uni-Notes/3st/networking/Exam/Pasted image 20230130170512.png",
-    "My-Uni-Notes/3st/networking/Exam/Pasted image 20230130170450.png",
-    "My-Uni-Notes/3st/networking/Exam/Network Layer.md",
-    "My-Uni-Notes/3st/networking/Exam/Data Link Layer.md",
-    "My-Uni-Notes/3st/networking/signal-2022-12-30-194943_004.png"
+    "grind/DevOps Notes.md",
+    "Day Planners/Day Planner-20230325.md",
+    "boorufetch/README.md",
+    "My-Uni-Notes/8st/cloud/Notes.md",
+    "My-Uni-Notes/Studying/4st-semester/Untitled Kanban.md",
+    "My-Uni-Notes/Studying/4st-semester/Untitled.canvas",
+    "grind/Kanban/Easter.md",
+    "grind/Kanban/Lessons/Decentralized Systems.md",
+    "grind/Stoicicm.md",
+    "My-Uni-Notes/3st/architecture-design/practise/task-4.md",
+    "07-07-23.md",
+    "14-07-23.md",
+    "202303241306.md"
   ]
 }
