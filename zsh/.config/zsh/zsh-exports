@@ -9,7 +9,6 @@ export GRADLE_HOME=$HOME/.local/share/gradle/latest
 export SXHKD_SHELL="/usr/bin/sh"
 export EDITOR="nvim"
 export TERMINAL="kitty"
-export BROWSER="vivaldi"
 
 # NNN Config
 export NNN_OPTS="deH" 
@@ -24,5 +23,5 @@ set --export NNN_FIFO "/tmp/nnn.fifo"
 export PATH=${GRADLE_HOME}/bin:$PATH
 export PATH="$PATH:$(go env GOBIN):$(go env GOPATH)/bin"
 export PATH=$HOME/.local/share/go/bin:$PATH
-
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 # source /etc/zsh_command_not_found

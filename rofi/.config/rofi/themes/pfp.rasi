@@ -1,15 +1,3 @@
-/*
- * rofi themes - pfp
- * colors - custom
- * mode - light
- */
-
-configuration {
-    modi: "drun";
-    display-drun: "";
-    font: "Rubik 10";
-}
-
 * {
     bg: #f8f9f7;
     fg: #372d2f;

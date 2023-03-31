@@ -23,8 +23,10 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
-exec "setxkbmap -layout us,gr"
-exec "setxkbmap -option 'grp:ctrl_space_toggle'"
+exec_always "setxkbmap -layout us,gr"
+exec_always "setxkbmap -option 'grp:ctrl_space_toggle'"
+
+exec --no-startup-id  nitrogen --restore ~/dotfiles/assets
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -44,8 +46,7 @@ bindsym shift+XF86MonBrightnessDown exec light -U 25
 floating_modifier $mod
 
 # move tiling windows via drag & drop by left-clicking into the title bar,
-# or left-clicking anywhere into the window while holding the floating modifier.
-tiling_drag modifier titlebar
+# or left-clicking anywhere into the window while holding the floating modifier. tiling_drag modifier titlebar
 
 # start a terminal
 bindsym $mod+Return exec kitty
@@ -137,7 +138,7 @@ bindsym $mod+Shift+r reload
 # bindsym $mod+Shift+r restart
 
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Exit i3' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -157,25 +158,18 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
 bar {
         status_command i3status
 }
 
 # Window borders
-for_window [class="^.*"] border pixel 5
-gaps inner 10
-gaps outer 10
+# for_window [class="^.*"] border pixel 5
+# gaps inner 10
+# gaps outer 10
 
 # Color settings
-client.focused #ebe705 #ebe705 #ebe705 #ebe705 #ebe705
-client.focused_inactive #ebe705 #ebe705 #ebe705 #ebe705
-client.unfocused #ebe705 #ebe705 #ebe705 #ebe705 #ebe705
-client.urgent #ebe705 #ebe705 #ebe705 #ebe705 #ebe705
-
-#client.focused #53d92e  #53d92e #53d92e #53d92e #53d92e
-#client.focused_inactive #49be28 #49be28 #49be28 #49be28 #49be28
-#client.unfocused #34881d #34881d #34881d #34881d #34881d
-#client.urgent #FF5733 #FF5733 #FF5733 #FF5733 #FF5733
+client.focused #0bbf35 #0bbf35 #0bbf35 #0bbf35 #0bbf35
+client.focused_inactive #0bbf35 #0bbf35 #0bbf35 #0bbf35 #0bbf35
+client.unfocused #0bbf35 #0bbf35 #0bbf35 #0bbf35 #0bbf35
+client.urgent #f70505 #f70505 #f70505 #f70505 #f70505
 
