@@ -4,35 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "5808009a916adabf",
+        "id": "f11778fb11ba9f08",
         "type": "tabs",
         "children": [
           {
-            "id": "8b11eb9e2457321b",
+            "id": "38110f27f7bd3be8",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "My-Uni-Notes/8st/cloud/Notes.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "36ed1f5a249ea6fb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "grind/Work/Cognitiv/2023-03-29.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "grind/Work/Cognitiv/2023-03-29.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "grind/Work/Cognitiv/2023-03-29.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "grind/Work/Cognitiv/2023-03-29.md"
-              }
+              "state": {}
             }
           },
           {
@@ -171,54 +150,53 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "36ed1f5a249ea6fb",
+  "active": "de64f697915a1ef8",
   "lastOpenFiles": [
+    "grind/Kanban/Easter.md",
+    "grind/Kanban/Summer.md",
     "grind/Work/Cognitiv/2023-03-28.md",
     "grind/Work/Cognitiv/2023-03-29.md",
-    "My-Uni-Notes/8st/cloud/Answers.md",
-    "My-Uni-Notes/8st/cloud/Notes.md",
+    "grind/DevOps Notes.md",
+    "grind/Stoicicm.md",
+    "open-notes/modules/ROOT/pages/philosophy.adoc",
+    "open-notes/modules/ROOT/pages/devops.adoc",
+    "grind/Kanban/DevOops.md",
+    "grind/Japan/Notes.md",
+    "My-Uni-Notes/2st/digital-design/assets/image-58.png",
+    "My-Uni-Notes/6st/decentralized/Notes.md",
+    "My-Uni-Notes/6st/decentralized/task-1/details.md",
+    "My-Uni-Notes/Studying/4st-semester/Operating Systems.md",
+    "My-Uni-Notes/Studying/4st-semester/Digital Design.md",
     "My-Uni-Notes/Studying/4st-semester/Circuit Theory.md",
-    "My-Uni-Notes/8st/cloud/cloud-task-2/documents/template.typ",
-    "My-Uni-Notes/8st/cloud/cloud-task-2/documents/main.typ",
-    "My-Uni-Notes/8st/cloud/cloud-task-2/documents",
-    "My-Uni-Notes/8st/cloud/cloud-task-2/template.typ",
-    "My-Uni-Notes/8st/cloud/cloud-task-2/main.typ",
-    "My-Uni-Notes/8st/cloud/cloud-task-2/Cloud 2.zip",
-    "My-Uni-Notes/8st/cloud/cloud-task-2/infra/Cloud 2.zip",
-    "My-Uni-Notes/8st/cloud/cloud-task-2/infra/prometheus/prometheus.yml",
-    "My-Uni-Notes/8st/cloud/cloud-task-2/infra/prometheus",
-    "My-Uni-Notes/8st/cloud/cloud-task-2/frontend/node_modules/svelte/types/compiler/compile/render_ssr/handlers/utils/remove_whitespace_children.d.ts",
+    "My-Uni-Notes/Studying/4st-semester/Cloud (Completed).md",
+    "My-Uni-Notes/Studying/4st-semester/Decentralized.md",
+    "My-Uni-Notes/Studying/image-1.png",
+    "My-Uni-Notes/2st/digital-design/assets/image-1.png",
+    "My-Uni-Notes/8st/cloud/Answers.md",
+    "Pasted image 20230401092612.png.md",
+    "My-Uni-Notes/2st/digital-design/Exam.md",
+    "My-Uni-Notes/8st/cloud/Notes.md",
+    "My-Uni-Notes/8st/cloud/image-1.png",
+    "My-Uni-Notes/8st/cloud/image-2.png",
+    "My-Uni-Notes/8st/cloud/image-3.png",
+    "My-Uni-Notes/2st/digital-design/Pasted image 20230401133327.png",
+    "My-Uni-Notes/5st/databases/Task 3/image-1.png",
+    "My-Uni-Notes/2st/circuit-theory/assets/image-2.png",
+    "My-Uni-Notes/2st/circuit-theory/assets/image-1.png",
+    "My-Uni-Notes/fix-images.py",
+    "My-Uni-Notes/fix-ascii-doc-images.py",
+    "My-Uni-Notes/8st/cloud/Answers.adoc",
+    "My-Uni-Notes/8st/cloud/Notes.adoc",
+    "My-Uni-Notes/5st/databases/Task 3/README.adoc",
+    "My-Uni-Notes/5st/databases/15-12-22.adoc",
+    "My-Uni-Notes/6st/decentralized/task-1/details.adoc",
+    "My-Uni-Notes/6st/decentralized/Notes.adoc",
+    "My-Uni-Notes/2st/digital-design/Notes.md",
+    "Day Planners/Day Planner-20230329.md",
     "My-Uni-Notes/8st/cloud/cloud-task-2/frontend/node_modules/svelte-check/node_modules/typescript/lib/README.md",
     "My-Uni-Notes/8st/cloud/cloud-task-2/frontend/node_modules/@typescript-eslint/eslint-plugin/docs/rules/unified-signatures.md",
     "My-Uni-Notes/8st/cloud/cloud-task-2/frontend/node_modules/@typescript-eslint/eslint-plugin/docs/rules/unbound-method.md",
     "My-Uni-Notes/8st/cloud/cloud-task-2/frontend/node_modules/@typescript-eslint/eslint-plugin/docs/rules/typedef.md",
-    "My-Uni-Notes/8st/cloud/cloud-task-2/frontend/node_modules/@typescript-eslint/eslint-plugin/docs/rules/type-annotation-spacing.md",
-    "My-Uni-Notes/8st/cloud/cloud-task-2/frontend/node_modules/@typescript-eslint/eslint-plugin/docs/rules/triple-slash-reference.md",
-    "My-Uni-Notes/8st/cloud/cloud-task-2/frontend/node_modules/@typescript-eslint/eslint-plugin/docs/rules/switch-exhaustiveness-check.md",
-    "My-Uni-Notes/8st/cloud/cloud-task-2/frontend/node_modules/@typescript-eslint/eslint-plugin/docs/rules/strict-boolean-expressions.md",
-    "My-Uni-Notes/8st/cloud/cloud-task-2/frontend/node_modules/@typescript-eslint/eslint-plugin/docs/rules/space-infix-ops.md",
-    "My-Uni-Notes/8st/cloud/cloud-task-2/frontend/node_modules/@typescript-eslint/eslint-plugin/docs/rules/space-before-function-paren.md",
-    "My-Uni-Notes/8st/cloud/cloud-task-2/frontend/node_modules/@typescript-eslint/eslint-plugin/docs/rules/space-before-blocks.md",
-    "My-Uni-Notes/8st/cloud/cloud-task-2/frontend/node_modules/@typescript-eslint/eslint-plugin/docs/rules/sort-type-union-intersection-members.md",
-    "My-Uni-Notes/8st/cloud/cloud-task-2/frontend/node_modules/@typescript-eslint/eslint-plugin/docs/rules/sort-type-constituents.md",
-    "My-Uni-Notes/8st/cloud/cloud-task-2/frontend/node_modules/@typescript-eslint/eslint-plugin/docs/rules/semi.md",
-    "My-Uni-Notes/8st/cloud/cloud-task-2/frontend/node_modules/@typescript-eslint/eslint-plugin/docs/rules/return-await.md",
-    "My-Uni-Notes/8st/cloud/cloud-task-2/frontend/node_modules/@typescript-eslint/eslint-plugin/docs/rules/restrict-template-expressions.md",
-    "My-Uni-Notes/8st/cloud/cloud-task-2/frontend/node_modules/@typescript-eslint/eslint-plugin/docs/rules/restrict-plus-operands.md",
-    "My-Uni-Notes/8st/cloud/cloud-task-2/frontend/node_modules/@typescript-eslint/eslint-plugin/docs/rules/require-await.md",
-    "My-Uni-Notes/8st/cloud/cloud-task-2/frontend/node_modules/@typescript-eslint/eslint-plugin/docs/rules/require-array-sort-compare.md",
-    "My-Uni-Notes/8st/cloud/cloud-task-2/frontend/node_modules/@typescript-eslint/eslint-plugin/docs/rules/quotes.md",
-    "My-Uni-Notes/8st/cloud/cloud-task-2/frontend/node_modules/@typescript-eslint/eslint-plugin/docs/rules/promise-function-async.md",
-    "My-Uni-Notes/8st/cloud/cloud-task-2/frontend/node_modules/undici/docs/assets/lifecycle-diagram.png",
-    "My-Uni-Notes/8st/cloud/cloud-task-2/frontend/static/favicon.png",
-    "My-Uni-Notes/8st/cloud/task-2/cloud-task-2/frontend/node_modules/undici/docs/assets/lifecycle-diagram.png",
-    "My-Uni-Notes/8st/cloud/task-2/cloud-task-2/frontend/static/favicon.png",
-    "My-Uni-Notes/8st/cloud/task-2/frontend/node_modules/undici/docs/assets/lifecycle-diagram.png",
-    "My-Uni-Notes/8st/cloud/task-2/frontend/static/favicon.png",
-    "My-Uni-Notes/Studying/Calculus.png",
-    "freedom-penguin.github.io/icons/rev.png",
-    "freedom-penguin.github.io/icons/profile.jpg",
-    "freedom-penguin.github.io/icons/ljinux.png",
     "My-Uni-Notes/Studying/4st-semester/Untitled.canvas"
   ]
 }

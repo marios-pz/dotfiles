@@ -83,10 +83,31 @@ if not status_ok then
     return
 end
 
+local langs = {
+    'go',
+    'python',
+    'c',
+    'svelte',
+    'java',
+    'html',
+    'css',
+    'javascript',
+    'gitcommit',
+    'gitignore',
+    'typescript',
+    'sql',
+    'bash',
+    'json',
+    'toml',
+    'yaml',
+    'terraform',
+    'dockerfile',
+    'lua'
+}
+
 configs.setup({
-    ensure_installed = 'all',                            -- one of 'all' or a list of languages
-    sync_install = false,                                -- install languages synchronously (only applied to `ensure_installed`)
-    ignore_install = { 'phpdoc', 'tree-sitter-phpdoc' }, -- List of parsers to ignore installing
+    ensure_installed = langs, -- one of 'all' or a list of languages
+    sync_install = true,      -- install languages synchronously (only applied to `ensure_installed`)
     highlight = {
         -- user_languagetree = true,
         enable = true,       -- false will disable the whole extension
@@ -96,7 +117,7 @@ configs.setup({
     autopairs = {
         enable = true,
     },
-    indent = { enable = true, disable = { 'yaml', 'css' } },
+    indent = { enable = true, disable = { 'css' } },
     context_commentstring = {
         enable = true,
         ensure_installed = false,
@@ -111,9 +132,6 @@ configs.setup({
             'Gold',
             'Orchid',
             'DodgerBlue',
-            -- "Cornsilk",
-            -- "Salmon",
-            -- "LawnGreen",
         },
         disable = { 'html' },
     },

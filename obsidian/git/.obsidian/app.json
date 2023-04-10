@@ -1,5 +1,12 @@
 {
   "vimMode": true,
   "tabSize": 8,
-  "spellcheck": true
+  "spellcheck": true,
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "Letter",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  }
 }
