@@ -48,6 +48,7 @@ local plugins = {
 
     -- Convenience
     "xiyaowong/nvim-transparent",
+    'marioortizmanero/adoc-pdf-live.nvim',
     "lukas-reineke/indent-blankline.nvim",
     "ThePrimeagen/harpoon",
     "edluffy/hologram.nvim",

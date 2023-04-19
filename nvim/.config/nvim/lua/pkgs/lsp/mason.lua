@@ -72,16 +72,15 @@ mason_lspconfig.setup({
 -- set termguicolors to enable highlight groups
 vim.opt.termguicolors = true
 
-local status_ok, todo = pcall(require, 'nvim-treesitter.configs')
-if not status_ok then
-    return
-end
-todo.setup({})
 
 local status_ok, configs = pcall(require, 'nvim-treesitter.configs')
 if not status_ok then
     return
 end
+
+configs.setup({})
+
+require('adoc_pdf_live').setup()
 
 local langs = {
     'go',
