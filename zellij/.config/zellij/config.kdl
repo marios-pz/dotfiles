@@ -1,13 +1,25 @@
 // if you have any issues run `zellij setup --check`
 
+// RTFM: https://zellij.dev/documentation/
 keybinds {
-    normal {
-        // uncomment this and adjust key if using copy_on_select=falsdiso    // bind "Alt c" { Copy; }
+    unbind "Ctrl h"
+    unbind "Ctrl j"
+    unbind "Ctrl k"
+    unbind "Ctrl l"
+    unbind "Ctrl H"
+    unbind "Ctrl J"
+    unbind "Ctrl K"
+    unbind "Ctrl L"
+    unbind "Ctrl g"
+
+    normal clear-defaults=true {
     }
-    locked {
+
+    locked clear-defaults=true {
         bind "Alt g" { SwitchToMode "Normal"; }
     }
-    resize {
+
+    resize clear-defaults=true {
         bind "Alt n" { SwitchToMode "Normal"; }
         bind "h" "Left" { Resize "Increase Left"; }
         bind "j" "Down" { Resize "Increase Down"; }
@@ -20,7 +32,8 @@ keybinds {
         bind "=" "+" { Resize "Increase"; }
         bind "-" { Resize "Decrease"; }
     }
-    pane {
+
+    pane clear-defaults=true {
         bind "Alt p" { SwitchToMode "Normal"; }
         bind "h" "Left" { MoveFocus "Left"; }
         bind "l" "Right" { MoveFocus "Right"; }
@@ -37,7 +50,8 @@ keybinds {
         bind "e" { TogglePaneEmbedOrFloating; SwitchToMode "Normal"; }
         bind "c" { SwitchToMode "RenamePane"; PaneNameInput 0;}
     }
-    move {
+
+    move clear-defaults=true {
         bind "Alt h" { SwitchToMode "Normal"; }
         bind "n" "Tab" { MovePane; }
         bind "p" { MovePaneBackwards; }
@@ -46,7 +60,8 @@ keybinds {
         bind "k" "Up" { MovePane "Up"; }
         bind "l" "Right" { MovePane "Right"; }
     }
-    tab {
+
+    tab clear-defaults=true {
         bind "Alt t" { SwitchToMode "Normal"; }
         bind "r" { SwitchToMode "RenameTab"; TabNameInput 0; }
         bind "h" "Left" "Up" "k" { GoToPreviousTab; }
@@ -65,7 +80,8 @@ keybinds {
         bind "9" { GoToTab 9; SwitchToMode "Normal"; }
         bind "Tab" { ToggleTab; }
     }
-    scroll {
+
+    scroll clear-defaults=true {
         bind "Alt s" { SwitchToMode "Normal"; }
         bind "e" { EditScrollback; SwitchToMode "Normal"; }
         bind "s" { SwitchToMode "EnterSearch"; SearchInput 0; }
@@ -76,10 +92,9 @@ keybinds {
         bind "Alt b" "PageUp" "Left" "h" { PageScrollUp; }
         bind "d" { HalfPageScrollDown; }
         bind "u" { HalfPageScrollUp; }
-        // uncomment this and adjust key if using copy_on_select=false
-        // bind "Alt c" { Copy; }
     }
-    search {
+
+    search clear-defaults=true {
         bind "Alt s" { SwitchToMode "Normal"; }
         bind "Alt c" { ScrollToBottom; SwitchToMode "Normal"; }
         bind "j" "Down" { ScrollDown; }
@@ -94,24 +109,29 @@ keybinds {
         bind "w" { SearchToggleOption "Wrap"; }
         bind "o" { SearchToggleOption "WholeWord"; }
     }
-    entersearch {
+
+    entersearch clear-defaults=true {
         bind "Alt c" "Esc" { SwitchToMode "Scroll"; }
         bind "Enter" { SwitchToMode "Search"; }
     }
-    renametab {
+
+    renametab clear-defaults=true {
         bind "Alt c" { SwitchToMode "Normal"; }
         bind "Esc" { UndoRenameTab; SwitchToMode "Tab"; }
     }
-    renamepane {
+
+    renamepane clear-defaults=true {
         bind "Alt c" { SwitchToMode "Normal"; }
         bind "Esc" { UndoRenamePane; SwitchToMode "Pane"; }
     }
-    session {
+
+    session clear-defaults=true {
         bind "Alt o" { SwitchToMode "Normal"; }
         bind "Alt s" { SwitchToMode "Scroll"; }
         bind "d" { Detach; }
     }
-    tmux {
+
+    tmux clear-defaults=true {
         bind "[" { SwitchToMode "Scroll"; }
         bind "Alt b" { Write 2; SwitchToMode "Normal"; }
         bind "\"" { NewPane "Down"; SwitchToMode "Normal"; }
@@ -134,6 +154,8 @@ keybinds {
         bind "Space" { NextSwapLayout; }
         bind "x" { CloseFocus; SwitchToMode "Normal"; }
     }
+
+    // https://zellij.dev/documentation/keybindings-shared.html
     shared_except "locked" {
         bind "Alt g" { SwitchToMode "Locked"; }
         bind "Alt q" { Quit; }
@@ -147,27 +169,35 @@ keybinds {
         bind "Alt [" { PreviousSwapLayout; }
         bind "Alt ]" { NextSwapLayout; }
     }
+
     shared_except "normal" "locked" {
         bind "Enter" "Esc" { SwitchToMode "Normal"; }
     }
+
     shared_except "pane" "locked" {
         bind "Alt p" { SwitchToMode "Pane"; }
     }
+
     shared_except "resize" "locked" {
         bind "Alt n" { SwitchToMode "Resize"; }
     }
+
     shared_except "scroll" "locked" {
         bind "Alt s" { SwitchToMode "Scroll"; }
     }
+
     shared_except "session" "locked" {
         bind "Alt o" { SwitchToMode "Session"; }
     }
+
     shared_except "tab" "locked" {
         bind "Alt t" { SwitchToMode "Tab"; }
     }
+
     shared_except "move" "locked" {
         bind "Alt h" { SwitchToMode "Move"; }
     }
+
     shared_except "tmux" "locked" {
         bind "Alt b" { SwitchToMode "Tmux"; }
     }
@@ -186,7 +216,24 @@ pane_frames true
 
 auto_layout true
 
-theme "tokyonight"
+// https://zellij.dev/documentation/themes.html
+theme "default"
+
+themes {
+    default {
+        bg "#1f2335"
+        fg "#c3c7d1"
+        black "#282c3e"
+        red "#f7768e"
+        green "#9ece6a"
+        yellow "#e0af68"
+        blue "#7aa2f7"
+        magenta "#d58bff"
+        cyan "#7dcfff"
+        white "#c3c7d1"
+        orange "#ff9e64"
+    }
+}
 
 // Add "compact" when you get used to the keybinds
 default_layout "default" 
@@ -203,9 +250,3 @@ copy_clipboard "system"
 copy_on_select false
 
 mirror_session false
-
-// The folder in which Zellij will look for layouts
-// layout_dir "/path/to/my/layout_dir"
-
-// The folder in which Zellij will look for themes
-// theme_dir "/path/to/my/theme_dir"
