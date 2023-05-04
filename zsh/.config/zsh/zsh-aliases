@@ -35,4 +35,4 @@ alias gpg-retrieve="gpg --keyserver-options auto-key-retrieve --receive-keys"
 
 
 # DevOps Aliases 
-alias makekube="minikube start --cpus='6' --memory='14g' --kubernetes-version='1.22.6'"
+alias makekube="minikube start --cpus='6' --memory='12g' --kubernetes-version='1.22.6'"

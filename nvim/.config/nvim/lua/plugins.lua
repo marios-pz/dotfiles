@@ -46,6 +46,7 @@ local plugins = {
     'ray-x/lsp_signature.nvim',
 
     -- Convenience
+    'audibleblink/hackthebox.vim',
     "xiyaowong/nvim-transparent",
     'marioortizmanero/adoc-pdf-live.nvim',
     "lukas-reineke/indent-blankline.nvim",
