@@ -22,7 +22,6 @@ local plugins = {
     "jay-babu/mason-null-ls.nvim",
     'RRethy/vim-illuminate',
     "folke/todo-comments.nvim",
-    "andweeb/presence.nvim",
 
     -- Debugging
     "mfussenegger/nvim-dap",
@@ -51,7 +50,6 @@ local plugins = {
     'marioortizmanero/adoc-pdf-live.nvim',
     "lukas-reineke/indent-blankline.nvim",
     "ThePrimeagen/harpoon",
-    "edluffy/hologram.nvim",
     "nvim-tree/nvim-tree.lua",
     'b0o/schemastore.nvim',
     "lewis6991/impatient.nvim",
@@ -63,6 +61,13 @@ local plugins = {
     "akinsho/bufferline.nvim",
     "ray-x/guihua.lua",
     "ray-x/go.nvim",
+    {
+        "folke/noice.nvim",
+        dependencies = {
+            "MunifTanjim/nui.nvim",
+            "rcarriga/nvim-notify"
+        },
+    },
     {
         "kylechui/nvim-surround",
         config = function()
