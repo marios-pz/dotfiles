@@ -12,14 +12,14 @@ keybinds {
     unbind "Ctrl L"
     unbind "Ctrl g"
 
-    normal clear-defaults=true {
+    normal  {
     }
 
-    locked clear-defaults=true {
+    locked  {
         bind "Alt g" { SwitchToMode "Normal"; }
     }
 
-    resize clear-defaults=true {
+    resize  {
         bind "Alt n" { SwitchToMode "Normal"; }
         bind "h" "Left" { Resize "Increase Left"; }
         bind "j" "Down" { Resize "Increase Down"; }
@@ -33,7 +33,7 @@ keybinds {
         bind "-" { Resize "Decrease"; }
     }
 
-    pane clear-defaults=true {
+    pane  {
         bind "Alt p" { SwitchToMode "Normal"; }
         bind "h" "Left" { MoveFocus "Left"; }
         bind "l" "Right" { MoveFocus "Right"; }
@@ -51,7 +51,7 @@ keybinds {
         bind "c" { SwitchToMode "RenamePane"; PaneNameInput 0;}
     }
 
-    move clear-defaults=true {
+    move  {
         bind "Alt h" { SwitchToMode "Normal"; }
         bind "n" "Tab" { MovePane; }
         bind "p" { MovePaneBackwards; }
@@ -61,7 +61,7 @@ keybinds {
         bind "l" "Right" { MovePane "Right"; }
     }
 
-    tab clear-defaults=true {
+    tab clear-defaults=false {
         bind "Alt t" { SwitchToMode "Normal"; }
         bind "r" { SwitchToMode "RenameTab"; TabNameInput 0; }
         bind "h" "Left" "Up" "k" { GoToPreviousTab; }
@@ -81,7 +81,7 @@ keybinds {
         bind "Tab" { ToggleTab; }
     }
 
-    scroll clear-defaults=true {
+    scroll  {
         bind "Alt s" { SwitchToMode "Normal"; }
         bind "e" { EditScrollback; SwitchToMode "Normal"; }
         bind "s" { SwitchToMode "EnterSearch"; SearchInput 0; }
@@ -94,7 +94,7 @@ keybinds {
         bind "u" { HalfPageScrollUp; }
     }
 
-    search clear-defaults=true {
+    search  {
         bind "Alt s" { SwitchToMode "Normal"; }
         bind "Alt c" { ScrollToBottom; SwitchToMode "Normal"; }
         bind "j" "Down" { ScrollDown; }
@@ -110,28 +110,28 @@ keybinds {
         bind "o" { SearchToggleOption "WholeWord"; }
     }
 
-    entersearch clear-defaults=true {
+    entersearch  {
         bind "Alt c" "Esc" { SwitchToMode "Scroll"; }
         bind "Enter" { SwitchToMode "Search"; }
     }
 
-    renametab clear-defaults=true {
+    renametab  {
         bind "Alt c" { SwitchToMode "Normal"; }
         bind "Esc" { UndoRenameTab; SwitchToMode "Tab"; }
     }
 
-    renamepane clear-defaults=true {
+    renamepane  {
         bind "Alt c" { SwitchToMode "Normal"; }
         bind "Esc" { UndoRenamePane; SwitchToMode "Pane"; }
     }
 
-    session clear-defaults=true {
+    session  {
         bind "Alt o" { SwitchToMode "Normal"; }
         bind "Alt s" { SwitchToMode "Scroll"; }
         bind "d" { Detach; }
     }
 
-    tmux clear-defaults=true {
+    tmux  {
         bind "[" { SwitchToMode "Scroll"; }
         bind "Alt b" { Write 2; SwitchToMode "Normal"; }
         bind "\"" { NewPane "Down"; SwitchToMode "Normal"; }
