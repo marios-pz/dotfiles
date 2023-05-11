@@ -1,0 +1,18 @@
+- name: Ensure Ansible user exists
+  vars:
+    ansible_user: "ansible"
+  tasks:
+    - name: Check if Ansible user exists
+      getent:
+        database: passwd
+        key: "{{ ansible_user }}"
+      register: user_check
+
+    - name: Create Ansible user if it doesn't exist
+      user:
+        name: "{{ ansible_user }}"
+        comment: "Ansible user"
+        shell: "/bin/bash"
+        home: "/home/{{ ansible_user }}"
+        create_home: true
+      when: user_check.rc != 0

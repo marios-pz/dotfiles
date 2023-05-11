@@ -1,0 +1,8 @@
+pacman_packages:
+  - xorg
+  - neovim
+  - i3
+  - git
+
+yay_packages:
+  - ly

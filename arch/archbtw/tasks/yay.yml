@@ -1,0 +1,23 @@
+- name: Check if yay is installed
+  become: true
+  command: "which yay"
+  register: yay_check
+  changed_when: false
+
+- name: Install yay if not already installed
+  become: true
+  git:
+    repo: "https://aur.archlinux.org/yay.git"
+    dest: "/tmp/yay"
+  when: yay_check.rc != 0
+
+- name: Build and install yay package
+  become: true
+  command: "cd /tmp/yay && makepkg -si --noconfirm"
+  when: yay_check.rc != 0
+
+- name: Install packages with yay 
+  become: false
+  pacman:
+    name: "{{ yay_packages }}"
+    state: present

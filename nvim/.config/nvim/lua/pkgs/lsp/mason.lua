@@ -28,6 +28,11 @@ require("nvim-tree").setup({
     filters = {
         dotfiles = true,
     },
+    view = {
+        options = {
+            hide_dotfiles = false,
+        },
+    },
 })
 
 require("pkgs.lsp.lsps")
