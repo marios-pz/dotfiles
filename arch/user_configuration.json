@@ -3,7 +3,7 @@
         "multilib"
     ],
     "audio": "pipewire",
-    "bootloader": "grub-install",
+    "bootloader": "systemd-bootctl",
     "config_version": "2.5.6",
     "debug": false,
     "gfx_driver": "All open-source (default)",
@@ -35,7 +35,10 @@
     "packages": [
         "git",
         "neovim",
-        "openssh"
+        "openssh",
+	"ansible",
+	"python3",
+	"python-pip"
     ],
     "profile": {
         "path": "/usr/lib/python3.10/site-packages/archinstall/profiles/xorg.py"
