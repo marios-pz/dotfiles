@@ -24,7 +24,7 @@
     },
     "nic": {
         "dhcp": true,
-        "dns": null,
+        "dns": ["1.1.1.1", "1.0.0.1"],
         "gateway": null,
         "iface": null,
         "ip": null,
@@ -37,7 +37,7 @@
         "neovim"
     ],
     "profile": {
-        "path": "/usr/lib/python3.11/site-packages/archinstall/profiles/xorg.py"
+        "path": "/usr/lib/python3.10/site-packages/archinstall/profiles/xorg.py"
     },
     "script": "guided",
     "silent": false,

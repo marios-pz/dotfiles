@@ -1,5 +1,5 @@
 {
-    "/dev/vda": {
+    "/dev/sda": {
         "partitions": [
             {
                 "boot": true,
