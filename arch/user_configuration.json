@@ -8,11 +8,11 @@
     "debug": false,
     "gfx_driver": "All open-source (default)",
     "harddrives": [
-        "/dev/vda"
+        "/dev/sda"
     ],
     "hostname": "archbtw",
     "kernels": [
-        "linux-hardened"
+        "linux"
     ],
     "mirror-region": {
         "Greece": {
@@ -34,7 +34,8 @@
     "offline": false,
     "packages": [
         "git",
-        "neovim"
+        "neovim",
+        "openssh"
     ],
     "profile": {
         "path": "/usr/lib/python3.10/site-packages/archinstall/profiles/xorg.py"

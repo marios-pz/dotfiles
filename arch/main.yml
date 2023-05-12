@@ -1,4 +1,4 @@
 ---
 - hosts: local
   roles:
-    - archbtw
+  - archbtw

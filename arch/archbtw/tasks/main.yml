@@ -1,11 +1,14 @@
 ---
 - name: Execute tasks for archbtw role
   block:
+    - name: Check ansible-user
+      import_tasks:  ./ansible-user.yml
 
   rescue:
     - name: Handle errors
       ansible.builtin.debug:
         msg: "An error occurred in the main tasks block"
+
   always:
     - name: Cleanup
       ansible.builtin.debug:
