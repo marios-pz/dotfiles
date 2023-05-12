@@ -1,8 +1,27 @@
 ---
 - name: Execute tasks for archbtw role
+
   block:
-    - name: Check ansible-user
-      import_tasks:  ./ansible-user.yml
+    - name: Check if Ansible user exists
+      ansible.builtin.command:
+        cmd: getent passwd ansible
+      register: user_check
+      changed_when: false
+
+    - name: Create Ansible user
+      ansible.builtin.user:
+        name: ansible
+        shell: /usr/bin/nologin
+        system: true
+        state: present
+      when: user_check.rc != 0
+
+    - name: Add Ansible user to wheel group
+      ansible.builtin.user:
+        name: ansible
+        groups: wheel
+        append: true
+      when: user_check.rc != 0
 
   rescue:
     - name: Handle errors
