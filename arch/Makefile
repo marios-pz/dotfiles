@@ -5,7 +5,7 @@ PLAYBOOK_FILE = ./main.yml
 .PHONY: playbook lint
 
 playbook:
-	sudo $(ANSIBLE_PLAYBOOK) $(PLAYBOOK_FILE) -i $(INVENTORY_FILE)
+	$(ANSIBLE_PLAYBOOK) $(PLAYBOOK_FILE) -i $(INVENTORY_FILE) --ask-become-pass
 
 lint:
 	ansible-lint $(PLAYBOOK_FILE)

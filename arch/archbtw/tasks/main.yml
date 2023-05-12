@@ -2,31 +2,31 @@
 - name: Execute tasks for archbtw role
 
   block:
-    - name: Check if Ansible user exists
-      ansible.builtin.command:
-        cmd: getent passwd ansible
-      register: user_check
-      changed_when: false
 
-    - name: Create Ansible user
-      ansible.builtin.user:
-        name: ansible
-        shell: /usr/bin/nologin
-        system: true
+    - name: Install packages with pacman
+      become: true
+      pacman:
+        name: "{{ pacman_packages }}"
         state: present
-      when: user_check.rc != 0
 
-    - name: Add Ansible user to wheel group
-      ansible.builtin.user:
-        name: ansible
-        groups: wheel
-        append: true
-      when: user_check.rc != 0
+    - name: Remove bloat from machine
+      become: true
+      pacman:
+        name: "{{ bloat_list }}"
+        state: absent
+
+
+    - name: Make sure libvirtd is on
+      become: true
+      ansible.builtin.systemd:
+        name: libvirtd.service
+        enabled: true
+        state: started
 
   rescue:
     - name: Handle errors
       ansible.builtin.debug:
-        msg: "An error occurred in the main tasks block"
+        msg: "Wow something broke in Arch :/"
 
   always:
     - name: Cleanup

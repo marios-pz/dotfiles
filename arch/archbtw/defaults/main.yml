@@ -1,8 +1,66 @@
 pacman_packages:
-  - xorg
-  - neovim
-  - i3
+  # base
   - git
+  - neovim
+  - base-devel
+  - xorg
+  - wayland
+  - xorg-xwayland
+  - pipewire
+  - wireplumber
+  - networkmanager
 
-yay_packages:
-  - ly
+  # sway and essentials
+  - wlroots
+  - wingpanel-indicator-notifications
+  - ibus
+  - thunar
+  - xdg-desktop-portal-wlr
+  - brightnessctl
+  - playerctl
+  - sway
+  - waybar
+  - bemenu
+  - mako
+  - foot
+  - dmenu
+  - rofi
+
+  # Tools
+  - k9s
+  - docker
+  - neofetch
+  - zellij
+  - btop
+  - stow
+  - zsh
+  - busybox
+  - wireshark
+  - bat
+  - tor
+
+  # Software
+  - firefox
+  - vivaldi
+  - thunderbird
+  - vlc
+  - kdenlive
+  - steam
+  - obs-studio
+  - transmission-cli
+  - transmission-gtk
+
+  # VM
+  - qemu
+  - virt-manager
+  - dnsmasq
+  - bridge-utils
+
+  # Languages
+  - rust
+  - npm
+  - go
+  - ripgrep
+
+bloat_list:
+  - google-chrome

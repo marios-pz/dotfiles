@@ -1,5 +1,0 @@
-- name: Install packages with pacman
-  become: true
-  pacman:
-    name: "{{ pacman_packages }}"
-    state: present
