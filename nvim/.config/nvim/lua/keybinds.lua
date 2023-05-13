@@ -1,6 +1,6 @@
 vim.bo.expandtab = true
-vim.bo.shiftwidth = 2
-vim.bo.softtabstop = 2
+vim.bo.shiftwidth = 4
+vim.bo.softtabstop = 4
 
 
 local utils = require('utils')
@@ -24,27 +24,27 @@ keymap("n", "<C-l>", "<C-w>l")
 
 -- Window resize
 keymap("n", "<S-Up>", function()
-  command("resize -2")
+    command("resize -2")
 end)
 
 keymap("n", "<S-Down>", function()
-  command("resize +2")
+    command("resize +2")
 end)
 
 keymap("n", "<S-Right>", function()
-  command("vertical resize -2")
+    command("vertical resize -2")
 end)
 
 keymap("n", "<S-Left>", function()
-  command("vertical resize +2")
+    command("vertical resize +2")
 end)
 
 -- Navigate buffers
 keymap("n", "<S-l>", function()
-  command("bnext")
+    command("bnext")
 end)
 keymap("n", "<S-h>", function()
-  command("bprevious")
+    command("bprevious")
 end)
 
 -- Insert --
@@ -74,9 +74,9 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv")
 
 -- Leader + Number (1..9)
 for l = 1, 10, 1 do
-  keymap("n", "<leader>" .. l, function()
-    require("bufferline").go_to_buffer(l, true)
-  end)
+    keymap("n", "<leader>" .. l, function()
+        require("bufferline").go_to_buffer(l, true)
+    end)
 end
 
 
@@ -94,10 +94,10 @@ nkeymap("n", "<F22>", "<cmd>lua require('dap').step_out()<CR>", opts) --F22 -> S
 nkeymap("n", "<leader>db", "<cmd>lua require('dap').toggle_breakpoint()<CR>", opts)
 nkeymap("n", "<leader>B", "<cmd>lua require('dap').set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>", opts)
 nkeymap(
-  "n",
-  "<leader>lp",
-  "<cmd>lua require('dap').set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>",
-  opts
+    "n",
+    "<leader>lp",
+    "<cmd>lua require('dap').set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>",
+    opts
 )
 nkeymap("n", "<leader>dr", "<cmd>lua require('dap').repl.open()<CR>", opts)
 nkeymap("n", "<leader>dl", "<cmd>lua require('dap').run_last()<CR>", opts)
