@@ -14,7 +14,6 @@ vim.opt.rtp:prepend(lazypath)
 local plugins = {
     "folke/which-key.nvim",
     'folke/tokyonight.nvim',
-    "nvim-tree/nvim-web-devicons",
     'sindrets/diffview.nvim',
     "mfussenegger/nvim-dap-python",
     "williamboman/mason.nvim",
@@ -46,12 +45,12 @@ local plugins = {
     'ray-x/lsp_signature.nvim',
 
     -- Convenience
+    "github/copilot.vim",
     'audibleblink/hackthebox.vim',
     "xiyaowong/nvim-transparent",
     'marioortizmanero/adoc-pdf-live.nvim',
     "lukas-reineke/indent-blankline.nvim",
     "ThePrimeagen/harpoon",
-    "nvim-tree/nvim-tree.lua",
     'b0o/schemastore.nvim',
     "lewis6991/impatient.nvim",
     "rafamadriz/friendly-snippets",

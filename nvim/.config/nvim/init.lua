@@ -6,6 +6,7 @@ require("./pkgs/which-key")
 require("./pkgs/bufferline")
 require("./pkgs/dap")
 require("./pkgs/autocommands")
+require("./pkgs/noice")
 
 -- mason
 require("./pkgs/lsp/mason")
@@ -15,8 +16,10 @@ require("./pkgs/lsp/cmp")
 require("./pkgs/lsp/null-ls")
 require("./pkgs/lsp/lsp-config")
 require("./pkgs/lsp/lsp-signature")
+require("./pkgs/lsp/treesitter")
 
 -- Convenience
+--require("./pkgs/convenience/nvim-tree")
 require("./pkgs/convenience/vim-surround")
 require("./pkgs/convenience/renamer")
 require("./pkgs/convenience/comment")
@@ -31,3 +34,7 @@ require("./pkgs/autopairs")
 vim.cmd.colorscheme("tokyonight-storm")
 require('impatient').enable_profile()
 require("todo-comments").setup()
+
+-- Load Custom server and icons
+require("pkgs.lsp.lsp-config").setup()
+require("pkgs.lsp.lsps")

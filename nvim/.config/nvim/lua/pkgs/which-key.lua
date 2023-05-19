@@ -69,7 +69,6 @@ local mappings = {
     Q = Bind("qa!", "Quit"),
     c = Bind("Bdelete!", "Close Buffer"),
     C = Bind('silent! execute "%bd|e#|bd#"', "Close all buffers but this"),
-    e = Bind("NvimTreeToggle", "Explorer"),
     a = Bind("CodeActionMenu", "Code Actions"),
     q = Bind("lua vim.diagnostic.setloclist()", "Quickfix"),
     F = Bind("Telescope live_grep theme=ivy", "Find Text"),
