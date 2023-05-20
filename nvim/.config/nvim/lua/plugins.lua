@@ -45,10 +45,10 @@ local plugins = {
     'ray-x/lsp_signature.nvim',
 
     -- Convenience
+    'tigion/nvim-asciidoc-preview',
     "github/copilot.vim",
     'audibleblink/hackthebox.vim',
     "xiyaowong/nvim-transparent",
-    'marioortizmanero/adoc-pdf-live.nvim',
     "lukas-reineke/indent-blankline.nvim",
     "ThePrimeagen/harpoon",
     'b0o/schemastore.nvim',

@@ -83,8 +83,8 @@ end
 local nkeymap = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 -- Debugger
-nkeymap("n", "<F5>", "<cmd>lua require('dap').continue()<CR>", opts) --it also starts the execution in debug mode
-nkeymap("n", "e", "<cmd>Lex<cr>:vertical resize 30<cr>", opts)       --it also starts the execution in debug mode
+nkeymap("n", "<F5>", "<cmd>lua require('dap').continue()<CR>", opts)   --it also starts the execution in debug mode
+nkeymap("n", "<leader>e", "<cmd>Lex<cr>:vertical resize 30<cr>", opts) --it also starts the execution in debug mode
 
 nkeymap("n", "<S-F5>", "<cmd>lua require('dap').terminate()<CR>", opts)
 
