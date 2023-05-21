@@ -9,6 +9,7 @@ pacman_packages:
   - pipewire
   - wireplumber
   - networkmanager
+  - zsh
 
   # sway and essentials
   - wlroots
@@ -16,6 +17,7 @@ pacman_packages:
   - ibus
   - thunar
   - xdg-desktop-portal-wlr
+  - xdg-desktop-portal-gtk
   - brightnessctl
   - playerctl
   - sway
@@ -35,7 +37,6 @@ pacman_packages:
   - stow
   - zsh
   - busybox
-  - wireshark
   - bat
   - tor
 
