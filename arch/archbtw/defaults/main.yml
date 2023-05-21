@@ -62,6 +62,7 @@ pacman_packages:
   - npm
   - go
   - ripgrep
+  - jdk17-openjdk # Minecraft moment
 
 bloat_list:
   - google-chrome
