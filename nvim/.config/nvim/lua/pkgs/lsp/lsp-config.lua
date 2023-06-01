@@ -38,11 +38,6 @@ local function lsp_keymaps(bufnr)
         vim.diagnostic.goto_next({ border = "rounded" })
     end)
 
-    buf_keymap("v", "<leader>a", function()
-        command("CodeActionMenu")
-    end)
-
-    -- create_command("Format", vim.lsp.buf.formatting, { bang = true })
     create_command("Format", function()
     end, { bang = true })
 end

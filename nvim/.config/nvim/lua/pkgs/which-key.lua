@@ -65,6 +65,7 @@ local mappings = {
         end,
         'Comment',
     },
+
     w = Bind("w!", "Save"),
     Q = Bind("qa!", "Quit"),
     c = Bind("Bdelete!", "Close Buffer"),

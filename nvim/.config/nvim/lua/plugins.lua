@@ -78,10 +78,6 @@ local plugins = {
         'weilbith/nvim-code-action-menu',
         cmd = 'CodeActionMenu',
     },
-    {
-        "kosayoda/nvim-lightbulb",
-        dependencies = 'antoinemadec/FixCursorHold.nvim',
-    },
 }
 
 local opts = {}
