@@ -22,6 +22,8 @@ local plugins = {
     'RRethy/vim-illuminate',
     "folke/todo-comments.nvim",
 
+    "akinsho/toggleterm.nvim",
+
     -- Debugging
     "mfussenegger/nvim-dap",
     "theHamsta/nvim-dap-virtual-text",
@@ -46,7 +48,6 @@ local plugins = {
 
     -- Convenience
     'tigion/nvim-asciidoc-preview',
-    "github/copilot.vim",
     'audibleblink/hackthebox.vim',
     "xiyaowong/nvim-transparent",
     "lukas-reineke/indent-blankline.nvim",
@@ -77,6 +78,10 @@ local plugins = {
     {
         'weilbith/nvim-code-action-menu',
         cmd = 'CodeActionMenu',
+    },
+    {
+        "folke/trouble.nvim",
+        dependencies = { "nvim-tree/nvim-web-devicons" },
     },
 }
 

@@ -17,6 +17,7 @@ require("./pkgs/lsp/null-ls")
 require("./pkgs/lsp/lsp-config")
 require("./pkgs/lsp/lsp-signature")
 require("./pkgs/lsp/treesitter")
+require("./pkgs/trouble")
 
 -- Convenience
 --require("./pkgs/convenience/nvim-tree")

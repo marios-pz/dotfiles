@@ -65,13 +65,12 @@ local mappings = {
         end,
         'Comment',
     },
-
     w = Bind("w!", "Save"),
     Q = Bind("qa!", "Quit"),
     c = Bind("Bdelete!", "Close Buffer"),
     C = Bind('silent! execute "%bd|e#|bd#"', "Close all buffers but this"),
     a = Bind("CodeActionMenu", "Code Actions"),
-    q = Bind("lua vim.diagnostic.setloclist()", "Quickfix"),
+    q = Bind("TroubleToggle quickfix", "Quickfix"),
     F = Bind("Telescope live_grep theme=ivy", "Find Text"),
     f = RunBind('telescope.builtin', "find_files(require('telescope.themes').get_dropdown({previewer = false}))",
         "Find Files"),
@@ -194,12 +193,6 @@ local mappings = {
         k = Bind("Telescope keymaps", "Keymaps"),
         C = Bind("Telescope commands", "Commands"),
     },
-    p = {
-        name = "Packer",
-        s = Bind("PackerSync", "Sync"),
-        S = Bind("PackerStatus", "Status"),
-        u = Bind("PackerUpdate", "Update"),
-    },
     m = {
         name = "Mason",
         m = Bind("Mason", "Mason"),
@@ -226,6 +219,7 @@ local mappings = {
         q = Bind("lua vim.diagnostic.setloclist()", "Quickfix"),
         r = Bind("lua vim.lsp.buf.rename()", "Rename"),
     },
+
 }
 
 local vopts = {

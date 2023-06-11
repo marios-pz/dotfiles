@@ -23,7 +23,8 @@ local langs = {
     'yaml',
     'terraform',
     'dockerfile',
-    'lua'
+    'lua',
+    'rust' -- (Written in Rust)
 }
 
 configs.setup({

@@ -1,7 +1,5 @@
 node_modules/
-*.json
 plugin/
 package-lock.json
-.DS_Store
-lua/.DS_Store
-lua/pkgs/.DS_Store
+**/.DS_Store
+*.json

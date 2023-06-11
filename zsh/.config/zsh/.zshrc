@@ -74,3 +74,6 @@ autoload edit-command-line; zle -N edit-command-line
 
 # Load Angular CLI autocompletion.
 source <(ng completion script)
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/bin/terraform terraform
