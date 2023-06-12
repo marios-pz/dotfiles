@@ -63,6 +63,15 @@ local plugins = {
     "ray-x/guihua.lua",
     "ray-x/go.nvim",
     {
+        "nvim-neotest/neotest",
+        dependencies = {
+            "nvim-neotest/neotest-go",
+            "nvim-lua/plenary.nvim",
+            "nvim-treesitter/nvim-treesitter",
+            "antoinemadec/FixCursorHold.nvim"
+        },
+    },
+    {
         "folke/noice.nvim",
         dependencies = {
             "MunifTanjim/nui.nvim",

@@ -83,6 +83,13 @@ local mappings = {
         end,
         'Rename',
     },
+    u = {
+        function()
+            require("neotest").run.run()
+        end,
+        'Rename',
+    },
+
     d = {
         name = 'Debugging',
         b = {
