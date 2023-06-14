@@ -48,8 +48,8 @@ local plugins = {
 
     -- Convenience
     'tigion/nvim-asciidoc-preview',
-    'audibleblink/hackthebox.vim',
     "xiyaowong/nvim-transparent",
+    'audibleblink/hackthebox.vim',
     "lukas-reineke/indent-blankline.nvim",
     "ThePrimeagen/harpoon",
     'b0o/schemastore.nvim',

@@ -9,6 +9,23 @@ if not luasnip_ok then
     return
 end
 
+
+require("transparent").setup({
+    groups = { -- table: default groups
+        'Normal', 'NormalNC', 'Comment', 'Constant', 'Special', 'Identifier',
+        'Statement', 'PreProc', 'Type', 'Underlined', 'Todo', 'String', 'Function',
+        'Conditional', 'Repeat', 'Operator', 'Structure', 'LineNr', 'NonText',
+        'SignColumn', 'CursorLineNr', 'EndOfBuffer',
+    },
+    extra_groups = {
+        "NormalFloat", -- plugins which have float panel such as Lazy, Mason, LspInfo
+        "NvimTreeNormal",
+        "Telescope",
+        "TroubleToggle"
+    },
+    exclude_groups = {}, -- table: groups you don't want to clear
+})
+
 local has_words_before = function()
     local line, col = unpack(vim.api.nvim_win_get_cursor(0))
     return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match('%s') == nil
