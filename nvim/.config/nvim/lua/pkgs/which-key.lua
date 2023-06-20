@@ -70,7 +70,7 @@ local mappings = {
     c = Bind("Bdelete!", "Close Buffer"),
     C = Bind('silent! execute "%bd|e#|bd#"', "Close all buffers but this"),
     a = Bind("CodeActionMenu", "Code Actions"),
-    q = Bind("TroubleToggle quickfix", "Quickfix"),
+    q = Bind("lua vim.diagnostic.setloclist()", "Quickfix"),
     F = Bind("Telescope live_grep theme=ivy", "Find Text"),
     f = RunBind('telescope.builtin', "find_files(require('telescope.themes').get_dropdown({previewer = false}))",
         "Find Files"),
