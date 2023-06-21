@@ -9,6 +9,10 @@ export SXHKD_SHELL="/usr/bin/sh"
 export EDITOR="nvim"
 export TERMINAL="kitty"
 
+if [[ -d "/opt/homebrew" ]]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
 export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$HOME/.local/bin":$PATH
 export PATH=${GRADLE_HOME}/bin:$PATH
