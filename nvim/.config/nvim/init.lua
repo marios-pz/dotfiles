@@ -2,6 +2,7 @@ require("options")
 require("utils")
 require("keybinds")
 require("plugins")
+require("pkgs.autocommands")
 
 -- mason
 require("pkgs.lsp.mason")
@@ -26,7 +27,6 @@ require("pkgs.autopairs")
 require("todo-comments").setup()
 
 require("pkgs.bufferline")
-require("pkgs.autocommands")
 require("pkgs.dap")
 require("pkgs.noice")
 require("pkgs.trouble")
