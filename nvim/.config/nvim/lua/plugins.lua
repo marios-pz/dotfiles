@@ -22,8 +22,6 @@ local plugins = {
     'RRethy/vim-illuminate',
     "folke/todo-comments.nvim",
 
-    "akinsho/toggleterm.nvim",
-
     -- Debugging
     "mfussenegger/nvim-dap",
     "theHamsta/nvim-dap-virtual-text",
@@ -56,12 +54,19 @@ local plugins = {
     "lewis6991/impatient.nvim",
     "rafamadriz/friendly-snippets",
     "JoosepAlviste/nvim-ts-context-commentstring",
-    "numToStr/Comment.nvim",
     "tpope/vim-surround",
     "windwp/nvim-autopairs",
     "akinsho/bufferline.nvim",
     "ray-x/guihua.lua",
     "ray-x/go.nvim",
+    {
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup({
+
+            })
+        end
+    },
     {
         "nvim-neotest/neotest",
         dependencies = {
@@ -69,13 +74,6 @@ local plugins = {
             "nvim-lua/plenary.nvim",
             "nvim-treesitter/nvim-treesitter",
             "antoinemadec/FixCursorHold.nvim"
-        },
-    },
-    {
-        "folke/noice.nvim",
-        dependencies = {
-            "MunifTanjim/nui.nvim",
-            "rcarriga/nvim-notify"
         },
     },
     {
