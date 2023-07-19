@@ -1,0 +1,148 @@
+* {
+    font-family: JetBrains Font Mono;
+    font-size: 18px;
+}
+
+window#waybar {
+    color: #ffffff;
+    background-color: rgba(0,0,0,0);
+}
+
+window#waybar.hidden {
+    opacity: 0.9;
+}
+
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#scratchpad,
+#mpd {
+    padding: 0 10px;
+    color: #ffffff;
+}
+
+#window,
+#workspaces {
+    margin: 0 4px;
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#clock,
+#backlight,
+#pulseaudio,
+#network,
+#custom-media.custom-spotify,
+#custom-media.custom-vlc,
+#idle_inhibitor,
+#battery,
+#tray{
+    background-color: rgba(23,23,23,1);
+    border-radius: 10px;
+    padding: 0.5em;
+    color: white;
+    margin-top: 1px;
+}
+
+#battery{
+    margin-left: 20px;
+}
+
+#network{
+    margin-right: 20px;
+}
+
+#battery.charging, #battery.plugged {
+    color: #ffffff;
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background-color: #f53c3c;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+label:focus {
+}
+
+#network.disconnected,
+#mpd.disconnected{
+    color: red;
+}
+
+#mpd.paused,
+#mpd.stopped,
+#wireplumber.muted,
+#pulseaudio.muted{
+    color: yellow;
+}
+
+#custom-media {
+    min-width: 100px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
+}
+
+#idle_inhibitor.activated {
+    color: #2d3436;
+}
+
+#language {
+    background: #00b093;
+    padding: 0 5px;
+    margin: 0 5px;
+    min-width: 16px;
+}
+
+#keyboard-state {
+    background: #97e1ad;
+    padding: 0 0px;
+    margin: 0 5px;
+    min-width: 16px;
+}
+
+#keyboard-state > label {
+    padding: 0 5px;
+}
+
+#keyboard-state > label.locked {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#scratchpad {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#scratchpad.empty {
+	background-color: transparent;
+}
