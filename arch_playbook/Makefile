@@ -1,6 +1,6 @@
 ANSIBLE_PLAYBOOK = ansible-playbook
 INVENTORY_FILE = ./inventory
-PLAYBOOK_FILE = ./main.yml
+PLAYBOOK_FILE = ./main_playbook.yaml
 
 .PHONY: playbook lint
 
