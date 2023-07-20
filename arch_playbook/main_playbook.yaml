@@ -14,6 +14,10 @@
 
     - name: Install packages with pacman
       become: true
+      notify:
+        - enable_services
+        - user_groups
+      
       pacman:
         name: "{{ pacman_list }}"
         state: present
@@ -25,7 +29,7 @@
         state: absent
 
   handlers:
-    - name: Start and enable services
+    - name: enable_services
       become: true
       systemd:
         name: "{{ item }}"
@@ -35,9 +39,10 @@
         - libvirtd.service
         - polkit.service
         - docker.service
+        - bluetooth.service
         - sddm.service
 
-    - name: Add user to groups
+    - name: user_groups
       become: true
       user:
         name: amadeus
