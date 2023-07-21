@@ -1,7 +1,7 @@
-= My Dotfiles
+# My Dotfiles
 
-= Purpose
+# Purpose
 This project contains my preferred configurations and environments 
 
-= LICENSE
+# LICENSE
 Project is under LGPLv3
