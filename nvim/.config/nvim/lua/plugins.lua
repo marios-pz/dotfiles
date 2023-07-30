@@ -12,8 +12,12 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
-    "folke/which-key.nvim",
+    -- Colorschemes
     'folke/tokyonight.nvim',
+    'rebelot/kanagawa.nvim',
+
+    -- Core Utils
+    "folke/which-key.nvim",
     'sindrets/diffview.nvim',
     "mfussenegger/nvim-dap-python",
     "williamboman/mason.nvim",
@@ -59,6 +63,13 @@ local plugins = {
     "akinsho/bufferline.nvim",
     "ray-x/guihua.lua",
     "ray-x/go.nvim",
+    {
+        "kdheepak/lazygit.nvim",
+        -- optional for floating window border decoration
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+        },
+    },
     {
         'numToStr/Comment.nvim',
         config = function()

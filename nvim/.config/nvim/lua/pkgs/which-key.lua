@@ -72,6 +72,7 @@ local mappings = {
     a = Bind("CodeActionMenu", "Code Actions"),
     q = Bind("lua vim.diagnostic.setloclist()", "Quickfix"),
     F = Bind("Telescope live_grep theme=ivy", "Find Text"),
+    g = Bind("LazyGit", "LazyGit"),
     f = RunBind('telescope.builtin', "find_files(require('telescope.themes').get_dropdown({previewer = false}))",
         "Find Files"),
     b = RunBind('telescope.builtin', "buffers(require('telescope.themes').get_dropdown{previewer = false})",
@@ -205,12 +206,7 @@ local mappings = {
         m = Bind("Mason", "Mason"),
         l = Bind("MasonLog", "Mason"),
     },
-    g = {
-        name = "Git",
-        o = Bind("Telescope git_status", "Open changed file"),
-        b = Bind("Telescope git_branches", "Checkout branch"),
-        c = Bind("Telescope git_commits", "Checkout commit"),
-    },
+
     l = {
         name = "LSP",
         d = Bind("Telescope lsp_document_diagnostics", "Document Diagnostics"),

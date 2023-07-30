@@ -2,6 +2,7 @@ require("options")
 require("utils")
 require("keybinds")
 require("plugins")
+require("colors")
 require("pkgs.autocommands")
 
 -- mason
@@ -30,4 +31,3 @@ require("pkgs.dap")
 require("pkgs.trouble")
 require("pkgs.which-key")
 require('impatient').enable_profile()
-vim.cmd.colorscheme("tokyonight-storm")
