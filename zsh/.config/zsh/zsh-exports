@@ -18,4 +18,6 @@ export PATH="$HOME/.local/bin":$PATH
 export PATH=${GRADLE_HOME}/bin:$PATH
 export PATH="$PATH:$(go env GOBIN):$(go env GOPATH)/bin"
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+export PATH="$PATH:$HOME/.local/bin"
+
 # source /etc/zsh_command_not_found
