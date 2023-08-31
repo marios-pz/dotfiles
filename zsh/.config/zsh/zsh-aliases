@@ -4,6 +4,8 @@ alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git
 alias vi='nvim'
 alias suvi='sudo -E nvim'
 alias virc='nvim ~/.config/nvim'
+alias lf='lfrun'
+
 alias la='ls -a --color=auto'
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
