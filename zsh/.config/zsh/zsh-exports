@@ -7,7 +7,7 @@ export MANWIDTH=999
 export GRADLE_HOME=$HOME/.local/share/gradle/latest
 export SXHKD_SHELL="/usr/bin/sh"
 export EDITOR="nvim"
-export TERMINAL="kitty"
+export TERMINAL="foot"
 
 if [[ -d "/opt/homebrew" ]]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
