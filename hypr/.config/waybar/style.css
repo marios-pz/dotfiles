@@ -1,9 +1,9 @@
 * {
     border: none;
     border-radius: 0px;
-    font-family: "JetBrains Font Mono";
+    font-family: "Liga SFMono Nerd Font";
     font-weight: bold;
-    font-size: 11px;
+    font-size: 13px;
     min-height: 10px;
 }
 
@@ -13,12 +13,13 @@ window#waybar {
     background: @bar-bg;
 }
 
-tooltip {
+tooltip, #custom-keyboard_layout {
     background: @main-bg;
     color: @main-fg;
     border-radius: 7px;
     border-width: 0px;
 }
+
 
 #workspaces button {
     box-shadow: none;
@@ -90,24 +91,22 @@ tooltip {
 
 #battery,
 #bluetooth,
-#custom-cliphist,
 #clock,
 #cpu,
-#custom-gpuinfo,
 #idle_inhibitor,
 #memory,
-#custom-mode,
 #mpris,
 #network,
 #custom-power,
 #pulseaudio,
 #taskbar,
 #tray,
-#custom-updates,
-#custom-wallchange,
-#custom-wbar,
 #window,
 #workspaces,
+#custom-cliphist,
+#custom-gpuinfo,
+#custom-keyboard_layout,
+#custom-updates,
 #custom-l_end,
 #custom-r_end,
 #custom-sl_end,
@@ -120,6 +119,11 @@ tooltip {
     margin: 4px 0px 4px 0px;
     padding-left: 4px;
     padding-right: 4px;
+}
+
+#custom-keyboard_layout {
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 #workspaces,
