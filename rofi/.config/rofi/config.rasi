@@ -8,7 +8,7 @@ configuration {
     display-window:              "";
     drun-display-format:         "{name}";
     window-format:               "{w}{t}";
-    font:                        "JetBrainsMono Nerd Font 10";
+    font:                        "Liga SFMono Nerd Font 11";
     icon-theme:                  "Tela-circle-dracula";
 }
 
@@ -27,7 +27,7 @@ window {
     border:                      2px;
     border-radius:               40px;
     border-color:                @main-br;
-    background-color:            transparent;
+    background-color:            @main-fg;
 }
 mainbox {
     enabled:                     true;
@@ -42,7 +42,7 @@ mainbox {
 // Inputs //
 inputbar {
     enabled:                     true;
-    width:                       25%;
+    width:                       0%;
     children:                    [ "mode-switcher" , "entry" ];
     background-color:            transparent;
     background-image:            url("~/.config/swww/wall.rofi", height);
