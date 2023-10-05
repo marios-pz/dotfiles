@@ -18,7 +18,6 @@ local plugins = {
 
     -- Core Utils
     "folke/which-key.nvim",
-    'sindrets/diffview.nvim',
     "mfussenegger/nvim-dap-python",
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
@@ -49,6 +48,7 @@ local plugins = {
     'ray-x/lsp_signature.nvim',
 
     -- Convenience
+    'sindrets/diffview.nvim',
     'tigion/nvim-asciidoc-preview',
     "xiyaowong/nvim-transparent",
     'audibleblink/hackthebox.vim',
