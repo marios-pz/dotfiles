@@ -3,7 +3,7 @@
     border-radius: 0px;
     font-family: "Liga SFMono Nerd Font";
     font-weight: bold;
-    font-size: 13px;
+    font-size: 11px;
     min-height: 10px;
 }
 
@@ -24,12 +24,12 @@ tooltip, #custom-keyboard_layout {
 #workspaces button {
     box-shadow: none;
 	text-shadow: none;
-    padding: 0px;
     border-radius: 9px;
     margin-top: 3px;
     margin-bottom: 3px;
-    padding-left: 3px;
-    padding-right: 3px;
+    padding: 0px;
+    padding-left: 1px;
+    padding-right: 1px;
     color: @main-fg;
     animation: gradient_f 20s ease-in infinite;
     transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
@@ -117,13 +117,13 @@ tooltip, #custom-keyboard_layout {
     background: @main-bg;
     opacity: 1;
     margin: 4px 0px 4px 0px;
-    padding-left: 4px;
-    padding-right: 4px;
+    padding-left: 2px;
+    padding-right: 2px;
 }
 
 #custom-keyboard_layout {
-    padding-left: 8px;
-    padding-right: 8px;
+    padding-left: 6px;
+    padding-right: 6px;
 }
 
 #workspaces,

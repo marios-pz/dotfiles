@@ -14,7 +14,7 @@
 
 // positions generated based on config.ctl //
 
-	"modules-left": ["custom/padd","custom/l_end", "custom/r_end","custom/l_end","wlr/taskbar","custom/r_end", "custom/padd", "custom/keyboard_layout"],
+	"modules-left": ["custom/l_end","wlr/taskbar","custom/r_end", "custom/padd", "custom/keyboard_layout"],
 	"modules-center": ["custom/padd","custom/l_end","clock","custom/r_end","custom/padd"],
 	"modules-right": ["custom/padd","custom/l_end","tray","battery","custom/r_end","custom/l_end","network","bluetooth","pulseaudio","pulseaudio#microphone","custom/r_end","custom/padd"],
 
