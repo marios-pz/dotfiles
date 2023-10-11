@@ -16,8 +16,8 @@ configuration {
 
 // Main //
 window {
-    height:                      590px;
-    width:                       1140px;
+    height:                      340px;
+    width:                       420px;
     transparency:                "real";
     fullscreen:                  false;
     enabled:                     true;
@@ -41,7 +41,7 @@ mainbox {
 
 // Inputs //
 inputbar {
-    enabled:                     true;
+    enabled:                     false;
     width:                       0%;
     children:                    [ "mode-switcher" , "entry" ];
     background-color:            transparent;
@@ -65,7 +65,7 @@ mode-switcher{
 }
 button {
     cursor:                      pointer;
-    border-radius:               50px;
+    border-radius:               10px;
     background-color:            @main-bg;
     text-color:                  @main-fg;
 }
@@ -78,10 +78,11 @@ button selected {
 // Lists //
 listbox {
     spacing:                     10px;
-    padding:                     30px;
+    padding:                     10px;
     children:                    [ "listview" ];
     background-color:            @main-bg;
 }
+
 listview {
     enabled:                     true;
     columns:                     1;
@@ -101,8 +102,8 @@ listview {
 // Elements //
 element {
     enabled:                     true;
-    spacing:                     30px;
-    padding:                     8px;
+    spacing:                     0px;
+    padding:                     10px;
     border-radius:               20px;
     cursor:                      pointer;
     background-color:            transparent;
@@ -125,7 +126,7 @@ element-icon {
 }
 element-text {
     vertical-align:              0.5;
-    horizontal-align:            0.0;
+    horizontal-align:            0.5;
     cursor:                      inherit;
     background-color:            transparent;
     text-color:                  inherit;
