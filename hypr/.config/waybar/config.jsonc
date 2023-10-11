@@ -14,20 +14,12 @@
 
 // positions generated based on config.ctl //
 
-	"modules-left": ["custom/padd","custom/l_end", "custom/power", "custom/r_end","custom/l_end","wlr/taskbar","custom/r_end", "custom/padd", "custom/keyboard_layout"],
+	"modules-left": ["custom/padd","custom/l_end", "custom/r_end","custom/l_end","wlr/taskbar","custom/r_end", "custom/padd", "custom/keyboard_layout"],
 	"modules-center": ["custom/padd","custom/l_end","clock","custom/r_end","custom/padd"],
 	"modules-right": ["custom/padd","custom/l_end","tray","battery","custom/r_end","custom/l_end","network","bluetooth","pulseaudio","pulseaudio#microphone","custom/r_end","custom/padd"],
 
 
 // sourced from modules based on config.ctl //
-
-    "custom/power": {
-        "format": "{}",
-        "exec": "echo ; echo  logout",
-        "on-click": "~/.config/hypr/scripts/logoutlaunch.sh 2",
-        "interval" : 86400, // once every day
-        "tooltip": true
-    },
 
     "custom/keyboard_layout":{
         "format": "{}",
@@ -78,12 +70,12 @@
 
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "󰤨 {essid}",
-        "format-ethernet": "󱘖 Wired",
-        "tooltip-format": "󱘖 {ipaddr}  {bandwidthUpBytes}  {bandwidthDownBytes}",
-        "format-linked": "󱘖 {ifname} (No IP)",
-        "format-disconnected": " Disconnected",
-        "format-alt": "󰤨 {signalStrength}%",
+        "format-wifi": "{essid}",
+        "format-ethernet": "Wired",
+        "tooltip-format": "{ipaddr}  {bandwidthUpBytes}  {bandwidthDownBytes}",
+        "format-linked": "{ifname} (No IP)",
+        "format-disconnected": "",
+        "format-alt": "{signalStrength}%",
         "interval": 5
     },
 
