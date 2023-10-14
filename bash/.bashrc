@@ -57,4 +57,9 @@ _WHITE=$(tput setaf 7)
 _RESET=$(tput sgr0)
 _BOLD=$(tput bold)
 
-export PS1="${_BOLD}${_YELLOW}[${_GREEN}\h${_BLUE}@${_RED}\u${_RESET}${_YELLOW}] \$ ${_RESET}"
+parse_git_branch() {
+    amog="$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/')"
+    echo "$amog"
+}
+
+export PS1="${_BOLD}${_YELLOW}[${_GREEN}\h${_BLUE}@${_RED}\u${_RESET}${_YELLOW}]\$(parse_git_branch) \$ ${_RESET}"
