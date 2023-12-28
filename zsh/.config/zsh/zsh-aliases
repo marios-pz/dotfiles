@@ -18,7 +18,7 @@ alias mv='mv -i'
 alias rm='rm -i'
 
 alias weather="curl wttr.in"
-
+alias tfconf="cd ~/.var/app/com.valvesoftware.Steam/data/Steam/steamapps/common/"
 # easier to read disk
 alias df='df -h'     # human-readable sizes
 alias free='free -m' # show sizes in MB
