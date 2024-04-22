@@ -2,13 +2,13 @@
 HISTSIZE=2000
 SAVEHIST=2000
 export_os
+
 export MANPAGER='nvim +Man!'
 export MANWIDTH=999
 export GRADLE_HOME=$HOME/.local/share/gradle/latest
 export SXHKD_SHELL="/usr/bin/sh"
 export EDITOR="nvim"
 export TERMINAL="foot"
-export TERM=xterm
 export NNN_PLUG='f:finder;o:fzopen;p:mocq;d:diffs;t:nmount;v:imgview'
 
 if [[ -d "/opt/homebrew" ]]; then
