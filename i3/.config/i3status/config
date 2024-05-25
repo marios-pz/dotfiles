@@ -1,27 +1,51 @@
+
 general {
-        output_format = "i3bar"
         colors = true
         interval = 5
 }
 
-order += "wireless wlp3s0"
-order += "battery 0"
+order += "wireless _first_"
+order += "ethernet _first_"
+order += "battery all"
+order += "disk /"
+order += "load"
+order += "memory"
 order += "tztime athens"
 
-wireless wlp3s0 {
-        format_up = "%essid %quality %ip"
-        format_down = "Wifi Down"
+wireless _first_ {
+        format_up = "W: (%quality at %essid) %ip"
+        format_down = "W: down"
 }
 
-battery 0 {
+ethernet _first_ {
+        format_up = "E: %ip (%speed)"
+        format_down = "E: down"
+}
+
+
+battery all {
         format = "%status %percentage %remaining %emptytime"
-        format_down = "❌"
-        status_chr = "⚡"
-        status_bat = "🔋"
-        status_unk = "🪫"
-        status_full = "🔋" 
+        format_down = "No battery"
+        status_chr = "⚡ CHR"
+        status_bat = "🔋 BAT"
+        status_unk = "? UNK"
+        status_full = "☻ FULL"
         path = "/sys/class/power_supply/BAT%d/uevent"
         low_threshold = 10
+}
+
+disk "/" {
+        format = "%avail"
+}
+
+load {
+        format = "%1min"
+}
+
+memory {
+        format = "%used | %available"
+        threshold_degraded = "1G"
+        format_degraded = "MEMORY < %available"
 }
 
 tztime athens {
