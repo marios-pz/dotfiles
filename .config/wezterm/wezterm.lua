@@ -8,7 +8,7 @@ local config = wezterm.config_builder()
 
 -- For example, changing the color scheme:
 config.color_scheme = "Batman"
-config.font = wezterm.font("CozetteHiDpi")
+-- config.font = wezterm.font("CozetteHiDpi")
 
 -- and finally, return the configuration to wezterm
 return config
