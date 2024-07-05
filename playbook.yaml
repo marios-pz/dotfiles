@@ -1,0 +1,43 @@
+---
+- name: Setup Dotfiles
+  hosts: localhost
+
+  vars:
+    vital_dependencies:
+      - git
+      - stow
+      - neovim
+      - network-manager-applet
+      - curl
+      - wget
+
+    additional_dependencies:
+      - firefox
+      - starship
+      - wezterm
+      - waybar
+      - hyprpaper
+      - dunst
+
+  tasks:
+    - name: Install Ansible Galaxy Roles General
+      become: false
+      ansible.builtin.command: ansible-galaxy collection install community.general
+    
+    - name: Install vital dependencies
+      become: true
+      community.general.pacman:
+        name: "{{ vital_dependencies }}"
+        state: present
+
+    - name: Run stow
+      become: false
+      shell: "stow . --target {{ ansible_env.HOME }} --verbose=2"
+      register: result
+      changed_when: "'LINK:' in result.stderr"
+
+    - name: Install rest dependencies
+      become: true
+      community.general.pacman:
+        name: "{{ additional_dependencies }}"
+        state: present
