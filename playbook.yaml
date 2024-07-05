@@ -2,33 +2,30 @@
 - name: Setup Dotfiles
   hosts: localhost
 
-  vars:
-    vital_dependencies:
-      - git
-      - stow
-      - neovim
-      - network-manager-applet
-      - curl
-      - wget
-
-    additional_dependencies:
-      - firefox
-      - starship
-      - wezterm
-      - waybar
-      - hyprpaper
-      - dunst
-
   tasks:
+
+    - name: Ensure the Arch Linux keyring is up to date
+      ansible.builtin.pacman:
+        name: archlinux-keyring
+        state: latest
+
+    - name: Import Packages
+      include_vars:
+        dir: ansible/variables
+        files_matching: 'packages.yaml'
+        name: packages
+
     - name: Install Ansible Galaxy Roles General
       become: false
-      ansible.builtin.command: ansible-galaxy collection install community.general
-    
-    - name: Install vital dependencies
+      ansible.builtin.command: |
+        ansible-galaxy collection install community.general
+
+    - name: Install core packages
       become: true
       community.general.pacman:
-        name: "{{ vital_dependencies }}"
+        name: "{{ item }}"
         state: present
+      loop: "{{ packages.main }}"
 
     - name: Run stow
       become: false
@@ -36,8 +33,31 @@
       register: result
       changed_when: "'LINK:' in result.stderr"
 
-    - name: Install rest dependencies
+    - name: Install system fonts
       become: true
       community.general.pacman:
-        name: "{{ additional_dependencies }}"
+        name: "{{ item }}"
         state: present
+      loop: "{{ packages.fonts }}"
+
+    - name: Install tools
+      become: true
+      community.general.pacman:
+        name: "{{ item }}"
+        state: present
+      loop: "{{ packages.tools }}"
+
+    - name: Enable bluetoothd service
+      become: true
+      ansible.builtin.systemd:
+        name: bluetooth
+        enabled: true
+        state: started
+
+    - name: Enable Syncthing service for the user
+      become: false
+      ansible.builtin.systemd:
+        name: syncthing
+        enabled: true
+        state: started
+        scope: user
