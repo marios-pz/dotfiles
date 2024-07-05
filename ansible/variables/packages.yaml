@@ -1,0 +1,53 @@
+---
+main:
+  - git
+  - stow
+  - network-manager-applet
+  - curl
+  - wget
+  - ripgrep
+  - unzip
+  - tar
+  - ranger
+  - rofi
+  - pipewire
+  - wireplumber
+  - polkit
+  - qt5-wayland
+  - qt6-wayland
+  - polkit-kde-agent
+  - xdg-desktop-portal-hyprland
+  - firefox
+  - starship
+  - wezterm
+  - waybar
+  - hyprpaper
+  - dunst
+  # - virtualbox
+  # - virtualbox-host-modules-arch
+  - syncthing
+  - blueberry
+
+fonts:
+  - ttf-dejavu
+  - ttf-liberation
+  - noto-fonts
+  - noto-fonts-cjk
+  - ttf-droid
+  - ttf-ubuntu-font-family
+  - xorg-fonts-type1
+  - xorg-fonts-misc
+  - ttf-freefont
+
+tools:
+  - neovim
+  - go
+  - python3
+  - docker
+  - helm
+  - minikube
+  - k9s
+  - kubectl
+  - obsidian
+  - terraform
+  - opentofu
