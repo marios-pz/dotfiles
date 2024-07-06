@@ -3,7 +3,6 @@
   hosts: localhost
 
   tasks:
-
     - name: Ensure the Arch Linux keyring is up to date
       ansible.builtin.pacman:
         name: archlinux-keyring
@@ -12,7 +11,7 @@
     - name: Import Packages
       include_vars:
         dir: ansible/variables
-        files_matching: 'packages.yaml'
+        files_matching: "packages.yaml"
         name: packages
 
     - name: Install Ansible Galaxy Roles General
@@ -40,12 +39,45 @@
         state: present
       loop: "{{ packages.fonts }}"
 
+    - name: Check if yay is installed
+      command: yay --version
+      register: yay_check
+      ignore_errors: true
+
+    - name: Clone yay repository
+      git:
+        repo: https://aur.archlinux.org/yay.git
+        dest: /tmp/yay
+        clone: true
+        update: true
+      when: yay_check.failed
+
+    - name: Build and install yay
+      command: makepkg -si --noconfirm
+      args:
+        chdir: /tmp/yay
+      when: yay_check.failed
+
+    - name: Clean up yay build directory
+      file:
+        path: /tmp/yay
+        state: absent
+      when: yay_check.failed
+
     - name: Install tools
       become: true
       community.general.pacman:
         name: "{{ item }}"
         state: present
       loop: "{{ packages.tools }}"
+
+    - name: Install packages from AUR
+      community.general.pacman:
+        name: "{{ item }}"
+        state: present
+        executable: yay
+        extra_args: --builddir /var/cache/yay
+      loop: "{{ packages.yay }}"
 
     - name: Enable bluetoothd service
       become: true
