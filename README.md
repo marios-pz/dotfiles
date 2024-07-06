@@ -3,16 +3,19 @@
 This repository contains my dotfiles for my personal workflow.
 Feel free to help or make suggestions.
 
+## Preview
+![image](https://github.com/marios-pz/dotfiles/assets/30930688/e9a53544-bb41-4286-b90f-6b3d1a9d0fdc)
+
+
+## Installation
 To clone the repo do the below:
 
 ```shell
 git clone --recurse-submodules https://github.com/marios-pz/nvim.git
 ```
 
-# Ansible Playbook
-
-To run the ansible playbook, run the below
+Install ansible `sudo pacman -S ansible` and run the below
 
 ```shell
-ansible-playbook --ask-become-pass fedora-playbook.yaml
+ansible-playbook -K playbook.yaml
 ```
