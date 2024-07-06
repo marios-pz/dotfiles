@@ -1,15 +1,16 @@
 ---
 main:
+  - base-devel
   - git
   - stow
   - network-manager-applet
   - curl
   - wget
+  - rsync
   - ripgrep
   - unzip
   - tar
   - ranger
-  - rofi
   - pipewire
   - wireplumber
   - polkit
@@ -22,24 +23,42 @@ main:
   - wezterm
   - waybar
   - hyprpaper
-  - dunst
-  # - virtualbox
-  # - virtualbox-host-modules-arch
+  - hypridle
+  - mako
   - syncthing
   - blueberry
+  - slurp
+  - foot
+  - grim
+  - hyprlock
+  - fzf
+  - fuzzel
+  - wl-clipboard
+  - pamixer
+  - playerctl
+  - feh
+  - brightnessctl
+  # - virtualbox
+  # - virtualbox-host-modules-arch
 
 fonts:
   - ttf-dejavu
   - ttf-liberation
-  - noto-fonts
-  - noto-fonts-cjk
   - ttf-droid
   - ttf-ubuntu-font-family
   - xorg-fonts-type1
   - xorg-fonts-misc
   - ttf-freefont
+  - noto-fonts
+  - noto-fonts-emoji
+  - noto-fonts-cjk
+  - noto-fonts-extra
 
 tools:
+  - mpv
+  - thunderbird
+  - luarocks
+  - npm
   - neovim
   - go
   - python3
@@ -51,3 +70,7 @@ tools:
   - obsidian
   - terraform
   - opentofu
+
+yay:
+  - catppuccin-gtk-theme-mocha
+  - cozette-otb
