@@ -10,34 +10,39 @@ main:
   - ripgrep
   - unzip
   - tar
-  - ranger
   - pipewire
   - wireplumber
   - polkit
-  - qt5-wayland
-  - qt6-wayland
   - polkit-kde-agent
-  - xdg-desktop-portal-hyprland
+  - ranger
   - firefox
-  - starship
-  - wezterm
-  - waybar
-  - hyprpaper
-  - hypridle
-  - mako
-  - syncthing
-  - blueberry
-  - slurp
-  - foot
-  - grim
-  - hyprlock
   - fzf
-  - fuzzel
-  - wl-clipboard
-  - pamixer
   - playerctl
   - feh
   - brightnessctl
+  - thunar-archive-plugin
+  - thunar-media-tags-plugin
+  - thunar-volman
+  - ffmpegthumbnailer
+  - webp-pixbuf-loader
+  - starship
+  - wezterm
+  - syncthing
+  - blueberry
+  - fuzzel
+  - tumbler
+  - xfce4-screenshooter
+  - i3
+  - i3lock
+  - i3status
+  - xclip
+  - autorandr
+  - rofi
+  - gtk-engine-murrine
+  - sassc
+  - fcitx-im
+  - fcitx-configtool
+  - fcitx-mozc
   # - virtualbox
   # - virtualbox-host-modules-arch
 
@@ -53,9 +58,15 @@ fonts:
   - noto-fonts-emoji
   - noto-fonts-cjk
   - noto-fonts-extra
+  - adobe-source-han-sans-jp-fonts
+  - adobe-source-han-serif-jp-fonts
+  - noto-fonts-cjk
+  - otf-ipafont
+  - otf-ipaexfont
+  - ttf-hanazono
+  - ttf-sazanami
 
 tools:
-  - mpv
   - thunderbird
   - luarocks
   - npm
@@ -74,3 +85,9 @@ tools:
 yay:
   - catppuccin-gtk-theme-mocha
   - cozette-otb
+  - raw-thumbnailer
+  - ttf-korurud
+  - ttf-monapo
+  - ttf-mplus-git
+  - ttf-vlgothic
+  - ttf-kanjistrokeorders
