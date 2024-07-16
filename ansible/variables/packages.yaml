@@ -23,6 +23,7 @@ main:
   - thunar-archive-plugin
   - thunar-media-tags-plugin
   - thunar-volman
+  - gvfs
   - ffmpegthumbnailer
   - webp-pixbuf-loader
   - starship
@@ -31,6 +32,7 @@ main:
   - blueberry
   - fuzzel
   - tumbler
+  - mpv
   - xfce4-screenshooter
   - i3
   - i3lock
@@ -83,7 +85,6 @@ tools:
   - opentofu
 
 yay:
-  - catppuccin-gtk-theme-mocha
   - cozette-otb
   - raw-thumbnailer
   - ttf-korurud
