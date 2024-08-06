@@ -1,139 +1,171 @@
 function fish_prompt
-    # This prompt shows:
-    # - green lines if the last return command is OK, red otherwise
-    # - your user name, in red if root or yellow otherwise
-    # - your hostname, in cyan if ssh or blue otherwise
-    # - the current path (with prompt_pwd)
-    # - date +%X
-    # - the current virtual environment, if any
-    # - the current git status, if any, with fish_git_prompt
-    # - the current battery state, if any, and if your power cable is unplugged, and if you have "acpi"
-    # - current background jobs, if any
+end # In case this file gets loaded non-interactively, e.g by conda
+status is-interactive || exit
 
-    # It goes from:
-    # ┬─[nim@Hattori:~]─[11:39:00]
-    # ╰─>$ echo here
+_tide_remove_unusable_items
+_tide_cache_variables
+_tide_parent_dirs
+source (functions --details _tide_pwd)
 
-    # To:
-    # ┬─[nim@Hattori:~/w/dashboard]─[11:37:14]─[V:django20]─[G:master↑1|●1✚1…1]─[B:85%, 05:41:42 remaining]
-    # │ 2    15054    0%    arrêtée    sleep 100000
-    # │ 1    15048    0%    arrêtée    sleep 100000
-    # ╰─>$ echo there
+set -l prompt_var _tide_prompt_$fish_pid
+set -U $prompt_var # Set var here so if we erase $prompt_var, bg job won't set a uvar
 
-    set -l retc red
-    test $status = 0; and set retc green
+set_color normal | read -l color_normal
+status fish-path | read -l fish_path
 
-    set -q __fish_git_prompt_showupstream
-    or set -g __fish_git_prompt_showupstream auto
+# _tide_repaint prevents us from creating a second background job
+function _tide_refresh_prompt --on-variable $prompt_var --on-variable COLUMNS
+    set -g _tide_repaint
+    commandline -f repaint
+end
 
-    function _nim_prompt_wrapper
-        set retc $argv[1]
-        set -l field_name $argv[2]
-        set -l field_value $argv[3]
+if contains newline $_tide_left_items # two line prompt initialization
+    test "$tide_prompt_add_newline_before" = true && set -l add_newline '\n'
 
-        set_color normal
-        set_color $retc
-        echo -n '─'
-        set_color -o green
-        echo -n '['
-        set_color normal
-        test -n $field_name
-        and echo -n $field_name:
-        set_color $retc
-        echo -n $field_value
-        set_color -o green
-        echo -n ']'
+    set_color $tide_prompt_color_frame_and_connection -b normal | read -l prompt_and_frame_color
+
+    set -l column_offset 5
+    test "$tide_left_prompt_frame_enabled" = true &&
+        set -l top_left_frame "$prompt_and_frame_color╭─" &&
+        set -l bot_left_frame "$prompt_and_frame_color╰─" &&
+        set column_offset (math $column_offset-2)
+    test "$tide_right_prompt_frame_enabled" = true &&
+        set -l top_right_frame "$prompt_and_frame_color─╮" &&
+        set -l bot_right_frame "$prompt_and_frame_color─╯" &&
+        set column_offset (math $column_offset-2)
+
+    if test "$tide_prompt_transient_enabled" = true
+        eval "
+function fish_prompt
+    _tide_status=\$status _tide_pipestatus=\$pipestatus if not set -e _tide_repaint
+        jobs -q && jobs -p | count | read -lx _tide_jobs
+        $fish_path -c \"set _tide_pipestatus \$_tide_pipestatus
+set _tide_parent_dirs \$_tide_parent_dirs
+PATH=\$(string escape \"\$PATH\") CMD_DURATION=\$CMD_DURATION fish_bind_mode=\$fish_bind_mode set $prompt_var (_tide_2_line_prompt)\" &
+        builtin disown
+
+        command kill \$_tide_last_pid 2>/dev/null
+        set -g _tide_last_pid \$last_pid
     end
 
-    set_color $retc
-    echo -n '┬─'
-    set_color -o green
-    echo -n [
+    if not set -q _tide_transient
+        math \$COLUMNS-(string length -V \"\$$prompt_var[1][1]\$$prompt_var[1][3]\")+$column_offset | read -lx dist_btwn_sides
 
-    if functions -q fish_is_root_user; and fish_is_root_user
-        set_color -o red
+        echo -n $add_newline'$top_left_frame'(string replace @PWD@ (_tide_pwd) \"\$$prompt_var[1][1]\")'$prompt_and_frame_color'
+        string repeat -Nm(math max 0, \$dist_btwn_sides-\$_tide_pwd_len) '$tide_prompt_icon_connection'
+
+        echo \"\$$prompt_var[1][3]$top_right_frame\"
+    end
+    echo -n \e\[0J\"$bot_left_frame\$$prompt_var[1][2]$color_normal \"
+end
+
+function fish_right_prompt
+    set -e _tide_transient || string unescape \"\$$prompt_var[1][4]$bot_right_frame$color_normal\"
+end"
     else
-        set_color -o yellow
+        eval "
+function fish_prompt
+    _tide_status=\$status _tide_pipestatus=\$pipestatus if not set -e _tide_repaint
+        jobs -q && jobs -p | count | read -lx _tide_jobs
+        $fish_path -c \"set _tide_pipestatus \$_tide_pipestatus
+set _tide_parent_dirs \$_tide_parent_dirs
+PATH=\$(string escape \"\$PATH\") CMD_DURATION=\$CMD_DURATION fish_bind_mode=\$fish_bind_mode set $prompt_var (_tide_2_line_prompt)\" &
+        builtin disown
+
+        command kill \$_tide_last_pid 2>/dev/null
+        set -g _tide_last_pid \$last_pid
     end
 
-    echo -n $USER
-    set_color -o white
-    echo -n @
+    math \$COLUMNS-(string length -V \"\$$prompt_var[1][1]\$$prompt_var[1][3]\")+$column_offset | read -lx dist_btwn_sides
 
-    if test -z "$SSH_CLIENT"
-        set_color -o blue
+    echo -ns $add_newline'$top_left_frame'(string replace @PWD@ (_tide_pwd) \"\$$prompt_var[1][1]\")'$prompt_and_frame_color'
+    string repeat -Nm(math max 0, \$dist_btwn_sides-\$_tide_pwd_len) '$tide_prompt_icon_connection'
+    echo -ns \"\$$prompt_var[1][3]$top_right_frame\"\n\"$bot_left_frame\$$prompt_var[1][2]$color_normal \"
+end
+
+function fish_right_prompt
+    string unescape \"\$$prompt_var[1][4]$bot_right_frame$color_normal\"
+end"
+    end
+else # one line prompt initialization
+    test "$tide_prompt_add_newline_before" = true && set -l add_newline '\0'
+
+    math 5 -$tide_prompt_min_cols | read -l column_offset
+    test $column_offset -ge 0 && set column_offset "+$column_offset"
+
+    if test "$tide_prompt_transient_enabled" = true
+        eval "
+function fish_prompt
+    set -lx _tide_status \$status
+    _tide_pipestatus=\$pipestatus if not set -e _tide_repaint
+        jobs -q && jobs -p | count | read -lx _tide_jobs
+        $fish_path -c \"set _tide_pipestatus \$_tide_pipestatus
+set _tide_parent_dirs \$_tide_parent_dirs
+PATH=\$(string escape \"\$PATH\") CMD_DURATION=\$CMD_DURATION fish_bind_mode=\$fish_bind_mode set $prompt_var (_tide_1_line_prompt)\" &
+        builtin disown
+
+        command kill \$_tide_last_pid 2>/dev/null
+        set -g _tide_last_pid \$last_pid
+    end
+
+    if set -q _tide_transient
+        echo -n \e\[0J
+        add_prefix= _tide_item_character
+        echo -n '$color_normal '
     else
-        set_color -o cyan
+        math \$COLUMNS-(string length -V \"\$$prompt_var[1][1]\$$prompt_var[1][2]\")$column_offset | read -lx dist_btwn_sides
+        string replace @PWD@ (_tide_pwd) $add_newline \$$prompt_var[1][1]'$color_normal '
+    end
+end
+
+function fish_right_prompt
+    set -e _tide_transient || string unescape \"\$$prompt_var[1][2]$color_normal\"
+end"
+    else
+        eval "
+function fish_prompt
+    _tide_status=\$status _tide_pipestatus=\$pipestatus if not set -e _tide_repaint
+        jobs -q && jobs -p | count | read -lx _tide_jobs
+        $fish_path -c \"set _tide_pipestatus \$_tide_pipestatus
+set _tide_parent_dirs \$_tide_parent_dirs
+PATH=\$(string escape \"\$PATH\") CMD_DURATION=\$CMD_DURATION fish_bind_mode=\$fish_bind_mode set $prompt_var (_tide_1_line_prompt)\" &
+        builtin disown
+
+        command kill \$_tide_last_pid 2>/dev/null
+        set -g _tide_last_pid \$last_pid
     end
 
-    echo -n (prompt_hostname)
-    set_color -o white
-    echo -n :(prompt_pwd)
-    set_color -o green
-    echo -n ']'
+    math \$COLUMNS-(string length -V \"\$$prompt_var[1][1]\$$prompt_var[1][2]\")$column_offset | read -lx dist_btwn_sides
+    string replace @PWD@ (_tide_pwd) $add_newline \$$prompt_var[1][1]'$color_normal '
+end
 
-    # Date
-    _nim_prompt_wrapper $retc '' (date +%X)
-
-    # Vi-mode
-    # The default mode prompt would be prefixed, which ruins our alignment.
-    function fish_mode_prompt
+function fish_right_prompt
+    string unescape \"\$$prompt_var[1][2]$color_normal\"
+end"
     end
+end
 
-    if test "$fish_key_bindings" = fish_vi_key_bindings
-        or test "$fish_key_bindings" = fish_hybrid_key_bindings
-        set -l mode
-        switch $fish_bind_mode
-            case default
-                set mode (set_color --bold red)N
-            case insert
-                set mode (set_color --bold green)I
-            case replace_one
-                set mode (set_color --bold green)R
-                echo '[R]'
-            case replace
-                set mode (set_color --bold cyan)R
-            case visual
-                set mode (set_color --bold magenta)V
+eval "function _tide_on_fish_exit --on-event fish_exit
+    set -e $prompt_var
+end"
+
+if test "$tide_prompt_transient_enabled" = true
+    function _tide_enter_transient
+        # If the commandline will be executed, or is empty
+        if commandline --is-valid || test -z "$(commandline)"
+            # Pager open usually means selecting, not running
+            # Can be untrue, but it's better than the alternative
+            if not commandline --paging-mode
+                set -g _tide_transient
+                set -g _tide_repaint
+                commandline -f repaint
+            end
         end
-        set mode $mode(set_color normal)
-        _nim_prompt_wrapper $retc '' $mode
+        commandline -f execute
     end
 
-
-    # Virtual Environment
-    set -q VIRTUAL_ENV_DISABLE_PROMPT
-    or set -g VIRTUAL_ENV_DISABLE_PROMPT true
-    set -q VIRTUAL_ENV
-    and _nim_prompt_wrapper $retc V (basename "$VIRTUAL_ENV")
-
-    # git
-    set -l prompt_git (fish_git_prompt '%s')
-    test -n "$prompt_git"
-    and _nim_prompt_wrapper $retc G $prompt_git
-
-    # Battery status
-    type -q acpi
-    and test (acpi -a 2> /dev/null | string match -r off)
-    and _nim_prompt_wrapper $retc B (acpi -b | cut -d' ' -f 4-)
-
-    # New line
-    echo
-
-    # Background jobs
-    set_color normal
-
-    for job in (jobs)
-        set_color $retc
-        echo -n '│ '
-        set_color brown
-        echo $job
-    end
-
-    set_color normal
-    set_color $retc
-    echo -n '╰─>'
-    set_color -o red
-    echo -n '$ '
-    set_color normal
+    bind \r _tide_enter_transient
+    bind \n _tide_enter_transient
+    bind -M insert \r _tide_enter_transient
+    bind -M insert \n _tide_enter_transient
 end

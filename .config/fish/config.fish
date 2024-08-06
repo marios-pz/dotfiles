@@ -6,7 +6,7 @@ end
 # First line removes the path; second line sets it.  Without the first line,
 # your path gets massive and fish becomes very slow.
 set -e fish_user_paths
-set -U fish_user_paths $HOME/.bin  $HOME/.local/bin  $HOME/Applications /var/lib/flatpak/exports/bin/ $fish_user_paths
+set -U fish_user_paths $HOME/.bin $HOME/.local/google-cloud-sdk/bin/  $HOME/.local/bin  $HOME/Applications /var/lib/flatpak/exports/bin/ $fish_user_paths
 
 ### EXPORT ###
 set fish_greeting                                 # Supresses fish's intro message
@@ -86,7 +86,7 @@ alias .5='cd ../../../../..'
 alias vi='nvim'
 
 # Changing "ls" to "eza"
-alias ls='eza -al --icons --color=always --group-directories-first' # my preferred listing
+alias ls='eza -a --icons --color=always --group-directories-first' # my preferred listing
 alias la='eza -a --icons --color=always --group-directories-first'  # all files and dirs
 alias ll='eza -l --icons --color=always --group-directories-first'  # long format
 alias lt='eza -aT --icons --color=always --group-directories-first' # tree listing
@@ -104,4 +104,7 @@ alias gpg-check="gpg2 --keyserver-options auto-key-retrieve --verify"
 # receive the key of a developer
 alias gpg-retrieve="gpg2 --keyserver-options auto-key-retrieve --receive-keys"
 
-zoxide init fish | source
+# SOURCES FILES
+source $HOME/.local/google-cloud-sdk/path.fish.inc
+
+zoxide init --cmd cd fish | source
