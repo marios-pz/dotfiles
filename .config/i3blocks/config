@@ -116,14 +116,14 @@ interval=10
 #COLOR_CRIT=#FF0000
 
 # Battery indicator
-#
+
 [battery2]
+command=~/.config/i3blocks/battery
 markup=pango
 interval=30
-color=#7dcfff
 
 # Brightness indicator
-#[backlight]
+# [backlight]
 #label=☀
 #interval=20
 #STEP_SIZE=5

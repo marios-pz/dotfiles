@@ -2,7 +2,7 @@
 
 test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
 alias vi='nvim'
-alias ls='ls --color=auto'
+alias suvi='sudo nvim'
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
 
@@ -10,10 +10,13 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
 alias k='kubectl'
+
+
+if [ -x "$(command -v exa)" ]; then
+    alias ls="exa --colour=always --icons=always"
+    alias la="exa --colour=always --icons=always --long --all --group"
+fi
 
 
 # Add an "alert" alias for long running commands.  Use like so:

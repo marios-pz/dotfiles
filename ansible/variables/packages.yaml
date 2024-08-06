@@ -1,9 +1,8 @@
 ---
 main:
-  - base-devel
+  - build-essential
   - git
   - stow
-  - network-manager-applet
   - curl
   - wget
   - rsync
@@ -12,8 +11,8 @@ main:
   - tar
   - pipewire
   - wireplumber
-  - polkit
-  - polkit-kde-agent
+  # - polkit
+  # - polkit-kde-agent
   - ranger
   - firefox
   - fzf
@@ -26,69 +25,44 @@ main:
   - gvfs
   - ffmpegthumbnailer
   - webp-pixbuf-loader
-  - starship
-  - wezterm
-  - syncthing
-  - blueberry
+  # - blueberry
   - fuzzel
   - tumbler
   - mpv
   - xfce4-screenshooter
   - i3
   - i3lock
-  - i3status
+  - i3blocks
   - xclip
   - autorandr
   - rofi
-  - gtk-engine-murrine
   - sassc
-  - fcitx-im
-  - fcitx-configtool
-  - fcitx-mozc
-  # - virtualbox
-  # - virtualbox-host-modules-arch
-
-fonts:
-  - ttf-dejavu
-  - ttf-liberation
-  - ttf-droid
-  - ttf-ubuntu-font-family
-  - xorg-fonts-type1
-  - xorg-fonts-misc
-  - ttf-freefont
-  - noto-fonts
-  - noto-fonts-emoji
-  - noto-fonts-cjk
-  - noto-fonts-extra
-  - adobe-source-han-sans-jp-fonts
-  - adobe-source-han-serif-jp-fonts
-  - noto-fonts-cjk
-  - otf-ipafont
-  - otf-ipaexfont
-  - ttf-hanazono
-  - ttf-sazanami
-
-tools:
-  - thunderbird
-  - luarocks
+  - fcitx5
+  - fcitx5-configtool
+  - fcitx5-mozc
+  - gtk2-engine-murrine
+  - gnupg
+  - software-properties-common
+  - fonts-dejavu
+  - fonts-liberation
+  - fonts-droid-fallback
+  - fonts-ubuntu
+  - xfonts-base
+  - fonts-freefont-ttf
+  - fonts-noto
+  - fonts-noto-cjk
+  - fonts-noto-color-emoji
+  - fonts-noto-extra
+  - fonts-ipafont-gothic
+  - fonts-ipafont-mincho
+  - fonts-hanazono
   - npm
-  - neovim
-  - go
+  - golang
   - python3
-  - docker
-  - helm
-  - minikube
-  - k9s
-  - kubectl
-  - obsidian
-  - terraform
-  - opentofu
-
-yay:
-  - cozette-otb
-  - raw-thumbnailer
-  - ttf-korurud
-  - ttf-monapo
-  - ttf-mplus-git
-  - ttf-vlgothic
-  - ttf-kanjistrokeorders
+  - python3-venv
+  - python3-pip
+  - luarocks
+  - docker.io
+  - thunderbird
+  - cargo
+  - fd-find

@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 # If not running interactively, don't do anything
 case $- in
@@ -31,6 +31,24 @@ fi
 
 if [ -f "./.config/bash/config.sh" ]; then
     . "./.config/bash/config.sh"
+fi
+
+if [ -f "./.config/bash/kubectl.sh" ]; then
+    . "./.config/bash/kubectl.sh"
+fi
+
+bind 'set show-all-if-ambiguous on'
+bind 'TAB:menu-complete'
+
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f "$HOME/.local/google-cloud-sdk/path.bash.inc" ]; then 
+    . "$HOME/.local/google-cloud-sdk/path.bash.inc"; 
+fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f "$HOME/.local/google-cloud-sdk/completion.bash.inc" ]; then 
+    . "$HOME/.local/google-cloud-sdk/completion.bash.inc";
 fi
 
 eval "$(starship init bash)"

@@ -3,11 +3,6 @@
   hosts: localhost
 
   tasks:
-    - name: Ensure the Arch Linux keyring is up to date
-      ansible.builtin.pacman:
-        name: archlinux-keyring
-        state: latest
-
     - name: Import Packages
       tags: packages
       include_vars:
@@ -15,15 +10,10 @@
         files_matching: "packages.yaml"
         name: packages
 
-    - name: Install Ansible Galaxy Roles General
-      become: false
-      ansible.builtin.command: |
-        ansible-galaxy collection install community.general
-
     - name: Install core packages
       become: true
       tags: core
-      community.general.pacman:
+      ansible.builtin.apt:
         name: "{{ item }}"
         state: present
       loop: "{{ packages.main }}"
@@ -35,58 +25,9 @@
       register: result
       changed_when: "'LINK:' in result.stderr"
 
-    - name: Install system fonts
-      become: true
-      tags: fonts
-      community.general.pacman:
-        name: "{{ item }}"
-        state: present
-      loop: "{{ packages.fonts }}"
-
-    - name: Check if yay is installed
-      command: yay --version
-      register: yay_check
-      ignore_errors: true
-
-    - name: Clone yay repository
-      git:
-        repo: https://aur.archlinux.org/yay.git
-        dest: /tmp/yay
-        clone: true
-        update: true
-      when: yay_check.failed
-
-    - name: Build and install yay
-      command: makepkg -si --noconfirm
-      args:
-        chdir: /tmp/yay
-      when: yay_check.failed
-
-    - name: Clean up yay build directory
-      file:
-        path: /tmp/yay
-        state: absent
-      when: yay_check.failed
-
-    - name: Install tools
-      tags: tools
-      become: true
-      community.general.pacman:
-        name: "{{ item }}"
-        state: present
-      loop: "{{ packages.tools }}"
-
-    - name: Install packages from AUR
-      tags: yay
-      community.general.pacman:
-        name: "{{ item }}"
-        state: present
-        executable: yay
-        extra_args: --builddir /var/cache/yay
-      loop: "{{ packages.yay }}"
-
     - name: Enable bluetoothd service
       become: true
+      tags: services
       ansible.builtin.systemd:
         name: bluetooth
         enabled: true
@@ -94,6 +35,7 @@
 
     - name: Enable Syncthing service for the user
       become: false
+      tags: services
       ansible.builtin.systemd:
         name: syncthing
         enabled: true
