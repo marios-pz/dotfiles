@@ -11,6 +11,8 @@ main:
   - tar
   - pipewire
   - wireplumber
+  - eza
+  - zoxide
   # - polkit
   # - polkit-kde-agent
   - ranger
@@ -40,7 +42,7 @@ main:
   - fcitx5
   - fcitx5-configtool
   - fcitx5-mozc
-  - gtk2-engine-murrine
+  # - gtk2-engine-murrine
   - gnupg
   - software-properties-common
   - fonts-dejavu
