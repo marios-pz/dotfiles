@@ -64,3 +64,10 @@
         enabled: true
         state: started
         scope: user
+
+    - name: Set the shell for the user
+      become: true
+      user:
+        name: user
+        shell: /usr/bin/fish
+
