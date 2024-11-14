@@ -105,6 +105,8 @@ alias gpg-check="gpg2 --keyserver-options auto-key-retrieve --verify"
 alias gpg-retrieve="gpg2 --keyserver-options auto-key-retrieve --receive-keys"
 
 # SOURCES FILES
-# source $HOME/.local/google-cloud-sdk/path.fish.inc
+if test -f $HOME/.local/bin/google-cloud-sdk/path.fish.inc
+    source $HOME/.local/bin/google-cloud-sdk/path.fish.inc
+end
 
 zoxide init --cmd cd fish | source

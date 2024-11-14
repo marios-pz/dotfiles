@@ -3,7 +3,6 @@
   hosts: localhost
   vars_files: ansible/variables/packages.yaml
   tasks:
-
     - name: Ensure the Arch Linux keyring is up to date
       ansible.builtin.pacman:
         name: archlinux-keyring
@@ -15,7 +14,7 @@
       ansible.builtin.package:
         name: "{{ packages }}"
         state: present
-      
+
     - name: Check if yay is installed
       command: yay --version
       register: yay_check
@@ -65,9 +64,28 @@
         state: started
         scope: user
 
+    - name: Enable docker daemon
+      become: true
+      tags: services
+      ansible.builtin.systemd:
+        name: docker
+        enabled: true
+        state: started
+
     - name: Set the shell for the user
       become: true
       user:
         name: user
         shell: /usr/bin/fish
 
+    - name: Ensure docker group exists
+      become: true
+      ansible.builtin.group:
+        name: docker
+
+    - name: Add user to docker group
+      become: true
+      ansible.builtin.user:
+        name: user
+        groups: docker
+        append: true

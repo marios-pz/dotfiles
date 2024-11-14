@@ -11,6 +11,8 @@ packages:
   - alsa-lib
   - alsa-topology-conf
   - alsa-ucm-conf
+  - ansible
+  - ansible-core
   - aom
   - apache
   - appstream
@@ -36,6 +38,7 @@ packages:
   - bluez-libs
   - bolt
   - botan2
+  - bridge-utils
   - brltty
   - brotli
   - bubblewrap
@@ -56,6 +59,7 @@ packages:
   - colord-gtk4
   - colord-sane
   - composefs
+  - containerd
   - coreutils
   - cracklib
   - cryptsetup
@@ -75,6 +79,7 @@ packages:
   - device-mapper
   - diffutils
   - djvulibre
+  - docker
   - dotconf
   - double-conversion
   - duktape
@@ -107,6 +112,7 @@ packages:
   - filesystem
   - findutils
   - firefox
+  - fish
   - flac
   - flatpak
   - flex
@@ -118,6 +124,7 @@ packages:
   - freetype2
   - fribidi
   - fuse-common
+  - fuse2
   - fuse3
   - fuzzel
   - fzf
@@ -137,6 +144,7 @@ packages:
   - gettext
   - ghostscript
   - giflib
+  - girara
   - git
   - gjs
   - glew
@@ -152,6 +160,7 @@ packages:
   - gnome-autoar
   - gnome-backgrounds
   - gnome-bluetooth-3.0
+  - gnome-browser-connector
   - gnome-calculator
   - gnome-calendar
   - gnome-characters
@@ -177,6 +186,10 @@ packages:
   - gnome-session
   - gnome-settings-daemon
   - gnome-shell
+  - gnome-shell-extension-caffeine
+  - gnome-shell-extension-dash-to-panel
+  - gnome-shell-extension-pop-shell-git
+  - gnome-shell-extension-weather-oclock
   - gnome-shell-extensions
   - gnome-software
   - gnome-system-monitor
@@ -230,6 +243,7 @@ packages:
   - gtksourceview4
   - gtksourceview5
   - guile
+  - gumbo-parser
   - gupnp
   - gupnp-av
   - gupnp-dlna
@@ -248,6 +262,7 @@ packages:
   - gzip
   - harfbuzz
   - harfbuzz-icu
+  - helm
   - hicolor-icon-theme
   - hidapi
   - highway
@@ -275,9 +290,11 @@ packages:
   - jasper
   - jbig2dec
   - jbigkit
+  - jq
   - js128
   - json-c
   - json-glib
+  - k9s
   - kbd
   - kcompletion5
   - kconfig5
@@ -292,13 +309,16 @@ packages:
   - kmod
   - krb5
   - krita
+  - kubectl
   - kwidgetsaddons
   - kwidgetsaddons5
   - kwindowsystem5
   - l-smash
   - lame
+  - lazygit
   - lcms2
   - ldb
+  - leptonica
   - libadwaita
   - libao
   - libappindicator-gtk3
@@ -420,6 +440,7 @@ packages:
   - libmpc
   - libmpcdec
   - libmtp
+  - libmupdf
   - libmysofa
   - libnautilus-extension
   - libndp
@@ -463,6 +484,7 @@ packages:
   - libpsl
   - libpulse
   - libpwquality
+  - libqalculate
   - libraqm
   - libraw
   - libraw1394
@@ -596,6 +618,7 @@ packages:
   - nano
   - nautilus
   - ncurses
+  - neofetch
   - neon
   - neovim
   - net-snmp
@@ -614,7 +637,9 @@ packages:
   - npth
   - nspr
   - nss
+  - ntfs-3g
   - ocl-icd
+  - oniguruma
   - openal
   - opencolorio
   - opencore-amr
@@ -658,6 +683,11 @@ packages:
   - pkgconf
   - playerctl
   - polkit
+  - pop-icon-theme-git
+  - pop-launcher-git
+  - pop-launcher-git-debug
+  - pop-shell-shortcuts-git
+  - pop-shell-shortcuts-git-debug
   - poppler
   - poppler-data
   - poppler-glib
@@ -669,12 +699,27 @@ packages:
   - psmisc
   - pystring
   - python
+  - python-argcomplete
+  - python-bcrypt
   - python-cairo
+  - python-cffi
+  - python-cryptography
   - python-defusedxml
   - python-gobject
+  - python-jinja
+  - python-markupsafe
+  - python-packaging
+  - python-paramiko
   - python-psutil
+  - python-pycparser
+  - python-pynacl
   - python-pyxdg
+  - python-resolvelib
   - python-setproctitle
+  - python-tomlkit
+  - python-typing_extensions
+  - python-xmltodict
+  - python-yaml
   - qrencode
   - qt5-base
   - qt5-declarative
@@ -698,6 +743,7 @@ packages:
   - rtkit
   - rtmpdump
   - rubberband
+  - runc
   - rygel
   - sane
   - sassc
@@ -711,6 +757,7 @@ packages:
   - shadow
   - shared-mime-info
   - simple-scan
+  - slack-desktop
   - slang
   - smartmontools
   - smbclient
@@ -743,6 +790,9 @@ packages:
   - tar
   - tdb
   - tecla
+  - tesseract
+  - tesseract-data-afr
+  - tesseract-data-osd
   - tevent
   - texinfo
   - thunderbird
@@ -759,6 +809,9 @@ packages:
   - tree-sitter-vim
   - tree-sitter-vimdoc
   - tslib
+  - ttf-jetbrains-mono
+  - ttf-jetbrains-mono-nerd
+  - ttf-roboto
   - twolame
   - tzdata
   - uchardet
@@ -771,6 +824,9 @@ packages:
   - util-linux-libs
   - v4l-utils
   - vapoursynth
+  - vencord
+  - vesktop
+  - vesktop-debug
   - vid.stab
   - vim
   - vim-runtime
@@ -787,6 +843,7 @@ packages:
   - webkitgtk-6.0
   - webp-pixbuf-loader
   - webrtc-audio-processing-1
+  - wezterm
   - wget
   - which
   - wildmidi
@@ -835,9 +892,15 @@ packages:
   - xxhash
   - xz
   - yaml-cpp
+  - yay
+  - yay-debug
   - yelp
   - yelp-xsl
+  - yq
+  - zathura
+  - zathura-pdf-mupdf
   - zbar
+  - zellij
   - zeromq
   - zimg
   - zip
