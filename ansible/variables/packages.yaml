@@ -824,9 +824,6 @@ packages:
   - util-linux-libs
   - v4l-utils
   - vapoursynth
-  - vencord
-  - vesktop
-  - vesktop-debug
   - vid.stab
   - vim
   - vim-runtime
