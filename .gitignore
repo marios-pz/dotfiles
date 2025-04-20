@@ -4,3 +4,5 @@
 obsidian/git/*
 **/paper
 zsh/.config/zsh/.zsh_history
+.config/gtk-3.0/bookmarks
+.config/fish/fishd.tmp.*

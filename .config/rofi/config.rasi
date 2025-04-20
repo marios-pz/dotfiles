@@ -1,8 +1,8 @@
 configuration{
     modi: ["drun", "window", "run"];
-    icon-theme: "Suru++ 25 Dark";
+    icon-theme: "Papirus-Dark";
     show-icons: true;
-    terminal: "wezterm";
+    terminal: "kitty";
     drun-display-format: "{icon} {name}";
     location: 0;
     disable-history: false;
@@ -26,4 +26,4 @@ configuration{
     kb-move-char-forward: "Control+f";
     kb-mode-complete: "Control+o";
 }
-@theme "./themes/tokyonight_big2.rasi"
+@theme "~/.config/rofi/tokyonight.rasi"
