@@ -3,7 +3,7 @@
 
 include "/home/user/.gtkrc-2.0.mine"
 gtk-theme-name="Tokyonight-Dark-Storm"
-gtk-icon-theme-name="Gruvbox-Plus-Dark"
+gtk-icon-theme-name="Suru++-Dark"
 gtk-font-name="JetBrainsMono Nerd Font 12"
 gtk-cursor-theme-name="default"
 gtk-cursor-theme-size=24
