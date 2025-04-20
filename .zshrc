@@ -76,9 +76,11 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
-alias ls='ls --color'
-alias vim='nvim'
-alias c='clear'
+
+if [[ -f ~/.config/.aliases.sh ]]; then
+   source ~/.config/.aliases.sh 
+fi
+ 
 
 # Shell integrations
 eval "$(fzf --zsh)"
