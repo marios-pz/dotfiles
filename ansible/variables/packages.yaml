@@ -3,44 +3,58 @@ packages:
   - abseil-cpp
   - accountsservice
   - acl
-  - adobe-source-code-pro-fonts
   - adwaita-cursors
+  - adwaita-fonts
   - adwaita-icon-theme
   - adwaita-icon-theme-legacy
   - alsa-card-profiles
   - alsa-lib
+  - alsa-plugins
   - alsa-topology-conf
   - alsa-ucm-conf
+  - android-tools
+  - android-udev
+  - anki-bin
   - ansible
   - ansible-core
   - aom
-  - apache
   - appstream
-  - apr
-  - apr-util
+  - appstream-glib
+  - aquamarine
   - archlinux-keyring
   - argon2
+  - ark
+  - arpack
+  - asio
   - at-spi2-core
+  - atkmm
   - attr
   - audit
   - autoconf
   - automake
   - autorandr
   - avahi
-  - baobab
+  - ayatana-ido
+  - azure-cli
+  - azure-kubelogin
+  - babl
   - base
   - base-devel
   - bash
+  - bat
+  - bind
   - binutils
   - bison
   - blas
+  - blueman
   - bluez
   - bluez-libs
-  - bolt
-  - botan2
-  - bridge-utils
-  - brltty
+  - bluez-utils
+  - boost-libs
+  - breeze-icons
+  - brightnessctl
   - brotli
+  - btop
   - bubblewrap
   - bzip2
   - c-ares
@@ -48,22 +62,23 @@ packages:
   - ca-certificates-mozilla
   - ca-certificates-utils
   - cairo
+  - cairomm
   - cairomm-1.16
   - cantarell-fonts
   - cblas
-  - cdparanoia
-  - chromaprint
-  - cifs-utils
+  - chaotic-keyring
+  - chaotic-mirrorlist
+  - cliphist
+  - clucene
+  - cmake
+  - cmatrix
+  - code
   - colord
-  - colord-gtk-common
-  - colord-gtk4
-  - colord-sane
-  - composefs
   - containerd
+  - convertlit
   - coreutils
-  - cracklib
+  - cppdap
   - cryptsetup
-  - cups-pk-helper
   - curl
   - dav1d
   - db5.3
@@ -78,27 +93,29 @@ packages:
   - desktop-file-utils
   - device-mapper
   - diffutils
-  - djvulibre
+  - discord
+  - dnssec-anchors
   - docker
-  - dotconf
+  - docker-compose
   - double-conversion
   - duktape
+  - dunst
   - e2fsprogs
-  - editorconfig-core-c
+  - ebook-tools
   - efibootmgr
   - efivar
+  - egl-wayland
+  - eglexternalplatform
+  - electron34
   - ell
+  - embree
   - enchant
-  - epiphany
-  - evince
-  - evolution-data-server
   - exempi
   - exiv2
   - expat
   - eza
-  - faac
-  - faad2
   - fakeroot
+  - fastfetch
   - fcft
   - fcitx5
   - fcitx5-configtool
@@ -107,20 +124,17 @@ packages:
   - fd
   - ffmpeg
   - ffmpegthumbnailer
+  - ffmpegthumbs
   - fftw
   - file
   - filesystem
   - findutils
   - firefox
-  - fish
   - flac
-  - flatpak
   - flex
-  - fluidsynth
-  - folks
+  - fmt
   - fontconfig
   - freeglut
-  - freerdp
   - freetype2
   - fribidi
   - fuse-common
@@ -134,55 +148,39 @@ packages:
   - gcc-libs
   - gcr
   - gcr-4
-  - gd
   - gdbm
   - gdk-pixbuf2
-  - gdm
+  - gegl
   - geoclue
   - geocode-glib-2
   - geocode-glib-common
   - gettext
+  - ghc-libs
   - ghostscript
   - giflib
+  - gimp
   - girara
   - git
+  - github-cli
   - gjs
+  - gl2ps
   - glew
   - glib-networking
   - glib2
   - glibc
+  - glibmm
   - glibmm-2.68
+  - glpk
   - glslang
   - glu
-  - glycin
   - gmp
-  - gnome-app-list
   - gnome-autoar
-  - gnome-backgrounds
-  - gnome-bluetooth-3.0
   - gnome-browser-connector
-  - gnome-calculator
-  - gnome-calendar
-  - gnome-characters
-  - gnome-clocks
-  - gnome-color-manager
-  - gnome-connections
-  - gnome-console
-  - gnome-contacts
-  - gnome-control-center
   - gnome-desktop
   - gnome-desktop-4
   - gnome-desktop-common
-  - gnome-disk-utility
-  - gnome-font-viewer
-  - gnome-keybindings
   - gnome-keyring
-  - gnome-logs
-  - gnome-maps
-  - gnome-menus
-  - gnome-music
-  - gnome-online-accounts
-  - gnome-remote-desktop
+  - gnome-mimeapps
   - gnome-session
   - gnome-settings-daemon
   - gnome-shell
@@ -190,94 +188,300 @@ packages:
   - gnome-shell-extension-dash-to-panel
   - gnome-shell-extension-pop-shell-git
   - gnome-shell-extension-weather-oclock
-  - gnome-shell-extensions
-  - gnome-software
-  - gnome-system-monitor
-  - gnome-text-editor
-  - gnome-tour
   - gnome-tweaks
-  - gnome-user-docs
-  - gnome-user-share
-  - gnome-weather
   - gnu-free-fonts
+  - gnulib-l10n
   - gnupg
   - gnutls
   - go
+  - gobject-introspection
   - gobject-introspection-runtime
-  - gom
+  - godot
   - gperftools
   - gpgme
   - gpm
   - graphene
+  - graphicsmagick
   - graphite
   - grep
-  - grilo
-  - grilo-plugins
+  - grim
   - groff
   - gsettings-desktop-schemas
   - gsettings-system-schemas
-  - gsfonts
   - gsl
   - gsm
-  - gsound
-  - gspell
   - gssdp
-  - gst-devtools-libs
-  - gst-editing-services
-  - gst-plugin-gtk
-  - gst-plugin-gtk4
   - gst-plugin-pipewire
-  - gst-plugins-bad
   - gst-plugins-bad-libs
-  - gst-plugins-base
   - gst-plugins-base-libs
-  - gst-plugins-good
-  - gst-python
   - gstreamer
   - gtest
+  - gtk-layer-shell
   - gtk-update-icon-cache
-  - gtk-vnc
+  - gtk2
   - gtk3
   - gtk4
   - gtkmm-4.0
-  - gtksourceview4
-  - gtksourceview5
+  - gtkmm3
   - guile
   - gumbo-parser
   - gupnp
-  - gupnp-av
   - gupnp-dlna
   - gupnp-igd
   - gvfs
-  - gvfs-afc
-  - gvfs-dnssd
-  - gvfs-goa
-  - gvfs-google
-  - gvfs-gphoto2
-  - gvfs-mtp
-  - gvfs-nfs
-  - gvfs-onedrive
-  - gvfs-smb
-  - gvfs-wsdd
   - gzip
   - harfbuzz
   - harfbuzz-icu
+  - haskell-aeson
+  - haskell-aeson-pretty
+  - haskell-ansi-terminal
+  - haskell-ansi-terminal-types
+  - haskell-ansi-wl-pprint
+  - haskell-appar
+  - haskell-asn1-encoding
+  - haskell-asn1-parse
+  - haskell-asn1-types
+  - haskell-assoc
+  - haskell-async
+  - haskell-attoparsec
+  - haskell-attoparsec-aeson
+  - haskell-attoparsec-iso8601
+  - haskell-auto-update
+  - haskell-base-compat
+  - haskell-base-compat-batteries
+  - haskell-base-orphans
+  - haskell-base-unicode-symbols
+  - haskell-base16-bytestring
+  - haskell-base64-bytestring
+  - haskell-basement
+  - haskell-bifunctors
+  - haskell-bitvec
+  - haskell-blaze-builder
+  - haskell-blaze-html
+  - haskell-blaze-markup
+  - haskell-boring
+  - haskell-bsb-http-chunked
+  - haskell-byteorder
+  - haskell-call-stack
+  - haskell-case-insensitive
+  - haskell-cassava
+  - haskell-cereal
+  - haskell-citeproc
+  - haskell-cmdargs
+  - haskell-colour
+  - haskell-commonmark
+  - haskell-commonmark-extensions
+  - haskell-commonmark-pandoc
+  - haskell-comonad
+  - haskell-conduit
+  - haskell-conduit-extra
+  - haskell-constraints
+  - haskell-contravariant
+  - haskell-cookie
+  - haskell-crypton
+  - haskell-crypton-connection
+  - haskell-crypton-x509
+  - haskell-crypton-x509-store
+  - haskell-crypton-x509-system
+  - haskell-crypton-x509-validation
+  - haskell-data-default
+  - haskell-data-default-class
+  - haskell-data-default-instances-containers
+  - haskell-data-default-instances-dlist
+  - haskell-data-default-instances-old-locale
+  - haskell-data-fix
+  - haskell-dec
+  - haskell-digest
+  - haskell-distributive
+  - haskell-djot
+  - haskell-dlist
+  - haskell-doclayout
+  - haskell-doctemplates
+  - haskell-easy-file
+  - haskell-emojis
+  - haskell-erf
+  - haskell-fast-logger
+  - haskell-file-embed
+  - haskell-foldable1-classes-compat
+  - haskell-generically
+  - haskell-glob
+  - haskell-gridtables
+  - haskell-haddock-library
+  - haskell-hashable
+  - haskell-hourglass
+  - haskell-hslua
+  - haskell-hslua-aeson
+  - haskell-hslua-classes
+  - haskell-hslua-core
+  - haskell-hslua-list
+  - haskell-hslua-marshalling
+  - haskell-hslua-module-doclayout
+  - haskell-hslua-module-path
+  - haskell-hslua-module-system
+  - haskell-hslua-module-text
+  - haskell-hslua-module-version
+  - haskell-hslua-module-zip
+  - haskell-hslua-objectorientation
+  - haskell-hslua-packaging
+  - haskell-hslua-repl
+  - haskell-hslua-typing
+  - haskell-http-api-data
+  - haskell-http-client
+  - haskell-http-client-tls
+  - haskell-http-date
+  - haskell-http-media
+  - haskell-http-types
+  - haskell-http2
+  - haskell-hunit
+  - haskell-indexed-traversable
+  - haskell-indexed-traversable-instances
+  - haskell-integer-logarithms
+  - haskell-iproute
+  - haskell-ipynb
+  - haskell-isocline
+  - haskell-jira-wiki-markup
+  - haskell-juicypixels
+  - haskell-lexer
+  - haskell-libyaml
+  - haskell-lpeg
+  - haskell-lua
+  - haskell-memory
+  - haskell-mime-types
+  - haskell-mmorph
+  - haskell-monad-control
+  - haskell-mono-traversable
+  - haskell-network
+  - haskell-network-byte-order
+  - haskell-network-uri
+  - haskell-old-locale
+  - haskell-old-time
+  - haskell-onetuple
+  - haskell-only
+  - haskell-optparse-applicative
+  - haskell-ordered-containers
+  - haskell-os-string
+  - haskell-pandoc
+  - haskell-pandoc-lua-engine
+  - haskell-pandoc-lua-marshal
+  - haskell-pandoc-server
+  - haskell-pandoc-types
+  - haskell-pem
+  - haskell-pretty-show
+  - haskell-prettyprinter
+  - haskell-primitive
+  - haskell-psqueues
+  - haskell-quickcheck
+  - haskell-random
+  - haskell-recv
+  - haskell-regex-base
+  - haskell-regex-tdfa
+  - haskell-resourcet
+  - haskell-safe
+  - haskell-safe-exceptions
+  - haskell-scientific
+  - haskell-semialign
+  - haskell-semigroupoids
+  - haskell-servant
+  - haskell-servant-server
+  - haskell-sha
+  - haskell-simple-sendfile
+  - haskell-singleton-bool
+  - haskell-skylighting
+  - haskell-skylighting-core
+  - haskell-skylighting-format-ansi
+  - haskell-skylighting-format-blaze-html
+  - haskell-skylighting-format-context
+  - haskell-skylighting-format-latex
+  - haskell-socks
+  - haskell-some
+  - haskell-sop-core
+  - haskell-split
+  - haskell-splitmix
+  - haskell-statevar
+  - haskell-streaming-commons
+  - haskell-strict
+  - haskell-syb
+  - haskell-tagged
+  - haskell-tagsoup
+  - haskell-temporary
+  - haskell-texmath
+  - haskell-text-conversions
+  - haskell-text-icu
+  - haskell-text-short
+  - haskell-th-abstraction
+  - haskell-th-compat
+  - haskell-th-lift
+  - haskell-th-lift-instances
+  - haskell-these
+  - haskell-time-compat
+  - haskell-time-manager
+  - haskell-tls
+  - haskell-toml-parser
+  - haskell-transformers-base
+  - haskell-transformers-compat
+  - haskell-type-equality
+  - haskell-typed-process
+  - haskell-typst
+  - haskell-typst-symbols
+  - haskell-unicode-collation
+  - haskell-unicode-data
+  - haskell-unicode-transforms
+  - haskell-uniplate
+  - haskell-unix-compat
+  - haskell-unix-time
+  - haskell-unliftio
+  - haskell-unliftio-core
+  - haskell-unordered-containers
+  - haskell-utf8-string
+  - haskell-uuid-types
+  - haskell-vault
+  - haskell-vector
+  - haskell-vector-algorithms
+  - haskell-vector-stream
+  - haskell-wai
+  - haskell-wai-app-static
+  - haskell-wai-cors
+  - haskell-wai-extra
+  - haskell-wai-logger
+  - haskell-warp
+  - haskell-witherable
+  - haskell-word8
+  - haskell-xml
+  - haskell-xml-conduit
+  - haskell-xml-types
+  - haskell-yaml
+  - haskell-zip-archive
+  - haskell-zlib
+  - hdf5
   - helm
   - hicolor-icon-theme
   - hidapi
   - highway
+  - hslua-cli
   - htop
-  - http-parser
   - hunspell
   - hwdata
+  - hwloc
   - hyphen
+  - hyprcursor
+  - hyprgraphics
+  - hypridle
+  - hyprland
+  - hyprland-qt-support
+  - hyprland-qtutils
+  - hyprlang
+  - hyprlock
+  - hyprpaper
+  - hyprpicker
+  - hyprsunset
+  - hyprutils
+  - hyprwayland-scanner
   - iana-etc
   - icu
   - iio-sensor-proxy
   - ijs
   - imagemagick
   - imath
-  - imlib2
   - intel-gmmlib
   - intel-media-driver
   - intel-ucode
@@ -288,48 +492,210 @@ packages:
   - iwd
   - jansson
   - jasper
+  - java-environment-common
+  - java-runtime-common
   - jbig2dec
   - jbigkit
+  - jdk17-openjdk
+  - jdk8-openjdk
+  - jemalloc
   - jq
+  - jre8-openjdk
+  - jre8-openjdk-headless
   - js128
   - json-c
   - json-glib
+  - jsoncpp
   - k9s
+  - karchive
+  - kauth
   - kbd
+  - kbookmarks
+  - kcmutils
+  - kcodecs
+  - kcolorscheme
+  - kcompletion
   - kcompletion5
+  - kconfig
   - kconfig5
+  - kconfigwidgets
+  - kcoreaddons
   - kcoreaddons5
+  - kcrash
   - kcrash5
   - kdbusaddons
+  - kde-cli-tools
+  - kdesu
   - keyutils
+  - kfilemetadata
+  - kglobalaccel
+  - kguiaddons
   - kguiaddons5
+  - ki18n
   - ki18n5
+  - kiconthemes
+  - kio
+  - kirigami
   - kitemviews
   - kitemviews5
+  - kitty
+  - kitty-shell-integration
+  - kitty-terminfo
+  - kjobwidgets
   - kmod
+  - knotifications
+  - kparts
+  - kpty
   - krb5
   - krita
+  - kservice
   - kubectl
+  - kvantum
+  - kvantum-qt5
+  - kwallet
   - kwidgetsaddons
   - kwidgetsaddons5
+  - kwindowsystem
   - kwindowsystem5
+  - kxmlgui
   - l-smash
   - lame
+  - lapack
+  - lazydocker-bin
   - lazygit
   - lcms2
-  - ldb
+  - ld-lsb
+  - leancrypto
+  - lensfun
   - leptonica
+  - less
+  - lib32-alsa-lib
+  - lib32-alsa-plugins
+  - lib32-amdvlk
+  - lib32-at-spi2-core
+  - lib32-audit
+  - lib32-brotli
+  - lib32-bzip2
+  - lib32-cairo
+  - lib32-curl
+  - lib32-dbus
+  - lib32-e2fsprogs
+  - lib32-expat
+  - lib32-flac
+  - lib32-fontconfig
+  - lib32-freetype2
+  - lib32-fribidi
+  - lib32-gcc-libs
+  - lib32-gdk-pixbuf2
+  - lib32-glib2
+  - lib32-glibc
+  - lib32-gmp
+  - lib32-gnutls
+  - lib32-gtk2
+  - lib32-harfbuzz
+  - lib32-icu
+  - lib32-json-c
+  - lib32-keyutils
+  - lib32-krb5
+  - lib32-libasyncns
+  - lib32-libcanberra
+  - lib32-libcap
+  - lib32-libcups
+  - lib32-libdatrie
+  - lib32-libdrm
+  - lib32-libelf
+  - lib32-libffi
+  - lib32-libgcrypt
+  - lib32-libglvnd
+  - lib32-libgpg-error
+  - lib32-libice
+  - lib32-libidn2
+  - lib32-libjpeg-turbo
+  - lib32-libldap
+  - lib32-libltdl
+  - lib32-libnghttp2
+  - lib32-libnghttp3
+  - lib32-libnm
+  - lib32-libnsl
+  - lib32-libogg
+  - lib32-libpciaccess
+  - lib32-libpipewire
+  - lib32-libpng
+  - lib32-libpsl
+  - lib32-libpulse
+  - lib32-librsvg
+  - lib32-libsm
+  - lib32-libsndfile
+  - lib32-libssh2
+  - lib32-libtasn1
+  - lib32-libthai
+  - lib32-libtiff
+  - lib32-libtirpc
+  - lib32-libunistring
+  - lib32-libva
+  - lib32-libvorbis
+  - lib32-libx11
+  - lib32-libxau
+  - lib32-libxcb
+  - lib32-libxcomposite
+  - lib32-libxcrypt
+  - lib32-libxcrypt-compat
+  - lib32-libxcursor
+  - lib32-libxdamage
+  - lib32-libxdmcp
+  - lib32-libxext
+  - lib32-libxfixes
+  - lib32-libxft
+  - lib32-libxi
+  - lib32-libxinerama
+  - lib32-libxml2
+  - lib32-libxrandr
+  - lib32-libxrender
+  - lib32-libxshmfence
+  - lib32-libxss
+  - lib32-libxt
+  - lib32-libxtst
+  - lib32-libxxf86vm
+  - lib32-llvm-libs
+  - lib32-lm_sensors
+  - lib32-mesa
+  - lib32-ncurses
+  - lib32-ncurses5-compat-libs
+  - lib32-nettle
+  - lib32-nspr
+  - lib32-nss
+  - lib32-openssl
+  - lib32-opus
+  - lib32-p11-kit
+  - lib32-pam
+  - lib32-pango
+  - lib32-pcre2
+  - lib32-pipewire
+  - lib32-pixman
+  - lib32-spirv-tools
+  - lib32-sqlite
+  - lib32-systemd
+  - lib32-tdb
+  - lib32-util-linux
+  - lib32-vulkan-icd-loader
+  - lib32-wayland
+  - lib32-xz
+  - lib32-zlib
+  - lib32-zstd
+  - libabw
   - libadwaita
-  - libao
+  - libaec
   - libappindicator-gtk3
   - libarchive
   - libass
   - libassuan
   - libasyncns
   - libatasmart
+  - libatomic_ops
   - libavc1394
   - libavif
-  - libavtp
+  - libayatana-appindicator
+  - libayatana-indicator
   - libb2
   - libblockdev
   - libblockdev-crypto
@@ -344,64 +710,61 @@ packages:
   - libbs2b
   - libbsd
   - libbytesize
-  - libcaca
   - libcanberra
   - libcap
   - libcap-ng
   - libcdio
   - libcdio-paranoia
+  - libcdr
   - libcloudproviders
+  - libcmis
   - libcolord
   - libcue
   - libcups
+  - libcurl-gnutls
   - libdaemon
+  - libdatachannel
   - libdatrie
   - libdbusmenu-glib
   - libdbusmenu-gtk3
-  - libdc1394
-  - libdca
   - libde265
   - libdecor
   - libdeflate
   - libdisplay-info
-  - libdmapsharing
   - libdovi
   - libdrm
-  - libdv
   - libdvdnav
   - libdvdread
+  - libe-book
   - libebur128
-  - libedataserverui4
   - libedit
   - libei
   - libelf
   - libepoxy
+  - libepubgen
+  - libetonyek
   - libevdev
   - libevent
   - libexif
+  - libexttextcat
+  - libfabric
   - libfdk-aac
   - libffi
   - libfontenc
   - libfreeaptx
+  - libfreehand
   - libgcrypt
-  - libgdata
   - libgdm
-  - libgee
   - libgexiv2
   - libgirepository
   - libgit2
   - libglvnd
-  - libgme
-  - libgoa
   - libgpg-error
-  - libgphoto2
   - libgsf
-  - libgtop
   - libgudev
   - libgusb
   - libgweather-4
   - libgxps
-  - libhandy
   - libheif
   - libibus
   - libical
@@ -409,45 +772,47 @@ packages:
   - libidn
   - libidn2
   - libiec61883
-  - libieee1284
   - libimobiledevice
   - libimobiledevice-glue
   - libinih
   - libinput
-  - libinstpatch
   - libiptcdata
   - libisl
+  - libixion
   - libjpeg-turbo
+  - libjuice
   - libjxl
   - libkdcraw5
   - libksba
+  - liblangtag
   - liblc3
   - libldac
   - libldap
-  - liblouis
+  - libliftoff
   - liblqr
-  - liblrdf
-  - libltc
   - libluv
-  - libmalcontent
+  - liblzf
   - libmanette
+  - libmaxminddb
   - libmd
-  - libmediaart
-  - libmicrodns
   - libmm-glib
+  - libmng
   - libmnl
   - libmodplug
   - libmpc
-  - libmpcdec
+  - libmpdclient
+  - libmspub
   - libmtp
   - libmupdf
+  - libmwaw
+  - libmypaint
   - libmysofa
   - libnautilus-extension
   - libndp
+  - libnet
   - libnetfilter_conntrack
   - libnewt
   - libnfnetlink
-  - libnfs
   - libnftnl
   - libnghttp2
   - libnghttp3
@@ -460,56 +825,58 @@ packages:
   - libnma-gtk4
   - libnotify
   - libnsl
+  - libnumbertext
   - libnvme
-  - liboauth
+  - libodfgen
   - libogg
-  - libomxil-bellagio
   - libopenmpt
+  - liborcus
   - libosinfo
   - libp11-kit
+  - libpackagekit-glib
+  - libpagemaker
   - libpaper
   - libpcap
   - libpciaccess
-  - libpeas
   - libpgm
-  - libphonenumber
   - libpipewire
   - libplacebo
   - libplist
   - libpng
   - libportal
-  - libportal-gtk3
   - libportal-gtk4
   - libproxy
   - libpsl
   - libpulse
-  - libpwquality
   - libqalculate
+  - libqxp
   - libraqm
   - libraw
   - libraw1394
-  - librest
+  - libreoffice-fresh
+  - librevenge
   - librsvg
+  - librsync
   - libsamplerate
   - libsasl
   - libsass
   - libseccomp
   - libsecret
-  - libshout
-  - libshumate
+  - libsigc++
   - libsigc++-3.0
   - libsm
   - libsndfile
   - libsodium
-  - libsoup
   - libsoup3
   - libsoxr
-  - libspectre
   - libspeechd
-  - libspelling
+  - libspiro
+  - libspng
+  - libsquish
   - libsrtp
   - libssh
   - libssh2
+  - libstaroffice
   - libstemmer
   - libsynctex
   - libsysprof-capture
@@ -519,37 +886,44 @@ packages:
   - libtheora
   - libtiff
   - libtirpc
+  - libtommath
   - libtool
+  - libtpms
   - libunibreak
   - libunistring
   - libunwind
+  - liburcu
+  - liburing
   - libusb
   - libusbmuxd
+  - libutempter
   - libutf8proc
   - libuv
   - libva
   - libva-intel-driver
   - libvdpau
   - libverto
-  - libvncserver
+  - libvisio
   - libvorbis
   - libvpl
   - libvpx
   - libvterm
   - libwacom
-  - libwbclient
   - libwebp
   - libwireplumber
-  - libwnck3
+  - libwmf
+  - libwpd
+  - libwps
+  - libwslay
   - libx11
   - libxau
   - libxcb
   - libxcomposite
   - libxcrypt
+  - libxcrypt-compat
   - libxcursor
   - libxcvt
   - libxdamage
-  - libxdg-basedir
   - libxdmcp
   - libxext
   - libxfixes
@@ -566,7 +940,6 @@ packages:
   - libxpm
   - libxrandr
   - libxrender
-  - libxres
   - libxshmfence
   - libxslt
   - libxss
@@ -576,18 +949,25 @@ packages:
   - libxxf86vm
   - libyaml
   - libyuv
+  - libzip
+  - libzmf
   - licenses
   - lilv
   - linux
   - linux-api-headers
   - linux-firmware
   - linux-firmware-whence
+  - linux-headers
+  - llhttp
   - llvm-libs
   - lm_sensors
   - lmdb
   - localsearch
-  - loupe
+  - lpsolve
+  - lsb-release
+  - lsof
   - lua
+  - lua-lpeg
   - lua51-lpeg
   - luajit
   - luarocks
@@ -597,31 +977,34 @@ packages:
   - m4
   - mailcap
   - make
-  - malcontent
+  - mbedtls
   - md4c
   - mdadm
+  - media-player-info
   - mesa
+  - microsoft-azure-vpn-client-bin
+  - miniupnpc
+  - minizip
   - minizip-ng
-  - mjpegtools
   - mkinitcpio
   - mkinitcpio-busybox
   - mlt
   - mobile-broadband-provider-info
-  - mod_dnssd
+  - modelsim-intel-starter
   - mpdecimal
   - mpfr
   - mpg123
   - msgpack-c
-  - msgraph
   - mtdev
   - mutter
+  - mypaint-brushes1
   - nano
   - nautilus
   - ncurses
   - neofetch
   - neon
   - neovim
-  - net-snmp
+  - netbeans
   - nettle
   - network-manager-applet
   - networkmanager
@@ -638,33 +1021,50 @@ packages:
   - nspr
   - nss
   - ntfs-3g
+  - numactl
+  - nwg-displays
+  - nwg-look
+  - obs-studio
+  - obsidian
   - ocl-icd
+  - octave
+  - onetbb
   - oniguruma
-  - openal
+  - openbsd-netcat
   - opencolorio
   - opencore-amr
   - openexr
-  - openh264
   - openjpeg2
+  - openmpi
+  - openpmix
   - openssh
   - openssl
+  - openucx
+  - openvpn
+  - openxr
   - opus
   - orc
-  - orca
   - osinfo-db
-  - ostree
   - otf-ipaexfont
   - otf-ipafont
   - otf-ipamjfont
   - p11-kit
+  - packagekit
   - pacman
+  - pacman-contrib
   - pacman-mirrorlist
+  - pahole
   - pam
   - pambase
+  - pamixer
+  - pandoc-cli
   - pango
+  - pangomm
   - pangomm-2.48
+  - parallel
   - parted
   - patch
+  - pavucontrol
   - pciutils
   - pcre
   - pcre2
@@ -680,127 +1080,240 @@ packages:
   - pipewire-jack
   - pipewire-pulse
   - pixman
+  - pkcs11-helper
   - pkgconf
   - playerctl
   - polkit
+  - polkit-gnome
+  - polkit-qt6
   - pop-icon-theme-git
   - pop-launcher-git
-  - pop-launcher-git-debug
   - pop-shell-shortcuts-git
-  - pop-shell-shortcuts-git-debug
   - poppler
   - poppler-data
   - poppler-glib
+  - poppler-qt6
   - popt
   - portaudio
+  - power-profiles-daemon
   - procps-ng
   - protobuf
-  - protobuf-c
+  - prrte
   - psmisc
+  - pugixml
   - pystring
   - python
   - python-argcomplete
+  - python-attrs
+  - python-autocommand
   - python-bcrypt
+  - python-beautifulsoup4
+  - python-blinker
+  - python-build
+  - python-cachecontrol
+  - python-cachy
   - python-cairo
+  - python-certifi
   - python-cffi
+  - python-charset-normalizer
+  - python-cleo
+  - python-click
+  - python-colorama
+  - python-crashtest
   - python-cryptography
-  - python-defusedxml
+  - python-decorator
+  - python-distlib
+  - python-distro
+  - python-docopt
+  - python-dulwich
+  - python-fastjsonschema
+  - python-filelock
+  - python-findpython
+  - python-flask
+  - python-flask-cors
+  - python-gmpy2
   - python-gobject
+  - python-html5lib
+  - python-i3ipc
+  - python-idna
+  - python-installer
+  - python-itsdangerous
+  - python-jaraco.classes
+  - python-jaraco.collections
+  - python-jaraco.context
+  - python-jaraco.functools
+  - python-jaraco.text
+  - python-jeepney
   - python-jinja
+  - python-jsonschema
+  - python-jsonschema-specifications
+  - python-keyring
+  - python-keyutils
+  - python-lark-parser
+  - python-lockfile
+  - python-mako
+  - python-markdown
   - python-markupsafe
+  - python-more-itertools
+  - python-mpmath
+  - python-msgpack
+  - python-orjson
   - python-packaging
   - python-paramiko
-  - python-psutil
+  - python-pbs-installer
+  - python-pexpect
+  - python-pip
+  - python-pkginfo
+  - python-platformdirs
+  - python-poetry
+  - python-poetry-core
+  - python-poetry-plugin-export
+  - python-protobuf
+  - python-ptyprocess
   - python-pycparser
   - python-pynacl
-  - python-pyxdg
+  - python-pyproject-hooks
+  - python-pyqt6
+  - python-pyqt6-sip
+  - python-pyqt6-webengine
+  - python-pysocks
+  - python-rapidfuzz
+  - python-referencing
+  - python-requests
+  - python-requests-toolbelt
   - python-resolvelib
-  - python-setproctitle
+  - python-rpds-py
+  - python-secretstorage
+  - python-send2trash
+  - python-setuptools
+  - python-shellingham
+  - python-shtab
+  - python-six
+  - python-soupsieve
+  - python-sympy
+  - python-termcolor
   - python-tomlkit
+  - python-trove-classifiers
   - python-typing_extensions
+  - python-urllib3
+  - python-virtualenv
+  - python-waitress
+  - python-webencodings
+  - python-werkzeug
+  - python-wheel
+  - python-xlib
   - python-xmltodict
   - python-yaml
-  - qrencode
+  - qca-qt6
+  - qhull
+  - qrupdate
+  - qscintilla-qt6
   - qt5-base
   - qt5-declarative
+  - qt5-graphicaleffects
+  - qt5-imageformats
+  - qt5-quickcontrols
+  - qt5-quickcontrols2
   - qt5-svg
   - qt5-translations
   - qt5-wayland
   - qt5-x11extras
+  - qt5ct
+  - qt6-5compat
   - qt6-base
   - qt6-declarative
+  - qt6-positioning
+  - qt6-scxml
+  - qt6-shadertools
   - qt6-svg
+  - qt6-tools
   - qt6-translations
   - qt6-wayland
+  - qt6-webchannel
+  - qt6-webengine
+  - qt6ct
   - quazip-qt5
   - ranger
   - raptor
+  - rasqal
   - rav1e
+  - re2
   - readline
+  - redland
+  - rhash
   - ripgrep
-  - rofi
+  - rnnoise
+  - rofi-wayland
   - rsync
   - rtkit
-  - rtmpdump
   - rubberband
   - runc
-  - rygel
-  - sane
   - sassc
+  - satty
   - sbc
-  - sdl2
-  - sdl2_ttf
+  - scrcpy
+  - sdbus-cpp
+  - sddm
+  - sdl12-compat
+  - sdl2-compat
+  - sdl3
+  - seatd
   - sed
   - semver
   - serd
   - shaderc
   - shadow
   - shared-mime-info
-  - simple-scan
+  - simdjson
   - slack-desktop
   - slang
+  - slurp
   - smartmontools
-  - smbclient
   - snappy
-  - snapshot
+  - sndio
   - sof-firmware
+  - solid
   - sord
   - sound-theme-freedesktop
-  - soundtouch
-  - spandsp
-  - speech-dispatcher
+  - spdlog
+  - speedtest-cli
   - speex
   - speexdsp
   - spirv-tools
+  - spotify
   - sqlite
   - sratom
   - srt
+  - sshfs
+  - starship
   - startup-notification
+  - steam
   - stow
   - sudo
-  - sushi
+  - suitesparse
+  - sundials
   - svt-av1
-  - svt-hevc
+  - swww
   - syncthing
   - systemd
   - systemd-libs
+  - systemd-resolvconf
   - systemd-sysvcompat
   - taglib
-  - talloc
   - tar
   - tdb
-  - tecla
+  - terraform
   - tesseract
   - tesseract-data-afr
   - tesseract-data-osd
-  - tevent
   - texinfo
-  - thunderbird
   - tinysparql
-  - tinyxml
-  - totem
+  - tldr
+  - tomlplusplus
   - totem-pl-parser
   - tpm2-tss
+  - traceroute
+  - tree
   - tree-sitter
   - tree-sitter-c
   - tree-sitter-lua
@@ -809,17 +1322,19 @@ packages:
   - tree-sitter-vim
   - tree-sitter-vimdoc
   - tslib
-  - ttf-jetbrains-mono
   - ttf-jetbrains-mono-nerd
+  - ttf-nerd-fonts-symbols
+  - ttf-nerd-fonts-symbols-common
   - ttf-roboto
-  - twolame
   - tzdata
   - uchardet
+  - udiskie
   - udisks2
   - unibilium
   - unzip
   - upower
-  - usbmuxd
+  - usbutils
+  - uthash
   - util-linux
   - util-linux-libs
   - v4l-utils
@@ -827,49 +1342,53 @@ packages:
   - vid.stab
   - vim
   - vim-runtime
+  - virtualbox
+  - virtualbox-guest-iso
+  - virtualbox-guest-utils
+  - virtualbox-host-modules-arch
   - vmaf
   - volume_key
-  - vte-common
-  - vte4
-  - vulkan-headers
   - vulkan-icd-loader
   - vulkan-intel
-  - wavpack
+  - waybar
   - wayland
-  - webkit2gtk-4.1
+  - wayland-protocols
   - webkitgtk-6.0
   - webp-pixbuf-loader
   - webrtc-audio-processing-1
-  - wezterm
   - wget
   - which
-  - wildmidi
   - wireless_tools
   - wireplumber
+  - wl-clipboard
+  - wlogout
   - woff2
   - wpa_supplicant
-  - wsdd
   - x264
   - x265
   - xcb-imdkit
   - xcb-proto
   - xcb-util
   - xcb-util-cursor
+  - xcb-util-errors
   - xcb-util-image
   - xcb-util-keysyms
   - xcb-util-renderutil
   - xcb-util-wm
-  - xcb-util-xrm
   - xclip
+  - xcur2png
   - xdg-dbus-proxy
   - xdg-desktop-portal
   - xdg-desktop-portal-gnome
   - xdg-desktop-portal-gtk
+  - xdg-desktop-portal-hyprland
   - xdg-user-dirs
   - xdg-user-dirs-gtk
   - xdg-utils
   - xf86-input-libinput
+  - xf86-video-vmware
   - xkeyboard-config
+  - xmlsec
   - xorg-fonts-encodings
   - xorg-server
   - xorg-server-common
@@ -885,19 +1404,22 @@ packages:
   - xorg-xset
   - xorg-xwayland
   - xorgproto
+  - xournalpp
   - xvidcore
   - xxhash
   - xz
   - yaml-cpp
   - yay
   - yay-debug
-  - yelp
-  - yelp-xsl
+  - yazi
   - yq
+  - yt-dlp
+  - yyjson
   - zathura
   - zathura-pdf-mupdf
-  - zbar
   - zellij
+  - zen-browser-bin
+  - zenity
   - zeromq
   - zimg
   - zip
@@ -906,6 +1428,6 @@ packages:
   - zlib-ng
   - zoxide
   - zram-generator
+  - zsh
   - zstd
-  - zvbi
   - zxing-cpp
