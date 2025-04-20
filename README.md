@@ -3,8 +3,7 @@
 Feel free to help or make suggestions.
 
 ## Preview
-
-![image](https://github.com/marios-pz/dotfiles/assets/30930688/e9a53544-bb41-4286-b90f-6b3d1a9d0fdc)
+![image](https://github.com/user-attachments/assets/b6138468-628e-40a8-8d95-32f7db9dd9a2)
 
 ## Installation
 
