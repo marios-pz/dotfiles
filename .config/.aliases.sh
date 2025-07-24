@@ -9,7 +9,7 @@ alias .3='cd ../../..'
 alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
 alias vi='nvim'
-
+alias ssh="kitten ssh"
 # Changing "ls" to "eza"
 alias la='eza -a --icons --color=always --group-directories-first'  # all files and dirs
 alias ll='eza -l --icons --color=always --group-directories-first'  # long format
