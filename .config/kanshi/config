@@ -1,0 +1,15 @@
+# Monitor eDP-1 (ID 0): laptop
+# Monitor DP-3 (ID 1): Home Monitor
+# Each output profile is delimited by brackets.
+# It contains several output directives (whose syntax is similar to sway-output(5)). A profile will be enabled if all of the listed outputs are connected. 
+profile "home" {
+
+}
+
+profile "work" {
+
+}
+
+profile "default" {
+
+}

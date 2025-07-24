@@ -76,11 +76,20 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Aliases
-
 if [[ -f ~/.config/.aliases.sh ]]; then
    source ~/.config/.aliases.sh 
 fi
- 
+
+export PATH="$HOME/.bin:$HOME/go/bin:$HOME/.local/bin:$HOME/Applications:/var/lib/flatpak/exports/bin:$PATH"
+
+# GCLOUD
+if [[ -f ~/.local/bin/google-cloud-sdk/path.zsh.inc ]]; then
+    source ~/.local/bin/google-cloud-sdk/path.zsh.inc 
+fi
+
+if [[ -f ~/.local/bin/google-cloud-sdk/completion.zsh.inc ]]; then
+    source ~/.local/bin/google-cloud-sdk/completion.zsh.inc 
+fi
 
 # Shell integrations
 eval "$(fzf --zsh)"
