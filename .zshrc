@@ -84,6 +84,7 @@ if [[ -f ~/.local/bin/google-cloud-sdk/completion.zsh.inc ]]; then
     source ~/.local/bin/google-cloud-sdk/completion.zsh.inc 
 fi
 
-# Shell integrations
-eval "$(fzf --zsh)"
-eval "$(zoxide init zsh)"
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+
+eval "$(zoxide init zsh --cmd cd)"
