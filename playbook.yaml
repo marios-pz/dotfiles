@@ -15,31 +15,6 @@
         name: "{{ packages }}"
         state: present
 
-    - name: Check if yay is installed
-      command: yay --version
-      register: yay_check
-      ignore_errors: true
-
-    - name: Clone yay repository
-      git:
-        repo: https://aur.archlinux.org/yay.git
-        dest: /tmp/yay
-        clone: true
-        update: true
-      when: yay_check.failed
-
-    - name: Build and install yay
-      command: makepkg -si --noconfirm
-      args:
-        chdir: /tmp/yay
-      when: yay_check.failed
-
-    - name: Clean up yay build directory
-      file:
-        path: /tmp/yay
-        state: absent
-      when: yay_check.failed
-
     - name: Run stow
       become: false
       tags: stow
@@ -76,7 +51,7 @@
       become: true
       user:
         name: user
-        shell: /usr/bin/fish
+        shell: /usr/bin/zsh
 
     - name: Ensure docker group exists
       become: true
