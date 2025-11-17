@@ -88,3 +88,9 @@ fi
 source <(fzf --zsh)
 
 eval "$(zoxide init zsh --cmd cd)"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/user/.local/bin/google-cloud-sdk/path.zsh.inc' ]; then . '/home/user/.local/bin/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/user/.local/bin/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/user/.local/bin/google-cloud-sdk/completion.zsh.inc'; fi
