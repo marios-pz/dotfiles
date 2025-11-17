@@ -1,0 +1,11 @@
+[Unit]
+Description=Change wallpaper using SWWW
+After=graphical-session.target swww.service
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash %h/.config/scripts/swww.sh
+
+
+[Install]
+WantedBy=default.target

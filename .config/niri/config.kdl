@@ -3,6 +3,22 @@
 // Check the wiki for a full description of the configuration:
 // https://yalter.github.io/niri/Configuration:-Introduction
 
+
+environment {
+    // Set a variable like this:
+    QT_QPA_PLATFORM "wayland"
+    BROWSER "zen-browser"
+    EDITOR "nvim"
+
+    // Remove a variable by using null as the value:
+    // DISPLAY null
+}
+
+clipboard {
+    // disable the primary clipboard (middle-click paste)
+    disable-primary
+}
+
 // Input device configuration.
 // Find the full list of options on the wiki:
 // https://yalter.github.io/niri/Configuration:-Input
@@ -11,13 +27,11 @@ input {
         xkb {
             // You can set rules, model, layout, variant and options.
             // For more information, see xkeyboard-config(7).
-
+            
             // For example:
-            // layout "us,ru"
-            // options "grp:win_space_toggle,compose:ralt,ctrl:nocaps"
-
-            // If this section is empty, niri will fetch xkb settings
-            // from org.freedesktop.locale1. You can control these using
+            layout "us,gr"
+            options "grp:win_space_toggle,compose:ralt,ctrl:nocaps"
+// If this section is empty, niri will fetch xkb settings from org.freedesktop.locale1. You can control these using
             // localectl set-x11-keymap.
         }
 
@@ -165,15 +179,16 @@ layout {
         // - CSS named colors: "red"
         // - RGB hex: "#rgb", "#rgba", "#rrggbb", "#rrggbbaa"
         // - CSS-like notation: "rgb(255, 127, 0)", rgba(), hsl() and a few others.
-
+            
+        // Karlach BG3 palette: https://www.color-hex.com/color-palette/1042978
         // Color of the ring on the active monitor.
-        active-color "#7fc8ff"
+        active-color "#900000" // "#7fc8ff"
 
         // Color of the ring on inactive monitors.
         //
         // The focus ring only draws around the active window, so the only place
         // where you can see its inactive-color is on other monitors.
-        inactive-color "#505050"
+        inactive-color "#2d2d2d" // "#505050"
 
         // You can also use gradients. They take precedence over solid colors.
         // Gradients are rendered the same as CSS linear-gradient(angle, from, to).
@@ -215,7 +230,7 @@ layout {
     // You can enable drop shadows for windows.
     shadow {
         // Uncomment the next line to enable shadows.
-        // on
+        on
 
         // By default, the shadow draws only around its window, and not behind it.
         // Uncomment this setting to make the shadow draw behind its window.
