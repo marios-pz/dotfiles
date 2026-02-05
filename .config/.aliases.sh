@@ -11,6 +11,7 @@ alias .5='cd ../../../../..'
 alias vi='nvim'
 alias ssh="kitten ssh"
 # Changing "ls" to "eza"
+alias ls="eza --icons --color=always --group-directories-first"
 alias la='eza -a --icons --color=always --group-directories-first'  # all files and dirs
 alias ll='eza -l --icons --color=always --group-directories-first'  # long format
 alias lt='eza -aT --icons --color=always --group-directories-first' # tree listing
@@ -22,6 +23,7 @@ alias l...='eza -al --icons --color=always --group-directories-first ../../../' 
 # get error messages from journalctl
 alias jctl="journalctl -p 3 -xb"
 
+alias download-video="yt-dlp --extractor-args youtube:player_client=android --throttled-rate 100K"
 # gpg encryption
 # verify signature for isos
 alias gpg-check="gpg2 --keyserver-options auto-key-retrieve --verify"

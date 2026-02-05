@@ -2,14 +2,13 @@
 // "/-" comments out the following node.
 // Check the wiki for a full description of the configuration:
 // https://yalter.github.io/niri/Configuration:-Introduction
-
-
 environment {
     // Set a variable like this:
     QT_QPA_PLATFORM "wayland"
     BROWSER "zen-browser"
     EDITOR "nvim"
-
+    ELECTRON_OZONE_PLATFORM_HINT "auto"
+    DISPLAY ":0"
     // Remove a variable by using null as the value:
     // DISPLAY null
 }
