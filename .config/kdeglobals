@@ -139,9 +139,6 @@ TerminalApplication=kitty
 [KDE]
 LookAndFeelPackage=org.kde.breezedark.desktop
 
-[UiSettings]
-ColorScheme=colors
-
 [WM]
 activeBackground=39,44,49
 activeBlend=252,252,252
