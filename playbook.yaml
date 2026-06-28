@@ -4,7 +4,8 @@
   vars_files: ansible/variables/packages.yaml
   tasks:
     - name: Ensure the Arch Linux keyring is up to date
-      ansible.builtin.pacman:
+      become: true
+      community.general.pacman:
         name: archlinux-keyring
         state: latest
 
@@ -18,7 +19,7 @@
     - name: Run stow
       become: false
       tags: stow
-      shell: "stow . --target {{ ansible_env.HOME }} --verbose=2"
+      ansible.builtin.shell: "stow . --target {{ ansible_env.HOME }} --verbose=2"
       register: result
       changed_when: "'LINK:' in result.stderr"
 
@@ -49,7 +50,7 @@
 
     - name: Set the shell for the user
       become: true
-      user:
+      ansible.builtin.user:
         name: user
         shell: /usr/bin/zsh
 

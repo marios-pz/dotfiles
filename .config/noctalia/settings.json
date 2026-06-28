@@ -214,6 +214,10 @@
                     "textColor": "none"
                 },
                 {
+                    "iconColor": "none",
+                    "id": "DarkMode"
+                },
+                {
                     "colorizeDistroLogo": false,
                     "colorizeSystemIcon": "none",
                     "colorizeSystemText": "none",
@@ -251,11 +255,11 @@
     },
     "colorSchemes": {
         "darkMode": true,
-        "generationMethod": "muted",
+        "generationMethod": "tonal-spot",
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "",
-        "predefinedScheme": "Ayu",
+        "predefinedScheme": "Catppuccin",
         "schedulingMode": "off",
         "syncGsettings": true,
         "useWallpaperColors": true
@@ -428,15 +432,15 @@
     },
     "hooks": {
         "colorGeneration": "",
-        "darkModeChange": "",
-        "enabled": false,
+        "darkModeChange": "~/.config/scripts/noctalia-darkmode-hook.sh $1",
+        "enabled": true,
         "performanceModeDisabled": "",
         "performanceModeEnabled": "",
         "screenLock": "",
         "screenUnlock": "",
         "session": "",
         "startup": "",
-        "wallpaperChange": ""
+        "wallpaperChange": "~/.config/scripts/noctalia-wallpaper-hook.sh '$1' '$3'"
     },
     "idle": {
         "customCommands": "[]",

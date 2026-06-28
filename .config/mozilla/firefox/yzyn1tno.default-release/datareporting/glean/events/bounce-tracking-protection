@@ -1,0 +1,3 @@
+{"timestamp":3744981,"category":"bounce.tracking.protection","name":"purge_action","extra":{"bounce_time":"1782661818","success":"true","is_dry_run":"true","glean_timestamp":"1782668963946","site_host":"tubitv.com"},"execution_counter":3}
+{"timestamp":10947613,"category":"bounce.tracking.protection","name":"purge_action","extra":{"is_dry_run":"true","glean_timestamp":"1782676166577","site_host":"localhost","success":"true","bounce_time":"1782669679"},"execution_counter":3}
+{"timestamp":57789,"category":"glean","name":"restarted","extra":{"glean_timestamp":"1782681330160","glean.startup.date":"2026-06-29T00:15+03:00"},"execution_counter":4}

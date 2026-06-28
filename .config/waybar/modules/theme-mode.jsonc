@@ -1,0 +1,8 @@
+    "custom/theme-mode": {
+        "exec": "mode=$(cat \"${XDG_CACHE_HOME:-$HOME/.cache}/matugen/mode\" 2>/dev/null || echo dark); if [ \"$mode\" = light ]; then echo '{\"text\":\"☀\",\"tooltip\":\"Light mode — click for dark\",\"class\":\"light\"}'; else echo '{\"text\":\"󰖔\",\"tooltip\":\"Dark mode — click for light\",\"class\":\"dark\"}'; fi",
+        "return-type": "json",
+        "on-click": "~/.config/scripts/theme-mode-toggle.sh",
+        "signal": 8,
+        "interval": "once",
+        "format": "{}"
+    },

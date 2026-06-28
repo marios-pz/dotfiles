@@ -1,0 +1,26 @@
+{"timestamp":57005,"category":"session_restore","name":"backup_can_be_loaded_session_file","extra":{"path_key":"clean","loadfail_reason":"File doesn't exist.","glean_timestamp":"1782681329376","can_load":"false"}}
+{"timestamp":57009,"category":"session_restore","name":"backup_can_be_loaded_session_file","extra":{"can_load":"true","path_key":"recovery","loadfail_reason":"N/A","glean_timestamp":"1782681329380"}}
+{"timestamp":57009,"category":"session_restore","name":"backup_can_be_loaded_session_file","extra":{"can_load":"true","path_key":"recovery","loadfail_reason":"N/A","glean_timestamp":"1782681329380"}}
+{"timestamp":57010,"category":"session_restore","name":"shutdown_success_session_startup","extra":{"shutdown_reason":"final-state-write-incomplete","shutdown_ok":"true","glean_timestamp":"1782681329381"}}
+{"timestamp":57318,"category":"jsonfile","name":"load_logins","extra":{"glean_timestamp":"1782681329690","value":"error_notfounderror"}}
+{"timestamp":57416,"category":"nimbus_events","name":"startup_database_consistency","extra":{"store_active_count":"32","primary":"database","db_active_count":"32","total_db_count":"32","trigger":"startup","total_store_count":"32","glean_timestamp":"1782681329787"}}
+{"timestamp":57436,"category":"jsonfile","name":"load_autofillprofiles","extra":{"glean_timestamp":"1782681329807","value":"error_notfounderror"}}
+{"timestamp":57448,"category":"doh","name":"state_rollback","extra":{"value":"null","glean_timestamp":"1782681329819"}}
+{"timestamp":57670,"category":"normandy","name":"enroll_failed_nimbus_experiment","extra":{"reason":"feature-conflict","value":"expand-vertical-tabs-callout-existing-profiles","glean_timestamp":"1782681330041"}}
+{"timestamp":57670,"category":"nimbus_events","name":"enroll_failed","extra":{"reason":"feature-conflict","experiment":"expand-vertical-tabs-callout-existing-profiles","glean_timestamp":"1782681330041"}}
+{"timestamp":57723,"category":"nimbus_events","name":"is_ready","extra":{"glean_timestamp":"1782681330094"}}
+{"timestamp":57732,"category":"containers","name":"container_profile_loaded","extra":{"containers":"4","glean_timestamp":"1782681330103"}}
+{"timestamp":57746,"category":"upgrade_dialog","name":"trigger_reason","extra":{"glean_timestamp":"1782681330118","value":"not-major"}}
+{"timestamp":62379,"category":"normandy","name":"expose_nimbus_experiment","extra":{"featureId":"newtabTrainhopAddon","glean_timestamp":"1782681334751","value":"new-tab-15422026062461428-to-release-152-wcw-v6","branchSlug":"rollout"}}
+{"timestamp":62379,"category":"nimbus_events","name":"exposure","extra":{"feature_id":"newtabTrainhopAddon","experiment":"new-tab-15422026062461428-to-release-152-wcw-v6","glean_timestamp":"1782681334751","branch":"rollout"}}
+{"timestamp":73279,"category":"pictureinpicture","name":"saw_toggle_toggle","extra":{"glean_timestamp":"1782681356570","firstTime":"false"}}
+{"timestamp":94247,"category":"pictureinpicture","name":"saw_toggle_toggle","extra":{"glean_timestamp":"1782681431679","firstTime":"false"}}
+{"timestamp":132212,"category":"pictureinpicture","name":"saw_toggle_toggle","extra":{"firstTime":"false","glean_timestamp":"1782681431679"}}
+{"timestamp":146338,"category":"pictureinpicture","name":"saw_toggle_toggle","extra":{"firstTime":"false","glean_timestamp":"1782681431679"}}
+{"timestamp":147616,"category":"pictureinpicture","name":"saw_toggle_toggle","extra":{"firstTime":"false","glean_timestamp":"1782681431679"}}
+{"timestamp":150425,"category":"pictureinpicture","name":"saw_toggle_toggle","extra":{"firstTime":"false","glean_timestamp":"1782681431679"}}
+{"timestamp":162239,"category":"pictureinpicture","name":"saw_toggle_toggle","extra":{"glean_timestamp":"1782681443840","firstTime":"false"}}
+{"timestamp":164645,"category":"pictureinpicture","name":"saw_toggle_toggle","extra":{"glean_timestamp":"1782681443840","firstTime":"false"}}
+{"timestamp":347984,"category":"pictureinpicture","name":"saw_toggle_toggle","extra":{"glean_timestamp":"1782681646258","firstTime":"false"}}
+{"timestamp":349441,"category":"pictureinpicture","name":"saw_toggle_toggle","extra":{"firstTime":"false","glean_timestamp":"1782681646258"}}
+{"timestamp":351009,"category":"pictureinpicture","name":"saw_toggle_toggle","extra":{"glean_timestamp":"1782681646258","firstTime":"false"}}
