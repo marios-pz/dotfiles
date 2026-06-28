@@ -1,4 +1,0 @@
-{"timestamp":57518,"category":"newtab","name":"widgets_impression","extra":{"newtab_visit_id":"{8ff70fc1-f668-4116-bd09-921dad4b3423}","widget_size":"large","widget_name":"sports","glean_timestamp":"1782681329889"},"execution_counter":1}
-{"timestamp":57518,"category":"newtab","name":"widgets_impression","extra":{"widget_name":"clocks","widget_size":"large","newtab_visit_id":"{8ff70fc1-f668-4116-bd09-921dad4b3423}","glean_timestamp":"1782681329889"},"execution_counter":1}
-{"timestamp":57518,"category":"newtab","name":"widgets_timer_impression","extra":{"newtab_visit_id":"{8ff70fc1-f668-4116-bd09-921dad4b3423}","glean_timestamp":"1782681329889"},"execution_counter":1}
-{"timestamp":57518,"category":"newtab","name":"widgets_impression","extra":{"widget_name":"focus_timer","newtab_visit_id":"{8ff70fc1-f668-4116-bd09-921dad4b3423}","glean_timestamp":"1782681329889","widget_size":"large"},"execution_counter":1}
