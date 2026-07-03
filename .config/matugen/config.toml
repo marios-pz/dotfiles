@@ -1,22 +1,9 @@
 [config]
 reload_gtk_theme = false
 
-[templates.waybar-theme]
-input_path = "~/.config/matugen/templates/waybar-theme.css"
-output_path = "~/.config/waybar/theme.css"
-
 [templates.alacritty-colors]
 input_path = "~/.config/matugen/templates/alacritty-colors.toml"
 output_path = "~/.config/alacritty/colors.toml"
-
-
-[templates.fuzzel]
-input_path = "~/.config/matugen/templates/fuzzel.ini"
-output_path = "~/.config/fuzzel/fuzzel.ini"
-
-[templates.wlogout-colors]
-input_path = "~/.config/matugen/templates/wlogout-colors.css"
-output_path = "~/.config/wlogout/colors.css"
 
 
 [templates.zathura-theme]

@@ -6,6 +6,7 @@ obsidian/git/*
 zsh/.config/zsh/.zsh_history
 .config/gtk-3.0/bookmarks
 .config/fish/fishd.tmp.*
+.config/pulse/cookie
 
 # matugen-generated output files (regenerated from templates on each theme change)
 .config/alacritty/colors.toml

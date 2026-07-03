@@ -16,7 +16,3 @@ fi
 
 echo "$new_mode" > "$MODE_FILE"
 matugen image "$wallpaper" --mode "$new_mode"
-
-pkill -SIGUSR2 waybar    2>/dev/null || true
-pkill -SIGRTMIN+8 waybar 2>/dev/null || true
-pkill -USR1 kitty        2>/dev/null || true

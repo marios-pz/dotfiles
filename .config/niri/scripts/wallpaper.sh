@@ -46,11 +46,6 @@ swww img "$WALLPAPER" \
 # Generate theme from wallpaper using matugen templates
 matugen image "$WALLPAPER" --mode "$MODE" --prefer saturation
 
-# Reload waybar CSS (SIGUSR2) and theme-mode button (SIGRTMIN+8)
-pkill -SIGUSR2 waybar    2>/dev/null || true
-pkill -SIGRTMIN+8 waybar 2>/dev/null || true
-
-# Reload kitty (SIGUSR1 reloads config)
 # Alacritty picks up colors.toml on next window open (live_config_reload covers main config only)
 
 echo "wallpaper: $(basename "$WALLPAPER") [$MODE]"
