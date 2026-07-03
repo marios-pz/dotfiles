@@ -622,9 +622,9 @@
     },
     "ui": {
         "boxBorderEnabled": false,
-        "fontDefault": "Adwaita Sans",
+        "fontDefault": "Maple Mono NF CN",
         "fontDefaultScale": 1,
-        "fontFixed": "monospace",
+        "fontFixed": "Maple Mono NF CN",
         "fontFixedScale": 1,
         "panelBackgroundOpacity": 0.93,
         "panelsAttachedToBar": true,

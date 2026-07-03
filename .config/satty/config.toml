@@ -25,7 +25,7 @@ disable-notifications = false
 
 # Font to use for text annotations
 [font]
-family = "Roboto"
+family = "Maple Mono NF CN"
 style = "Bold"
 
 # Custom colours for the colour palette
