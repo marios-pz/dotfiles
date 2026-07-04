@@ -19,7 +19,7 @@
     - name: Run stow
       become: false
       tags: stow
-      ansible.builtin.shell: "stow . --target {{ ansible_env.HOME }} --verbose=2"
+      ansible.builtin.shell: "stow . --target {{ ansible_facts['env']['HOME'] }} --verbose=2"
       register: result
       changed_when: "'LINK:' in result.stderr"
 
