@@ -8,6 +8,9 @@ binds {
 
     Mod+Shift+ESCAPE                     { show-hotkey-overlay; }
 
+    // ─── Keyboard layout ───
+    Shift+Tab                           hotkey-overlay-title="Switch Keyboard Layout (EN/GR)" { switch-layout "next"; }
+
     // ─── Applications ───
     Mod+Return                          hotkey-overlay-title="Open Terminal: Alacritty" { spawn "alacritty"; }
     Mod+Space                               hotkey-overlay-title="Open App Launcher: noctalia launcher" { spawn-sh "qs -c noctalia-shell ipc call launcher toggle"; }

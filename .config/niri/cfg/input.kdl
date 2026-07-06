@@ -4,9 +4,8 @@
 input {
     keyboard {
         xkb {
-            //If you want to overwrite your keyboard layout,
-            // uncomment the line below and change the layout accordingly.
-            //layout "us" // Use the American keyboard layout
+            layout "us,gr" // English (US) and Greek layouts
+            options "grp:alt_shift_toggle" // Switch layout with Alt+Shift
         }
         numlock // Enable numlock on startup
     }
