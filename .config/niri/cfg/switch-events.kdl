@@ -1,0 +1,15 @@
+// ────────────── Switch Events (lid / tablet-mode) ──────────────
+// Fires on convertible 2-in-1 hinge sensors. No-op on machines without
+// these switches (e.g. the desktop).
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Switch-Events
+
+// Note: switch-events only support "spawn" (no shell, no "~" expansion),
+// so the script path must be absolute.
+switch-events {
+    tablet-mode-on {
+        spawn "bash" "/home/user/.config/niri/scripts/tablet-mode.sh" "on"
+    }
+    tablet-mode-off {
+        spawn "bash" "/home/user/.config/niri/scripts/tablet-mode.sh" "off"
+    }
+}

@@ -21,6 +21,9 @@ binds {
     // Please choose your own file manager.
     Mod+E                               hotkey-overlay-title="File Manager: Nautilus" { spawn "nautilus"; }
 
+    // ─── Touch / Tablet Mode ───
+    Mod+ALT+K                           hotkey-overlay-title="Toggle On-Screen Keyboard" { spawn "bash" "/home/user/.config/niri/scripts/tablet-mode.sh" "toggle-osk"; }
+
     // ─── Media Controls ───
     XF86AudioRaiseVolume                allow-when-locked=true { spawn-sh "noctalia msg volume-up"; }
     XF86AudioLowerVolume                allow-when-locked=true { spawn-sh "noctalia msg volume-down"; }
