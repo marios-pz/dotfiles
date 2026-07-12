@@ -1,14 +1,10 @@
 #!/usr/bin/env bash
-# Called by noctalia after wallpaper+color generation: $1=path $2=mode(dark/light)
+# Called by noctalia v5's wallpaper_changed hook: reads $NOCTALIA_WALLPAPER_PATH
+# Regenerates the matugen theme (bar, niri, starship, etc.) from the new wallpaper.
 
-WALLPAPER="$1"
-MODE="${2:-dark}"
+WALLPAPER="$NOCTALIA_WALLPAPER_PATH"
+[[ -z "$WALLPAPER" ]] && exit 0
 
-CACHE_DIR="${XDG_CACHE_HOME:-$HOME/.cache}/matugen"
-mkdir -p "$CACHE_DIR"
-echo "$WALLPAPER" > "$CACHE_DIR/last-wallpaper"
-echo "$MODE"      > "$CACHE_DIR/mode"
-
-matugen image "$WALLPAPER" --mode "$MODE" --prefer saturation
+matugen image "$WALLPAPER" --prefer saturation
 
 niri msg action reload-config 2>/dev/null || true

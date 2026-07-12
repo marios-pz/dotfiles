@@ -4,19 +4,51 @@
     }
 
      // if you use steam you will probably like these
+     //
+     // IMPORTANT: app-id matches anywhere in the string (it's an unanchored regex),
+     // so an unanchored "steam" also matches "steam_app_<appid>" — the app-id Steam
+     // assigns to the actual GAME window when launching it (this is how e.g. Black
+     // Ops 2 was ending up floating/merged with Steam's own windows instead of
+     // opening in its own tiled/fullscreen window). Anchor with ^...$ so this only
+     // ever matches the Steam client itself, never a game.
     window-rule {
-        match app-id="steam"
+        match app-id=r#"^steam$"#
         exclude title=r#"^[Ss]team$"#
         open-floating true
     }
 
     window-rule {
-       match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
+       match app-id=r#"^steam$"# title=r#"^notificationtoasts_\d+_desktop$"#
        default-floating-position x=10 y=10 relative-to="bottom-right"
        open-focused false
+    }
+
+    // Firefox / Zen: float every window from these two, including the main
+    // browser window itself — chosen deliberately over a narrower rule so
+    // stray window.open() popups (which share the same app-id as the main
+    // window and can't be distinguished from it) never land as a blank
+    // tiled column again.
+    window-rule {
+        match app-id=r#"^(firefox|zen)$"#
+        open-floating true
+    }
+
+    // Picture-in-Picture keeps its own small default size.
+    window-rule {
+        match app-id=r#"^(firefox|zen)$"# title="^Picture-in-Picture$"
+        default-column-width { fixed 480; }
+        default-window-height { fixed 270; }
     }
 
     layer-rule {
         match namespace="^noctalia-wallpaper*"
         place-within-backdrop true
+    }
+
+    // noctalia v5 settings window
+    window-rule {
+        match app-id="dev.noctalia.Noctalia"
+        open-floating true
+        default-column-width { fixed 1080; }
+        default-window-height { fixed 920; }
     }

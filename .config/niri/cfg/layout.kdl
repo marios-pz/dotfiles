@@ -6,8 +6,8 @@
 
         focus-ring {
             width 3
-            active-color "#ffb4a8"
-            inactive-color "#534341"
+            active-color "#ffb59d"
+            inactive-color "#53433f"
         }
 
         border {
