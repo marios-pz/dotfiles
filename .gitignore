@@ -12,3 +12,5 @@ zsh/.config/zsh/.zsh_history
 .config/alacritty/colors.toml
 .config/starship.toml
 .config/niri/cfg/layout.kdl
+
+**/.claude
