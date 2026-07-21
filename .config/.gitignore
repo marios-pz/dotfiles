@@ -1,4 +1,39 @@
-mozilla
-zen
-vesktop
+# Deny everything under ~/.config by default.
+# Only paths already tracked in this repo are allowed through, so config
+# dirs created by other apps (btop, spotify, yay, ...) never show up as
+# untracked clutter in `git status`. To track something new, add an
+# `!/path` line for it below (directories need the trailing slash).
+/*
 
+!/.aliases.sh
+!/.gitignore
+!/alacritty/
+!/autostart/
+!/Code/
+!/dconf/
+!/gtk-3.0/
+!/MangoHud/
+!/matugen/
+!/menus/
+!/mimeapps.list
+!/niri/
+!/noctalia/
+!/nvim/
+!/pavucontrol.ini
+!/qt5ct/
+!/qt6ct/
+!/scripts/
+!/starship.toml
+!/systemd/
+!/user-dirs.dirs
+!/user-dirs.locale
+
+# matugen-generated output files (regenerated from templates on each theme change)
+/alacritty/colors.toml
+/starship.toml
+/niri/cfg/layout.kdl
+
+# noise inside otherwise-allowed dirs
+/gtk-3.0/bookmarks
+/fish/fishd.tmp.*
+/pulse/cookie
