@@ -111,6 +111,7 @@ binds {
     Mod+CTRL+9                          { move-column-to-workspace 9; }
 
     Mod+TAB                             { focus-workspace-previous; }
+    Mod+D                               hotkey-overlay-title="Chat apps workspace" { focus-workspace "comms"; }
 
     // ─── Layout Controls ───
     Mod+CTRL+F                          { expand-column-to-available-width; }

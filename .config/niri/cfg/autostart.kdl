@@ -4,3 +4,6 @@
     spawn-at-startup "noctalia" "--daemon"
     spawn-sh-at-startup "~/.config/niri/scripts/wallpaper.sh"
     spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
+
+    spawn-at-startup "vesktop"
+    spawn-at-startup "flatpak" "run" "com.slack.Slack"
