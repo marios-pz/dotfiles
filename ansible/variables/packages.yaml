@@ -1,3 +1,6 @@
 packages:
   - git
   - neovim
+  - tree-sitter
+  - tree-sitter-cli
+  - flatpak

@@ -3,6 +3,25 @@
         clip-to-geometry true
     }
 
+    // Named workspace for chat apps — see autostart.kdl for the spawns
+    // and keybinds.kdl (Mod+D) for the jump-to keybind.
+    workspace "comms"
+
+    // Vesktop (Discord client) and Slack, parked on "comms" only when
+    // they're the ones niri itself spawned at startup — launching them
+    // manually later should still open on whatever workspace you're on.
+    window-rule {
+        match at-startup=true app-id=r#"^vesktop$"#
+        open-on-workspace "comms"
+        open-focused false
+    }
+
+    window-rule {
+        match at-startup=true app-id=r#"^com\.slack\.Slack$"#
+        open-on-workspace "comms"
+        open-focused false
+    }
+
      // if you use steam you will probably like these
      //
      // IMPORTANT: app-id matches anywhere in the string (it's an unanchored regex),

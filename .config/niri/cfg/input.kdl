@@ -22,6 +22,12 @@ input {
         //accel-speed 0.0
     }
 
+    // Maps the touchscreen 1:1 to the laptop panel (no-op on machines
+    // without a touchscreen, e.g. the desktop).
+    touch {
+        map-to-output "eDP-1"
+    }
+
     focus-follows-mouse // Automatically focus windows under the mouse pointer
     workspace-auto-back-and-forth // Enable workspace back & forth switching
 }
