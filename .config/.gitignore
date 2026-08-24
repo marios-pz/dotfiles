@@ -13,7 +13,6 @@
 !/dconf/
 !/gtk-3.0/
 !/MangoHud/
-!/matugen/
 !/menus/
 !/mimeapps.list
 !/niri/
@@ -27,11 +26,6 @@
 !/systemd/
 !/user-dirs.dirs
 !/user-dirs.locale
-
-# matugen-generated output files (regenerated from templates on each theme change)
-/alacritty/colors.toml
-/starship.toml
-/niri/cfg/layout.kdl
 
 # noise inside otherwise-allowed dirs
 /gtk-3.0/bookmarks
