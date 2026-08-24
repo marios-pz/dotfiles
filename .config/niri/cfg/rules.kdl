@@ -42,16 +42,6 @@
        open-focused false
     }
 
-    // Firefox / Zen: float every window from these two, including the main
-    // browser window itself — chosen deliberately over a narrower rule so
-    // stray window.open() popups (which share the same app-id as the main
-    // window and can't be distinguished from it) never land as a blank
-    // tiled column again.
-    window-rule {
-        match app-id=r#"^(firefox|zen)$"#
-        open-floating true
-    }
-
     // Picture-in-Picture keeps its own small default size.
     window-rule {
         match app-id=r#"^(firefox|zen)$"# title="^Picture-in-Picture$"
@@ -61,7 +51,7 @@
 
     layer-rule {
         match namespace="^noctalia-wallpaper*"
-        place-within-backdrop true
+        place-within-backdrop false
     }
 
     // noctalia v5 settings window
