@@ -1,6 +1,63 @@
 packages:
+  # Core
   - git
   - neovim
   - tree-sitter
   - tree-sitter-cli
   - flatpak
+  - stow
+
+  # Compositor and session
+  - hyprland
+  - hyprpicker
+  - xdg-desktop-portal-hyprland
+  - xdg-desktop-portal-gtk
+  - xorg-xwayland
+  - polkit-gnome
+  - gnome-keyring
+  - sddm
+
+  # Caelestia shell dependencies available from the repos. The rest come from
+  # the AUR, see .config/hypr/scripts/install.sh
+  - qt6-base
+  - qt6-declarative
+  - qt6-imageformats
+  - ttf-material-symbols-variable
+  - ttf-cascadia-code-nerd
+  - fish
+  - cliphist
+  - fuzzel
+  - grim
+  - slurp
+  - swappy
+  - wl-clipboard
+  - dart-sass
+  - gpu-screen-recorder
+  - libqalculate
+  - aubio
+  - ddcutil
+  - brightnessctl
+  - lm_sensors
+  - networkmanager
+  - power-profiles-daemon
+  - trash-cli
+
+  # 2-in-1 hardware
+  - iio-sensor-proxy
+
+  # Gaming
+  - steam
+  - steam-devices
+  - gamescope
+  - gamemode
+  - lib32-gamemode
+  - mangohud
+  - lib32-mangohud
+
+  # Desktop apps
+  - alacritty
+  - nautilus
+  - pavucontrol
+  - btop
+  - capitaine-cursors
+  - bluez-utils

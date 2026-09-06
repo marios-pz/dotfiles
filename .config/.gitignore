@@ -9,9 +9,11 @@
 !/.gitignore
 !/alacritty/
 !/autostart/
+!/caelestia/
 !/Code/
 !/dconf/
 !/gtk-3.0/
+!/hypr/
 !/MangoHud/
 !/menus/
 !/mimeapps.list
@@ -26,6 +28,11 @@
 !/systemd/
 !/user-dirs.dirs
 !/user-dirs.locale
+
+# Caelestia writes generated state (colour schemes, cli.json) next to its
+# config, so only the hand written file is tracked.
+/caelestia/*
+!/caelestia/shell.json
 
 # noise inside otherwise-allowed dirs
 /gtk-3.0/bookmarks
