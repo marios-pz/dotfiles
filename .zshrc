@@ -97,3 +97,4 @@ if [ -f '/home/user/.local/bin/google-cloud-sdk/completion.zsh.inc' ]; then . '/
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+export CAPACITOR_ANDROID_STUDIO_PATH=/opt/android-studio/bin/studio.sh
