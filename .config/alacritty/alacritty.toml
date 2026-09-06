@@ -140,7 +140,7 @@ action = "ResetFontSize"
 [general]
 live_config_reload = true
 working_directory = "None"
-import = ["~/.config/alacritty/themes/noctalia.toml",
+import = ["~/.config/alacritty/themes/colors.toml",
 ]
 
 [[keyboard.bindings]]

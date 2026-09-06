@@ -1,8 +1,0 @@
-// ────────────── Startup Applications ──────────────
-// https://github.com/YaLTeR/niri/wiki/Configuration:-Miscellaneous#spawn-sh-at-startup
-
-    spawn-at-startup "noctalia" "--daemon"
-    spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
-
-    spawn-at-startup "vesktop"
-    spawn-at-startup "flatpak" "run" "com.slack.Slack"

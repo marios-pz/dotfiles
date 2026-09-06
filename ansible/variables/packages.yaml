@@ -18,7 +18,7 @@ packages:
   - sddm
 
   # Caelestia shell dependencies available from the repos. The rest come from
-  # the AUR, see .config/hypr/scripts/install.sh
+  # the AUR, see .config/hypr/README.md
   - qt6-base
   - qt6-declarative
   - qt6-imageformats

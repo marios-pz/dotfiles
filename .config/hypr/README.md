@@ -29,18 +29,22 @@ everything here is Lua.
 
 ## Install
 
-Repo packages come from the ansible playbook, AUR packages and the Quickshell
-swap from the install script:
+Repo packages come from the ansible playbook:
 
 ```shell
 ansible-playbook -K playbook.yaml
-~/.config/hypr/scripts/install.sh
 ```
 
-`install.sh` will ask before removing Noctalia. It has to: Noctalia ships a
-Quickshell fork that declares `Conflicts: quickshell-git`, and Caelestia needs
-upstream Quickshell, so only one of the two shells can be installed at a time.
-The niri config stays on disk either way.
+Then Quickshell and Caelestia, which the playbook does not cover:
+
+```shell
+sudo pacman -S --needed quickshell
+yay -S --needed caelestia-shell caelestia-cli wvkbd
+```
+
+Quickshell lives in `[extra]`. If a fork is already installed, pacman will
+offer to replace it: forks declare `Conflicts: quickshell-git`, so only one
+can be present at a time.
 
 Then log out and pick Hyprland at the SDDM session menu.
 
