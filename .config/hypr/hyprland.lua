@@ -7,7 +7,7 @@
 --   scripts/*.sh       anything that has to outlive a dispatcher call
 --
 -- Order matters in two places: rules.lua defines window tags that gaming.lua
--- and convertible.lua reuse, and keybinds.lua expects the workspaces to exist.
+-- reuses, and keybinds.lua expects the workspaces to exist.
 
 require("hyprland.env")
 require("hyprland.monitors")
@@ -18,6 +18,6 @@ require("hyprland.gestures")
 require("hyprland.workspaces")
 require("hyprland.rules")
 require("hyprland.gaming")
-require("hyprland.convertible")
+require("hyprland.lid")
 require("hyprland.keybinds")
 require("hyprland.execs")

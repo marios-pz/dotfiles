@@ -11,10 +11,6 @@ hl.monitor({
 
 -- The built in panel. `preferred` picks its native mode, which avoids
 -- hardcoding a resolution that breaks if the panel is ever swapped.
---
--- The transform is deliberately absent here. scripts/tablet-mode.sh rewrites
--- this whole line at runtime to rotate the screen, and a transform baked into
--- the config would fight it on every reload.
 hl.monitor({
     output   = vars.internalMonitor,
     mode     = "preferred",

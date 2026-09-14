@@ -78,8 +78,8 @@ hl.config({
 
     cursor = {
         hotspot_padding   = 1,
-        -- Convertible niceties: the pointer gets out of the way as soon as
-        -- you touch the screen, and comes back when you move the mouse.
+        -- The pointer gets out of the way as soon as you touch the screen,
+        -- and comes back when you move the mouse.
         hide_on_touch     = true,
         hide_on_key_press = false,
         inactive_timeout  = 5,

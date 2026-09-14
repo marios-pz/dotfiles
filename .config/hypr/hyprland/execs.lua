@@ -1,5 +1,4 @@
 local vars = require("variables")
-local util = require("utils.functions")
 
 -- Everything started once, at login. `hyprland.start` fires after the
 -- compositor is up and the Wayland socket exists, so clients started here
@@ -43,11 +42,4 @@ hl.on("hyprland.start", function()
     hl.exec_cmd(vars.browser)
     hl.exec_cmd(vars.discord)
     hl.exec_cmd(vars.slack)
-
-    ---- Convertible ----
-
-    -- Puts rotation, the touchpad and the on screen keyboard into a known
-    -- laptop mode state. Switch binds only fire on a change, so a machine
-    -- that booted folded stays in laptop mode until you fold it once.
-    hl.exec_cmd(util.script("tablet-mode.sh") .. " reset")
 end)

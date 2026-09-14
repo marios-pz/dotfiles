@@ -1,6 +1,6 @@
 # Hyprland + Caelestia
 
-A Hyprland setup for a Lenovo Yoga convertible, using the Caelestia shell for
+A Hyprland setup for a Lenovo Yoga laptop, using the Caelestia shell for
 the bar, launcher, notifications, lock screen and wallpaper.
 
 Hyprland 0.56 reads `hyprland.lua`. There is no `.conf` fallback any more, so
@@ -21,7 +21,7 @@ everything here is Lua.
 | `hyprland/workspaces.lua` | The static 1 to 9 workspaces |
 | `hyprland/rules.lua` | Window and layer rules |
 | `hyprland/gaming.lua` | Steam, game rules, game mode |
-| `hyprland/convertible.lua` | Hinge and lid switch handling |
+| `hyprland/lid.lua` | Lid switch handling |
 | `hyprland/keybinds.lua` | Every key and mouse bind |
 | `hyprland/execs.lua` | Autostart |
 | `utils/functions.lua` | Shared helpers |
@@ -39,7 +39,7 @@ Then Quickshell and Caelestia, which the playbook does not cover:
 
 ```shell
 sudo pacman -S --needed quickshell
-yay -S --needed caelestia-shell caelestia-cli wvkbd
+yay -S --needed caelestia-shell caelestia-cli
 ```
 
 Quickshell lives in `[extra]`. If a fork is already installed, pacman will
@@ -149,48 +149,23 @@ panel and lock binds carry Ctrl.
 | `Super + V` | Clipboard history |
 | `Super + .` | Emoji picker |
 
-### Convertible and gaming
+### Zoom and gaming
 
 | Key | Action |
 | --- | --- |
-| `Super + O` | On screen keyboard |
-| `Super + R` | Lock or unlock auto rotation |
-| `Super + Shift + R` | Rotate 90 degrees |
+| `Super + 0` | Reset the desktop zoom |
 | `Super + G` | Game mode |
 
-## The 2-in-1 bits
-
-Folding the lid past the keyboard fires the `Lenovo Yoga Tablet Mode Control
-switch`, which runs `scripts/tablet-mode.sh on`:
-
-- `scripts/rotation.sh watch` starts reading the accelerometer through
-  `monitor-sensor` and rotates `eDP-1` to match.
-- `scripts/osk.sh start` brings up wvkbd in `--auto` mode, so it appears when
-  a text field takes focus and drops when it loses it.
-- The touchpad is disabled, since folded it is face down against whatever the
-  machine is resting on.
-
-Unfolding undoes all three.
+## Touch and the lid
 
 Touch input is bound to `eDP-1` in `hyprland/input.lua`, for the finger and
-the pen separately. That mapping is also what makes rotation usable: Hyprland
-transforms touch coordinates for any device mapped to a transformed output,
-so taps keep landing where you pressed.
+the pen separately, so taps keep landing where you pressed once a second
+monitor widens the layout.
 
-Some notes on the sharp edges:
-
-- **The hinge switch bounces.** Folding this machine once fires the on and off
-  events dozens of times over a couple of seconds. `tablet-mode.sh` debounces
-  with `flock` plus a timestamp, which collapses a burst into one transition.
-  Without it, every bounce spawns a competing sensor watcher.
-- **Rotation direction.** If the screen turns the wrong way, swap the
-  `right-up` and `left-up` lines in `scripts/rotation.sh`.
-- **Booting folded.** Switch binds only fire on a change, so a machine that
-  booted already folded comes up in laptop mode. Fold it once to sync. Reading
-  the switch state at login would need your user in the `input` group, which
-  this config does not do for you.
-- **Rotating by hand** implies a rotation lock, otherwise the next sensor
-  reading undoes it immediately. `Super + R` releases it again.
+Closing the lid runs `scripts/lid.sh close`, which blanks the panel with DPMS
+only when it is the sole output: closing the lid on a docked machine leaves
+the external monitor alone. Nothing here suspends, that is logind's job, and
+duplicating it causes races on resume.
 
 ## Gaming
 
@@ -231,5 +206,4 @@ lowercases device names and turns spaces into hyphens, so they do not look
 like the names in `/proc/bus/input/devices`.
 
 Switches are the exception: they are matched on the raw libinput name, spaces
-and capitals intact. That is why `tabletModeSwitch` and `lidSwitch` look
-different from the rest.
+and capitals intact. That is why `lidSwitch` looks different from the rest.

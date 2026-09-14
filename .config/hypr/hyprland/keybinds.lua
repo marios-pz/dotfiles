@@ -2,8 +2,8 @@ local vars   = require("variables")
 local util   = require("utils.functions")
 local gaming = require("hyprland.gaming")
 
--- Every keyboard and mouse bind. Switch events (hinge, lid) live in
--- hyprland/convertible.lua because they are not keys.
+-- Every keyboard and mouse bind. Switch events (the lid) live in
+-- hyprland/lid.lua because they are not keys.
 --
 -- Mod is SUPER throughout. Anything prefixed `caelestia:` is a global
 -- shortcut registered by the shell over the D-Bus GlobalShortcuts portal,
@@ -154,16 +154,16 @@ bind("SUPER + ALT + V", hl.dsp.exec_cmd("pkill fuzzel || caelestia clipboard -d"
 bind("SUPER + Period", hl.dsp.exec_cmd("pkill fuzzel || caelestia emoji -p"), "Emoji picker")
 
 
----------------------------
----- Convertible extras ----
----------------------------
+--------------------
+---- Desktop zoom ----
+--------------------
 
-bind("SUPER + O", hl.dsp.exec_cmd(util.script("osk.sh") .. " toggle"),
-    "Toggle the on screen keyboard", locked)
-bind("SUPER + R", hl.dsp.exec_cmd(util.script("rotation.sh") .. " lock"),
-    "Lock or unlock auto rotation")
-bind("SUPER + SHIFT + R", hl.dsp.exec_cmd(util.script("rotation.sh") .. " step"),
-    "Rotate the screen 90 degrees")
+-- Two finger pinch zooms the desktop, see gestures.lua. Because the gesture
+-- multiplies, pinching back out never lands exactly on 1, so this snaps it.
+-- Set straight from Lua: `hyprctl keyword` is refused by the Lua parser.
+bind("SUPER + 0", function()
+    hl.config({ cursor = { zoom_factor = 1 } })
+end, "Reset the desktop zoom", locked)
 
 
 ---------------

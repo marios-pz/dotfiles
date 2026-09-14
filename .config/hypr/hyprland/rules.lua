@@ -181,7 +181,3 @@ hl.layer_rule({ match = { namespace = "caelestia-(border-exclusion|area-picker)"
 hl.layer_rule({ match = { namespace = "hyprpicker" }, animation = "fade" })
 hl.layer_rule({ match = { namespace = "selection" }, animation = "fade" })
 hl.layer_rule({ match = { namespace = "launcher" }, animation = "popin 80%", blur = true })
-
--- The on screen keyboard sits above the lock screen so you can type your
--- password with the lid folded back.
-hl.layer_rule({ match = { namespace = "wvkbd" }, above_lock = 1, animation = "slide bottom" })

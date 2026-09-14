@@ -12,8 +12,8 @@ hl.config({
         -- rather than conjure a tenth workspace.
         workspace_swipe_create_new               = false,
 
-        -- The whole point of a 2-in-1: the same swipe works with the lid
-        -- folded back and no touchpad in reach.
+        -- The same swipe works on the touchscreen, with no touchpad in
+        -- reach.
         workspace_swipe_touch                    = true,
     },
 })

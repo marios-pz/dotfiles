@@ -43,9 +43,8 @@ return {
     touchscreenName       = "wacom-hid-53b8-finger",
     penName               = "wacom-hid-53b8-pen",
 
-    -- Raw libinput names. Unlike pointer devices, Hyprland matches switches
-    -- on the unmodified name, so these keep their spaces and capitals.
-    tabletModeSwitch      = "Lenovo Yoga Tablet Mode Control switch",
+    -- Raw libinput name. Unlike pointer devices, Hyprland matches switches
+    -- on the unmodified name, so this keeps its spaces and capitals.
     lidSwitch             = "Lid Switch",
 
     touchpadScrollFactor  = 0.3,
@@ -93,8 +92,4 @@ return {
     volumeStep      = 5,
     volumeMax       = 100,
     sleepCmd        = "systemctl suspend",
-
-    -- On screen keyboard height, in pixels, for portrait and landscape.
-    oskHeight       = 340,
-    oskLandscape    = 260,
 }

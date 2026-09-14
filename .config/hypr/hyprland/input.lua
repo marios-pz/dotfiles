@@ -21,10 +21,8 @@ hl.config({
             clickfinger_behavior = true,
         },
 
-        -- Bind touch to the built in panel. This is also what makes rotation
-        -- work: when the output is transformed, Hyprland transforms the touch
-        -- coordinates of any device mapped to it, so taps keep landing where
-        -- you actually pressed.
+        -- Bind touch to the built in panel, so taps keep landing where you
+        -- actually pressed once a second monitor widens the layout.
         touchdevice = {
             output = vars.internalMonitor,
         },
