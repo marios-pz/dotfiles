@@ -42,9 +42,6 @@ packages:
   - power-profiles-daemon
   - trash-cli
 
-  # 2-in-1 hardware
-  - iio-sensor-proxy
-
   # Gaming
   - steam
   - steam-devices
