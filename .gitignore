@@ -6,3 +6,4 @@ obsidian/git/*
 zsh/.config/zsh/.zsh_history
 
 **/.claude
+**/.uuid
