@@ -12,6 +12,12 @@ application/x-extension-xhtml=zen.desktop
 application/x-extension-xht=zen.desktop
 x-scheme-handler/claude-cli=claude-code-url-handler.desktop
 x-scheme-handler/viber=viber.desktop
+x-scheme-handler/magnet=magnet-qbt.desktop
+x-scheme-handler/ror2mm=gale-handler.desktop
+x-scheme-handler/gale=gale-handler.desktop
+x-scheme-handler/deadlock-mod-manager=deadlock-modmanager-handler.desktop
+x-scheme-handler/deadlock-modmanager=deadlock-modmanager-handler.desktop
+x-scheme-handler/dlmm=deadlock-modmanager-handler.desktop
 
 [Added Associations]
 x-scheme-handler/http=zen.desktop;
