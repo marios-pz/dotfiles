@@ -73,7 +73,7 @@ if [[ -f ~/.config/.aliases.sh ]]; then
    source ~/.config/.aliases.sh 
 fi
 
-export PATH="$HOME/.bin:$HOME/go/bin:$HOME/.local/bin:$HOME/Applications:/var/lib/flatpak/exports/bin:$PATH"
+export PATH="$HOME/.bin:$HOME/go/bin:$HOME/.cargo/bin:$HOME/.local/bin:$HOME/Applications:/var/lib/flatpak/exports/bin:$PATH"
 
 # GCLOUD
 if [[ -f ~/.local/bin/google-cloud-sdk/path.zsh.inc ]]; then
