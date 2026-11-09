@@ -7,35 +7,22 @@ packages:
   - flatpak
   - stow
 
-  # Compositor and session
-  - hyprland
-  - hyprpicker
-  - xdg-desktop-portal-hyprland
+  # Desktop: KDE Plasma (plasma-meta pulls kwin, polkit-kde-agent, kwallet,
+  # plasma-pa, xdg-desktop-portal-kde, ...)
+  - plasma-meta
+  - cachyos-kde-settings
+  - sddm
   - xdg-desktop-portal-gtk
   - xorg-xwayland
-  - polkit-gnome
-  - gnome-keyring
-  - sddm
+  - dolphin
+  - konsole
+  - spectacle
+  - ark
+  - kate
 
-  # Caelestia shell dependencies available from the repos. The rest come from
-  # the AUR, see .config/hypr/README.md
-  - qt6-base
-  - qt6-declarative
-  - qt6-imageformats
-  - ttf-material-symbols-variable
+  # Misc
   - ttf-cascadia-code-nerd
   - fish
-  - cliphist
-  - fuzzel
-  - grim
-  - slurp
-  - swappy
-  - wl-clipboard
-  - dart-sass
-  - gpu-screen-recorder
-  - libqalculate
-  - aubio
-  - ddcutil
   - brightnessctl
   - lm_sensors
   - networkmanager
@@ -53,7 +40,6 @@ packages:
 
   # Desktop apps
   - alacritty
-  - nautilus
   - pavucontrol
   - btop
   - capitaine-cursors
