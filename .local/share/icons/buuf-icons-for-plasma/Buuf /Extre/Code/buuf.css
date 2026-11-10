@@ -1,0 +1,164 @@
+form
+{
+text-align:center;
+}
+
+a
+{
+color: #863131;
+text-decoration: none;
+border:1px solid transparent;
+}
+
+a:hover
+{
+border-bottom:1px dotted #863131;
+}
+
+html *{
+font-family:"Myriad Pro", "Trebuchet MS", sans-serif;
+font-size:15px;
+}
+
+html{
+background-image:url(scotch.png);
+background-attachment:fixed;
+}
+
+body{
+padding:1em 2em;
+}
+
+div#afasho, div#deed{
+padding:.5em 2.3em;
+background-color: #E2DFDE;
+}
+
+h1[title="Buuf"]{
+font-size:1px;
+font-weight:bold;
+font-family:Tahoma;
+text-align: center;
+color:#E2DFDE;
+z-index:3;
+}
+
+.bread {text-align: justify;}
+
+
+
+div[title="So you think you can talk to dead people better than me"]
+{
+position:absolute;
+top:1px;
+right:1px;
+}
+
+img
+{
+max-width:100%;
+}
+
+
+.centerme
+{
+text-align:center;
+font-size:7pt;
+font-family:verdana;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS for the box starts here
+================================================*/
+/* Default styling. Used when JavaScript is unsupported 
+.cbb {
+	padding:0 10px;
+	margin:1em 0;
+	background:#fff;
+	border:1px solid #666;
+	}
+.cbb h1 {
+	margin:0 -10px;
+	padding:0.3em 10px;
+	background:#efece6;
+	font:bold 1.2em/1 Arial, Helvetica, sans-serif;
+	}*/
+/* Insert the custom corners and borders for browsers with sufficient JavaScript support */
+
+
+/* Rules for the top corners and border */
+.bt {
+	background:url(box00000.png) no-repeat 100% 0;
+	margin:0 0 0 18px;
+	height:17px;
+	}
+.bt div {
+	height:17px;
+	width:18px;
+	position:relative;
+	left:-18px;
+	background:url(box00000.png) no-repeat 0 0;
+	}
+
+/* Rules for the bottom corners and border */
+.bb {
+	background:url(box00000.png) no-repeat 100% 100%;
+	margin:0 0 0 12px;
+	height:17px;
+	}
+.bb div {
+	height:17px;
+	width:18px;
+	position:relative;
+	left:-12px;
+	background:url(box00000.png) no-repeat 0 100%;
+	}
+
+/* Insert the left border */
+.i1 {
+	padding:0 0 0 12px;
+	background:url(borders0.png) repeat-y 0 0;
+	}
+/* Insert the right border */
+.i2 {
+	padding:0 12px 0 0;
+	background:url(borders0.png) repeat-y 100% 0;
+	}
+/* Wrapper for the content. Use it to set the background colour and insert some padding between the borders and the content. */
+.i3 {
+	padding:0 100px;
+	}
+/* CSS for the box ends here */

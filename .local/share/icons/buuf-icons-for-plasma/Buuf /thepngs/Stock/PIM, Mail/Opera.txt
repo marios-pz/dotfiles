@@ -1,0 +1,1 @@
+The reply, forward, and compose icons are for Opera or any other browser that includes an integrated mail client. For a standalone mail client, just use the arrows by themselves, there's no reason to be redundant.

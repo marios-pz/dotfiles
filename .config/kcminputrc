@@ -1,2 +1,5 @@
 [Libinput][1267][12926][ELAN06FA:00 04F3:327E Touchpad]
 DisableWhileTyping=false
+
+[Mouse]
+cursorTheme=Oxygen_Yellow

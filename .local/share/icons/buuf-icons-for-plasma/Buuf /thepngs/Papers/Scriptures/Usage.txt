@@ -1,0 +1,1 @@
+In gnome and other modern desktops, you can assign icons to individual files.

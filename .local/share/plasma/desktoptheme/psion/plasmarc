@@ -1,0 +1,9 @@
+[BlurBehindEffect]
+enabled=false
+
+[ContrastEffect]
+enabled=false
+blur=1.0
+contrast=2.0
+intensity=2.0
+saturation=2.0

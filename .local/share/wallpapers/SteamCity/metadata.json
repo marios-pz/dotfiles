@@ -1,0 +1,14 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "phobian@tutanota.com",
+                "Name": "Eddie Mendoza"
+            }
+        ],
+        "Id": "SteamCity",
+        "License": "CC-BY-SA-4.0",
+        "Name": "Steam City"
+    },
+    "X-KDE-PlasmaImageWallpaper-AccentColor": "#847865"
+}
