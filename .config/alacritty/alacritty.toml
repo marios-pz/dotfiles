@@ -29,19 +29,19 @@ draw_bold_text_with_bright_colors = true
 size = 12
 
 [font.normal]
-family = "Maple Mono NF CN"
+family = "MonaspiceXe Nerd Font"
 style = "Regular"
 
 [font.bold]
-family = "Maple Mono NF CN"
+family = "MonaspiceXe Nerd Font"
 style = "Bold"
 
 [font.italic]
-family = "Maple Mono NF CN"
+family = "MonaspiceXe Nerd Font"
 style = "Italic"
 
 [font.bold_italic]
-family = "Maple Mono NF CN"
+family = "MonaspiceXe Nerd Font"
 style = "Bold Italic"
 
 [selection]

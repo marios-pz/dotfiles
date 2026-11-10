@@ -11,6 +11,7 @@
 !/autostart/
 !/Code/
 !/dconf/
+!/fontconfig/
 !/gtk-3.0/
 !/kdedefaults/
 !/MangoHud/

@@ -1,4 +1,5 @@
 {
+    "terminal.integrated.fontFamily": "'MonaspiceXe Nerd Font', monospace",
     "workbench.colorTheme": "Wallbash",
     "window.menuBarVisibility": "toggle",
     "editor.fontSize": 12,
