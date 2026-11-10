@@ -7,3 +7,6 @@ zsh/.config/zsh/.zsh_history
 
 **/.claude
 **/.uuid
+
+# app-installed icons, not mine
+.local/share/icons/hicolor/

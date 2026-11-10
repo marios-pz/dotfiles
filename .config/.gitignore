@@ -26,6 +26,23 @@
 !/user-dirs.dirs
 !/user-dirs.locale
 
+# KDE Plasma settings
+!/kdeglobals
+!/kwinrc
+!/kglobalshortcutsrc
+!/kcminputrc
+!/plasmarc
+!/plasmashellrc
+!/plasma-org.kde.plasma.desktop-appletsrc
+!/kscreenlockerrc
+!/ksplashrc
+!/kwinrulesrc
+!/breezerc
+!/kxkbrc
+!/powerdevilrc
+!/dolphinrc
+!/konsolerc
+
 # noise inside otherwise-allowed dirs
 /gtk-3.0/bookmarks
 /fish/fishd.tmp.*
