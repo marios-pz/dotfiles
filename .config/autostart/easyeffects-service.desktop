@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Easy Effects
+Exec=easyeffects --hide-window
+Icon=com.github.wwmm.easyeffects
+Type=Application
+Terminal=false
+X-GNOME-Autostart-enabled=true
